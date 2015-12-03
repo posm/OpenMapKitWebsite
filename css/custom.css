@@ -1,0 +1,16 @@
+ html, body  {
+   font-size:14px;
+ }
+
+ /* Navbar logo */
+ .top-bar .title-area .name h1 a {
+     font-size: 150px;
+     position: relative;
+     bottom: 25px;
+ }
+
+ /* Navbar logo on shrink */
+ .f-topbar-fixed.shrink .top-bar .title-area img, .f-topbar-fixed.shrink .top-bar .title-area li img, .f-topbar-fixed.shrink .top-bar .title-area a {
+     position: relative;
+     bottom: 45px;
+ }
