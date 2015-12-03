@@ -1,10 +1,13 @@
-###### Install gem plugins
+Install gem plugins
+
 ```bundle install```
 
-###### Start jekyll dev server
+Start jekyll dev server
+
 ```jekyll serve```
 
-###### The current folder will be generated into ./_site, watch for changes, and regenerated automatically
+The current folder will be generated into ./_site, watch for changes, and regenerated automatically
+
 ```jekyll build --watch```
 
-##### Documentation built using [theDocs](http://shamsoft.net/theDocs/index.html)
+Documentation built using [theDocs](http://shamsoft.net/theDocs/index.html)
