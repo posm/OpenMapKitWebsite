@@ -7,6 +7,32 @@
      font-size: 150px;
      position: relative;
      bottom: 25px;
+     color:#fff;
+ }
+
+ /** Navbar when expanded */
+ .top-bar.expanded .title-area {
+     background: #639B3D;
+ }
+
+ .contain-to-grid .top-bar-section ul li {
+     background: #fff;
+ }
+
+ .top-bar .toggle-topbar.menu-icon a {
+     color: #fff;
+ }
+
+ .top-bar.expanded .toggle-topbar a {
+      color: #fff;
+ }
+
+ .top-bar, .contain-to-grid {
+     background-color: #639B3D;
+ }
+
+ .f-topbar-fixed.shrink .top-bar .title-area, .f-topbar-fixed.shrink .top-bar .title-area li, .f-topbar-fixed.shrink .top-bar .title-area a {
+     line-height: 123px;
  }
 
  /* Navbar logo on shrink */
@@ -14,3 +40,27 @@
      position: relative;
      bottom: 45px;
  }
+
+ /* footer */
+ .footer-logo {
+     font-size: 150px;
+     height: 60px;
+     position: relative;
+     bottom: 40px;
+ }
+
+
+ .modIconText .icon-text-simple .service-icon {
+     font-size: 50px;
+     float: left;
+     color: #e0e0e0;
+     text-align: center;
+ }
+
+
+ /** theDocs header **/
+
+ /*.navbar-toggle {*/
+     /*float: left;*/
+     /*margin: 0px;*/
+ /*}*/

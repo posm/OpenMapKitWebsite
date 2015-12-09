@@ -3,6 +3,18 @@ $(function() {
 
   "use strict";
 
+  $(window).scroll(function() {
+
+    var scroll = $(window).scrollTop();
+
+    if ( scroll >= 40 ) {
+      $('body').addClass('shrink');
+    } else {
+      $('body').removeClass('shrink');
+    }
+
+  });
+
   // Back to top
   $('#scroll-up').on( 'click', function() {
     $('html, body').animate({scrollTop : 0}, 900);

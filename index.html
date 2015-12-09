@@ -30,7 +30,7 @@ slides:
           link_to: http://themeforest.net/user/honryou/portfolio?ref=honryou
         - text: Purchase Now
           link_to: http://themeforest.net/user/honryou/portfolio?ref=honryou
-  - bg: images/@stock/slide-5.jpg
+  - bg:
     small_title:
       klass: bottom-to-top
       text: This is a creative theme that you'll
@@ -46,42 +46,42 @@ slides:
 
 
 works:
-  - image: images/@stock/work-1.jpg
+  - image:
     title: Beautiful Girl
     link_to: portfolio-item.html
     klass: graphi-design
     desc: Design &amp; Development
-  - image: images/@stock/work-2.jpg
+  - image:
     title: Beautiful Girl
     link_to: portfolio-item.html
     klass: graphi-design
     desc: Design &amp; Development
-  - image: images/@stock/work-3.jpg
+  - image:
     title: Beautiful Girl
     link_to: portfolio-item.html
     klass: graphi-design
     desc: Design &amp; Development
-  - image: images/@stock/work-4.jpg
+  - image:
     title: Beautiful Girl
     link_to: portfolio-item.html
     klass: graphi-design
     desc: Design &amp; Development
-  - image: images/@stock/work-5.jpg
+  - image:
     title: Beautiful Girl
     link_to: portfolio-item.html
     klass: graphi-design
     desc: Design &amp; Development
-  - image: images/@stock/work-6.jpg
+  - image:
     title: Beautiful Girl
     link_to: portfolio-item.html
     klass: graphi-design
     desc: Design &amp; Development
-  - image: images/@stock/work-7.jpg
+  - image:
     title: Beautiful Girl
     link_to: portfolio-item.html
     klass: graphi-design
     desc: Design &amp; Development
-  - image: images/@stock/work-8.jpg
+  - image:
     title: Beautiful Girl
     link_to: portfolio-item.html
     klass: graphi-design
@@ -89,17 +89,14 @@ works:
 
 
 services:
-  - icon: trophy
-    title: Web Design
+  - icon: icon_label
+    title: Title of Feature 1
     desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
-  - icon: cogs
-    title: Web Development
+  - icon: icon_wifi
+    title: Title of Feature 2
     desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
-  - icon: pagelines
-    title: Branding
-    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
-  - icon: lock
-    title: Security
+  - icon: icon_mapPin
+    title: Title of Feature 3
     desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
 
 milestones:
@@ -181,20 +178,17 @@ milestones:
   </div>
 </div>
 
-<div class="four spacing"></div>
+<div class="three spacing"></div>
 
 <div class="row">
-  <div class="medium-3 large-3 columns">
-    {% include icon-text.html title='Creative design' desc='Est aperiam ex sint maiores aliquam delectus minima rerum et natus rerum sit quae nostrum.' icon_class='icn-icon_wifi' delay='0' shape_class='icon-text-circle' %}
+  <div class="medium-4 large-4 columns">
+    {% include icon-text.html title='Create a server' desc='Est aperiam ex sint maiores aliquam delectus minima rerum et natus rerum sit quae nostrum.' icon_class='icn-icon_survey' delay='0' shape_class='icon-text-circle' %}
   </div>
-  <div class="medium-3 large-3 columns">
-    {% include icon-text.html title='Creative design' desc='Est aperiam ex sint maiores aliquam delectus minima rerum et natus rerum sit quae nostrum.' icon_class='icn-icon_wifi' delay='200' shape_class='icon-text-circle' %}
+  <div class="medium-4 large-4 columns">
+    {% include icon-text.html title='Open OMK map' desc='Est aperiam ex sint maiores aliquam delectus minima rerum et natus rerum sit quae nostrum.' icon_class='icn-icon_OMK' delay='200' shape_class='icon-text-circle' %}
   </div>
-  <div class="medium-3 large-3 columns">
-    {% include icon-text.html title='Creative design' desc='Est aperiam ex sint maiores aliquam delectus minima rerum et natus rerum sit quae nostrum.' icon_class='icn-icon_wifi' delay='400' shape_class='icon-text-circle' %}
-  </div>
-  <div class="medium-3 large-3 columns">
-    {% include icon-text.html title='Creative design' desc='Est aperiam ex sint maiores aliquam delectus minima rerum et natus rerum sit quae nostrum.' icon_class='icn-icon_wifi' delay='600' shape_class='icon-text-circle' %}
+  <div class="medium-4 large-4 columns">
+    {% include icon-text.html title='Implement survey' desc='Est aperiam ex sint maiores aliquam delectus minima rerum et natus rerum sit quae nostrum.' icon_class='icn-icn_surey_filled' delay='400' shape_class='icon-text-circle' %}
   </div>
 </div>
 
@@ -280,7 +274,7 @@ milestones:
       {% for service in page.services %}
       <div class='fadein mod modIconText' data-delay='{{ 300 | times:forloop.index0 }}'>
         <div class='icon-text-simple'>
-          <i class='fa fa-{{service.icon}}'></i>
+          <div class='service-icon icn-{{service.icon}}'></div>
           <h3>{{service.title}}</h3>
           <p>{{service.desc}}</p>
         </div>
