@@ -64,3 +64,19 @@
      /*float: left;*/
      /*margin: 0px;*/
  /*}*/
+
+ @media (max-width: 767px) {
+     .open-sidebar .contain-to-grid.sticky.fixed, .open-sidebar .contain-to-grid.sticky {
+         left:-80%;
+     }
+ }
+
+ .custom-topbar {
+     position: absolute !important;
+     right: 0;
+     top: 0;
+ }
+
+ .hamburger-menu {
+     bottom:0 !important;
+ }

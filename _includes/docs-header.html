@@ -1,11 +1,6 @@
 <div class='contain-to-grid sticky fixed'>
-    <!--<button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-    <!--</button>-->
-
     <nav class='top-bar' data-options='sticky_on: large' data-topbar=''>
+
         <ul class='title-area'>
             <li class='name'>
                 <h1>
@@ -14,8 +9,20 @@
                     </a>
                 </h1>
             </li>
-            <li class='toggle-topbar menu-icon'>
-                <a href='#'>Menu</a>
+
+            <!--<li class="custom-topbar">-->
+                <!--<button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--</li>-->
+            <li class='custom-topbar navbar-toggle for-sidebar' data-toggle="offcanvas">
+                <a class="hamburger-menu" href='#'>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
             </li>
         </ul>
         <section class='top-bar-section'>
@@ -48,12 +55,3 @@
         </section>
     </nav>
 </div>
-
-<!-- Banner -->
-<div class="banner banner-sm overlay-black" style="background-image: url(../images/hero_1.jpg);">
-    <div class="container text-left">
-        <h1>Documentation</h1>
-        <h5 class="text-uppercase">The best documentation template available!</h5>
-    </div>
-</div>
-<!-- END Banner -->
