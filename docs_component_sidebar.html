@@ -1,0 +1,139 @@
+---
+layout: docs-default
+title: Component Sidebar
+section_id: docs-component-sidebar
+---
+
+<body>
+
+    <main class="container">
+      <div class="row">
+
+        {% include docs-sidebar.html %}
+
+        <!-- Main content -->
+        <article class="col-md-9 col-sm-9 main-content" role="main">
+          
+          <header>
+            <h1>Sidebar</h1>
+            <p>A necessary component for your documentation template. Categorize your pages in different categories and let your readers to easily navigate between the pages.</p>
+          </header>
+
+          <section>
+            <p>You can find an example of a sidebar in left side of this page. A sample code is as follow.</p>
+            <div class="code-snippet">
+<pre class="line-numbers"><code class="language-markup">
+&lt;aside class=&quot;col-md-3 sidebar&quot;&gt;
+
+  &lt;ul class=&quot;sidenav&quot;&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot;&gt;Getting started&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;How to install&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Next step&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      Components
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Promo&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Steps&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Media&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-css3&quot;&gt;&lt;/span&gt;CSS&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-font&quot;&gt;&lt;/span&gt; Typography&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-tag&quot;&gt;&lt;/span&gt; Label&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-square-o&quot;&gt;&lt;/span&gt; Button&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/aside&gt;
+</code></pre>
+            </div>
+
+
+            <div class="callout callout-info" role="alert">
+              <h4>Dropable</h4>
+              <p>If you want to show sub-links by clicking on main category, add <code>.dropable</code> class to your <code>.sidenav</code>. You can add <code>.open</code> class to your <code>.sidenav ul</code> to make them open by default.</p>
+            </div>
+
+            <div class="callout callout-info" role="alert">
+              <h4>Sticky</h4>
+              <p>If you want to have your sidebar always in screen, even after scrolling, add <code>.sticky</code> class to the <code>.sidenav</code> tag.</p>
+            </div>
+
+            <h3>Variations</h3>
+            <p>Checkout other examples of sidebar component. You should add your desire class to the <code>.sidebar</code> tag.</p>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="promo">
+                  <img class="bordered" src="assets/img/sidebar-default.png" alt="default">
+                  <h3>Default</h3>
+                  <p>It's default sidebar type, doesn't require any class.</p>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="promo">
+                  <img class="bordered" src="assets/img/sidebar-line.png" alt="line">
+                  <h3>Line</h3>
+                  <p>Uses <code>.sidebar-line</code> class.</p>
+                  <a class="btn btn-purple" href="component_sidebar_line.html">Demo</a>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="promo">
+                  <img class="bordered" src="assets/img/sidebar-icon.png" alt="icon">
+                  <h3>Icon</h3>
+                  <p>Uses <code>.sidebar-icon</code> class.</p>
+                  <a class="btn btn-purple" href="component_sidebar_icon.html">Demo</a>
+                </div>
+              </div>
+            </div>
+            
+          </section>
+
+          
+        </article>
+        <!-- END Main content -->
+      </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <p>Copyright &copy; 2015. All right reserved</p>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <ul class="footer-menu">
+              <li><a href="page_changelog.html">Changelog</a></li>
+              <li><a href="page_credits.html">Credits</a></li>
+              <li><a href="mailto:support@shamsoft.net">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END Footer -->
+
+    <!-- Scripts -->
+    <script src="assets/js/theDocs.all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>

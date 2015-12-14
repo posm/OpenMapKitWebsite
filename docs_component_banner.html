@@ -1,90 +1,15 @@
 ---
-layout: default
-title: component_banner
+layout: docs-default
+title: Component Banner
 section_id: docs-component-banner
 ---
-<head>
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ "/css/theDocs.all.min.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/custom.css" | prepend: site.baseurl }}">
 
-    <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
-  </head>
-
-  <body>
+<body>
 
     <main class="container">
       <div class="row">
 
-        <!-- Sidebar -->
-        <aside class="col-md-3 col-sm-3 sidebar">
-
-          <ul class="sidenav dropable sticky">
-            <li><a href="index.html">Overview</a></li>
-            <li>
-              <a href="#">Layouts</a>
-              <ul>
-                <li><a href="layout_boxed_left-sidebar.html">Boxed - Left sidebar</a></li>
-                <li><a href="layout_boxed_right-sidebar.html">Boxed - Right sidebar</a></li>
-                <li><a href="layout_boxed_no-sidebar.html">Boxed - No sidebar</a></li>
-                <li><a href="layout_full_left-sidebar.html">Fullwidth - Left sidebar</a></li>
-                <li><a href="layout_full_right-sidebar.html">Fullwidth - Right sidebar</a></li>
-                <li><a href="layout_full_no-sidebar.html">Fullwidth - No sidebar</a></li>
-            <li><a href="layout_sidebar_boxed.html">Boxed sidebar</a></li>
-                <li><a href="layout_skin.html">Skins</a></li>
-              </ul>
-            </li>
-
-            <li>
-              <a class="active" href="#">Components</a>
-              <ul>
-                <li><a href="component_navbar.html">Navbar</a></li>
-                <li><a class="active" href="component_banner.html">Banner</a></li>
-                <li><a href="component_banner_sample1.html">Banner - Sample 1</a></li>
-                <li><a href="component_banner_sample2.html">Banner - Sample 2</a></li>
-                <li><a href="component_banner_sample3.html">Banner - Sample 3</a></li>
-                <li><a href="component_sidebar.html">Sidebar - default</a></li>
-                <li><a href="component_sidebar_line.html">Sidebar - line</a></li>
-                <li><a href="component_sidebar_icon.html">Sidebar - icon</a></li>
-                <li><a href="component_footer.html">Footer</a></li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="#">Basic styling</a>
-              <ul>
-                <li><a href="css_typography.html">Typography</a></li>
-                <li><a href="css_button.html">Buttons</a></li>
-                <li><a href="css_label.html">Labels</a></li>
-                <li><a href="css_table.html">Tables</a></li>
-                <li><a href="css_alert.html">Alerts</a></li>
-                <li><a href="css_icon.html">Icons</a></li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="#">Elements</a>
-              <ul>
-                <li><a href="element_toc.html">Table of contents</a></li>
-                <li><a href="element_code.html">Code view</a></li>
-                <li><a href="element_view.html">Views</a></li>
-                <li><a href="element_promo.html">Promo</a></li>
-                <li><a href="element_files.html">Included files</a></li>
-                <li><a href="element_requirement.html">Requirements</a></li>
-                <li><a href="element_tab.html">Tabs</a></li>
-                <li><a href="element_step.html">Steps</a></li>
-                <li><a href="element_media.html">Media</a></li>
-                <li><a href="element_jumbotron.html">Jumbotron</a></li>
-                <li><a href="element_faq.html">FAQ</a></li>
-              </ul>
-            </li>
-
-          </ul>
-
-        </aside>
-        <!-- END Sidebar -->
-
+        {% include docs-sidebar.html %}
 
         <!-- Main content -->
         <article class="col-md-9 col-sm-9 main-content" role="main">
@@ -220,6 +145,7 @@ section_id: docs-component-banner
           
         </article>
         <!-- END Main content -->
+
       </div>
     </main>
 

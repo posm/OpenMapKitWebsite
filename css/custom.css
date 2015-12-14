@@ -66,15 +66,23 @@
  /*}*/
 
  @media (max-width: 767px) {
-     .open-sidebar .contain-to-grid.sticky.fixed, .open-sidebar .contain-to-grid.sticky {
+     .open-sidebar .contain-to-grid.sticky.fixed, .open-sidebar .contain-to-grid.sticky, body.open-sidebar {
          left:-80%;
+     }
+
+     .f-topbar-fixed.open-sidebar article.main-content {
+        right:80%;
      }
  }
 
  .custom-topbar {
      position: absolute !important;
      right: 0;
-     top: 0;
+     top: 27px;
+ }
+
+ .shrink .custom-topbar {
+     top:10px;
  }
 
  .hamburger-menu {
