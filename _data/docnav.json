@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Overview",
+    "path": "index.html",
+    "section_id": "home"
+  },
+  {
+    "name": "Layouts",
+    "section_id": "portfolio",
+    "children": [
+      {
+        "name": "Banner",
+        "path": "docs_component_banner.html"
+      },
+      {
+        "name": "Sidebar",
+        "path": "docs_component_sidebar.html"
+      },
+      {
+        "name": "Boxed No Sidebar",
+        "path": "docs_layout_boxed_no-sidebar.html"
+      },
+      {
+        "name": "Fullwidth - Left sidebar",
+        "path": "docs_layout_full_left-sidebar.html"
+      },
+      {
+        "name": "Boxed Sidebar",
+        "path": "docs_boxed_sidebar.html"
+      }
+    ]
+  },
+  {
+    "name": "Components",
+    "section_id": "portfolio",
+    "children": [
+      {
+        "name": "Banner",
+        "path": "docs_docs_component_banner.html"
+      },
+      {
+        "name": "Sidebar",
+        "path": "docs_component_sidebar.html"
+      }
+    ]
+  },
+  {
+    "name": "Basic styling",
+    "section_id": "portfolio",
+    "children": [
+      {
+        "name": "Banner",
+        "path": "docs_component_banner.html"
+      },
+      {
+        "name": "Sidebar",
+        "path": "component_sidebar.html"
+      }
+    ]
+  },
+  {
+    "name": "Elements",
+    "section_id": "portfolio",
+    "children": [
+      {
+        "name": "Banner",
+        "path": "docs_docs_component_banner.html"
+      },
+      {
+        "name": "Sidebar",
+        "path": "component_sidebar.html"
+      }
+    ]
+  }
+]

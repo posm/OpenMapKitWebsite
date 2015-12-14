@@ -1,121 +1,8 @@
 ---
-layout: default
-section_id: home
-slides:
-  - bg: images/hero_1.jpg
-    small_title:
-      klass: bottom-to-top
-      text: The perfect theme for
-    title:
-      klass: bottom-to-top
-      text: Data collection platform
-    buttons:
-      klass: bottom-to-top
-      items:
-        - text: Learn More
-          link_to: http://themeforest.net/user/honryou/portfolio?ref=honryou
-  - bg: images/hero_2.jpg
-    klass: centered-text
-    small_title:
-      klass: bottom-to-top
-      text: We make websites that are
-    title:
-      klass: bottom-to-top
-      text: Creative &amp; Powerful
-    buttons:
-      klass: bottom-to-top
-      items:
-        - klass: boxed
-          text: View Features
-          link_to: http://themeforest.net/user/honryou/portfolio?ref=honryou
-        - text: Purchase Now
-          link_to: http://themeforest.net/user/honryou/portfolio?ref=honryou
-  - bg:
-    small_title:
-      klass: bottom-to-top
-      text: This is a creative theme that you'll
-    title:
-      klass: bottom-to-top
-      text: definitely love...
-    buttons:
-      klass: bottom-to-top
-      items:
-        - text: Learn More
-          link_to: http://themeforest.net/user/honryou/portfolio?ref=honryou
-
-
-
-works:
-  - image:
-    title: Beautiful Girl
-    link_to: portfolio-item.html
-    klass: graphi-design
-    desc: Design &amp; Development
-  - image:
-    title: Beautiful Girl
-    link_to: portfolio-item.html
-    klass: graphi-design
-    desc: Design &amp; Development
-  - image:
-    title: Beautiful Girl
-    link_to: portfolio-item.html
-    klass: graphi-design
-    desc: Design &amp; Development
-  - image:
-    title: Beautiful Girl
-    link_to: portfolio-item.html
-    klass: graphi-design
-    desc: Design &amp; Development
-  - image:
-    title: Beautiful Girl
-    link_to: portfolio-item.html
-    klass: graphi-design
-    desc: Design &amp; Development
-  - image:
-    title: Beautiful Girl
-    link_to: portfolio-item.html
-    klass: graphi-design
-    desc: Design &amp; Development
-  - image:
-    title: Beautiful Girl
-    link_to: portfolio-item.html
-    klass: graphi-design
-    desc: Design &amp; Development
-  - image:
-    title: Beautiful Girl
-    link_to: portfolio-item.html
-    klass: graphi-design
-    desc: Design &amp; Development
-
-
-services:
-  - icon: icon_label
-    title: Title of Feature 1
-    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
-  - icon: icon_wifi
-    title: Title of Feature 2
-    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
-  - icon: icon_mapPin
-    title: Title of Feature 3
-    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
-
-milestones:
-  - icon: folder-open
-    from: 0
-    to: 69
-    title: Projects Completed
-  - icon: coffee
-    from: 0
-    to: 726
-    title: Cups of coffee offered
-  - icon: thumbs-up
-    from: 0
-    to: 59
-    title: Happy clients
-  - icon: file-text
-    from: 0
-    to: 21
-    title: Articles Published
+{
+  "layout": "default",
+  "section_id": "home"
+}
 
 ---
 
@@ -129,7 +16,7 @@ milestones:
       <span></span>
     </a>
     <ul class='sequence-pagination'>
-      {% for slide in page.slides %}
+      {% for slide in site.data.index.slides %}
         {% if forloop.first %}
           {% assign class = 'current' %}
         {% else %}
@@ -139,7 +26,7 @@ milestones:
       {% endfor %}
     </ul>
     <ul class='sequence-canvas'>
-      {% for slide in page.slides %}
+      {% for slide in site.data.index.slides %}
         {% if forloop.first %}
           {% assign style = 'static' %}
         {% else %}
@@ -151,14 +38,14 @@ milestones:
           <div class='small-title {{ slide.small_title.klass }}'>
             <div class='row'>
               <div class='large-12 columns'>
-                <h2>{{ slide.small_title.text }}</h2>
+                <h2 class="{{slide.small_title.font_color}}">{{ slide.small_title.text }}</h2>
               </div>
             </div>
           </div>
           <div class='title {{ slide.title.klass }}'>
             <div class='row'>
               <div class='large-12 columns'>
-                <h2>{{ slide.title.text }}</h2>
+                <h2 class="{{slide.title.font_color}}">{{ slide.title.text }}</h2>
               </div>
             </div>
           </div>
@@ -181,15 +68,11 @@ milestones:
 <div class="three spacing"></div>
 
 <div class="row">
+  {% for feature in site.data.index.omk_features %}
   <div class="medium-4 large-4 columns">
-    {% include icon-text.html title='Create a server' desc='Est aperiam ex sint maiores aliquam delectus minima rerum et natus rerum sit quae nostrum.' icon_class='icn-icon_survey' delay='0' shape_class='icon-text-circle' %}
+    {% include icon-text.html title=feature.title desc=feature.description icon_class=feature.icon delay='0' shape_class='icon-text-circle' %}
   </div>
-  <div class="medium-4 large-4 columns">
-    {% include icon-text.html title='Open OMK map' desc='Est aperiam ex sint maiores aliquam delectus minima rerum et natus rerum sit quae nostrum.' icon_class='icn-icon_OMK' delay='200' shape_class='icon-text-circle' %}
-  </div>
-  <div class="medium-4 large-4 columns">
-    {% include icon-text.html title='Implement survey' desc='Est aperiam ex sint maiores aliquam delectus minima rerum et natus rerum sit quae nostrum.' icon_class='icn-icn_surey_filled' delay='400' shape_class='icon-text-circle' %}
-  </div>
+  {% endfor %}
 </div>
 
 <div class="spacing"></div>
@@ -224,18 +107,43 @@ milestones:
     <!--</ul>-->
   <!--</div>-->
 <!--</div>-->
-<div class='full'>
+
+<!--<div class='full'>-->
+  <!--<div class='row'>-->
+    <!--<div class='large-12 columns'>-->
+      <!--{% include section-header.html title="How it works" %}-->
+      <!--<div class='spacing'></div>-->
+      <!--<p>-->
+          <!--{{ site.data.index.how_works.text }}-->
+      <!--</p>-->
+      <!--<div class='three spacing'></div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class='spacing'></div>-->
+<!--</div>-->
+
+<div class='full' style='background: #f5f5f5'>
   <div class='row'>
     <div class='large-12 columns'>
       {% include section-header.html title="How it works" %}
       <div class='spacing'></div>
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
+        {{ site.data.index.how_works.text }}
       </p>
-      <div class='three spacing'></div>
+      <div class='two spacing'></div>
     </div>
   </div>
-  <div class='spacing'></div>
+
+  <div class='two spacing'></div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <p class='centered-text'>
+        <a class='button' href='docs.html'>Learn More</a>
+      </p>
+    </div>
+  </div>
+  <div class='two spacing'></div>
+
 </div>
 
 <div class='full parallax' style='background-image: url(images/parallax_bg.jpg); color: #fff;'>
@@ -250,7 +158,7 @@ milestones:
     </div>
   </div>
   <div class='row'>
-    {% for milestone in page.milestones %}
+    {% for milestone in site.data.index.milestones %}
     <div class='medium-3 large-3 columns'>
       <div class='mod modMilestone'>
         <i class='fa fa-{{milestone.icon}}'></i>
@@ -271,7 +179,7 @@ milestones:
       <div class='three spacing'></div>
     </div>
     <div class='medium-6 columns'>
-      {% for service in page.services %}
+      {% for service in site.data.index.services %}
       <div class='fadein mod modIconText' data-delay='{{ 300 | times:forloop.index0 }}'>
         <div class='icon-text-simple'>
           <div class='service-icon icn-{{service.icon}}'></div>
@@ -323,82 +231,20 @@ milestones:
   <!--</div>-->
 </div>
 
-<div class='full' style='background: #f5f5f5'>
-  <div class='row'>
-    <div class='large-12 columns'>
-      {% include section-header.html title="Our recent posts" %}
-      <div class='spacing'></div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
-      </p>
-      <div class='two spacing'></div>
-    </div>
-  </div>
-
-  <div class='row'>
-    {% for post in site.posts %}
-      {% if forloop.index > 3 %}
-        {% break %}
-      {% endif %}
-
-      <div class='large-4 medium-4 columns'>
-        <div class='mod modBlogPost'>
-          {% for image in post.images %}
-            {% unless forloop.first %}
-              {% break %}
-            {% endunless %}
-            <a href="{{post.url}}"><img alt="" src="{{image}}" /></a>
-          {% endfor %}
-          <div class='content'>
-            <p class='date'>{{post.date | date: "%B %d, %Y" }}</p>
-            <h4><a href="#">{{post.title}}</a></h4>
-            <p>{{post.excerpt}}</p>
-            <!--
-              <div class="tags">
-                {% for cat in post.categories %}
-                  <a href="#">{{cat | capitalize}}</a>
-                  {% unless forloop.last %}
-                    ,
-                  {% endunless %}
-                {% endfor %}
-              </div>
-            -->
-          </div>
-        </div>
-      </div>
-
-    {% endfor %}
-
-  </div>
-
-
-  <div class='two spacing'></div>
-  <div class='row'>
-    <div class='large-12 columns'>
-      <p class='centered-text'>
-        <a class='button' href='blog.html'>See more posts</a>
-      </p>
-    </div>
-  </div>
-  <div class='two spacing'></div>
-
-</div>
-
-
 <!--{% include our-customers.html %}-->
 
 
-<div class='full no-padding' style='background: #fff'>
-  <div class='two spacing'></div>
-  <div class='mod modCallToAction'>
-    <div class='row'>
-      <div class='medium-9 large-9 columns'>
-        <p>Like what you see here? Checkout this theme and start to build your site immediately.</p>
-      </div>
-      <div class='medium-3 large-3 columns'>
-        <a class='button' href='http://themeforest.net/user/honryou/portfolio?ref=honryou'>Learn more</a>
-      </div>
-    </div>
-  </div>
-  <div class='spacing'></div>
-</div>
+<!--<div class='full no-padding' style='background: #fff'>-->
+  <!--<div class='two spacing'></div>-->
+  <!--<div class='mod modCallToAction'>-->
+    <!--<div class='row'>-->
+      <!--<div class='medium-9 large-9 columns'>-->
+        <!--<p>Like what you see here? Checkout this theme and start to build your site immediately.</p>-->
+      <!--</div>-->
+      <!--<div class='medium-3 large-3 columns'>-->
+        <!--<a class='button' href='http://themeforest.net/user/honryou/portfolio?ref=honryou'>Learn more</a>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class='spacing'></div>-->
+<!--</div>-->
