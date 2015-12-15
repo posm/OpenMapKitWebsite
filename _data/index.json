@@ -107,37 +107,37 @@
     {
       "icon": "icon_label",
       "title": "Open Street Map Tags",
-      "desc": "Include standard OpenStreetMap tags  in your survey"
+      "desc": "Use Excel to author a survey including standard OpenStreetMap tags"
     },
     {
       "icon": "icon_wifi",
       "title": "Points of Interest",
-      "desc": "Create new Points of Interest and load those into OpenStreetMap. Simply drop a pin to create a POI and add tags"
+      "desc": "Create new Points of Interest and load into OpenStreetMap. Simply drop a pin to create a POI and add tags"
     },
     {
       "icon": "icon_mapPin",
       "title": "Collect Surveys",
-      "desc": "Securely collect your survey results in FormHub or OpenMapKit Server.   Save your edits and upload your public data to OpenStreetMap"
+      "desc": "Securely collect your survey results in OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap"
     }
   ],
   "milestones": [
     {
       "icon": "folder-open",
       "from": 0,
-      "to": 69,
+      "to": 9,
       "title": "Projects Completed"
     },
     {
       "icon": "coffee",
       "from": 0,
-      "to": 726,
-      "title": "Cups of coffee offered"
+      "to": 3900,
+      "title": "OSM Edits"
     },
     {
       "icon": "thumbs-up",
       "from": 0,
-      "to": 59,
-      "title": "Happy clients"
+      "to": 5,
+      "title": "Country Deployments"
     },
     {
       "icon": "file-text",
