@@ -148,23 +148,23 @@
   ],
   "how_works": {
     "title": "How it works",
-    "text": "OpenMapKit launches directly from OpenDataKit when the OSM question type is enabled in a standard survey. Simply include OSM questions and tags in your survey to collect information on OSM in the field."
+    "text": "OpenMapKit launches directly from OpenDataKit when the OSM question type is enabled in a standard survey. Simply include OSM questions and tags in your survey to collect information on OSM in the field. OpenMapKit confirms to the XForm standard and allows complex questions and logic right in the survey form. "
   },
   "omk_features": [
     {
       "icon": "icn-icon_survey",
       "title": "Create a Survey",
-      "description": "Include standard OpenStreetMap tags in your survey"
+      "description": "Use Excel to author a new survey. Include standard OpenStreetMap tags in your forms"
     },
     {
       "icon": "icn-icon_OMK",
       "title": "Open OMK App",
-      "description": "Create new Points of Interest and load those into OpenStreetMap. Simply drop a pin to create a POI and add tags"
+      "description": "Use the app to answer questions in the field. Drop a pin to create new Points of Interest or update information already on the map"
     },
     {
       "icon": "icn-icn_surey_filled",
       "title": "Implement Survey",
-      "description": "Securely collect your survey results in FormHub or OpenMapKit Server.   Save your edits and upload your public data to OpenStreetMap"
+      "description": "Securely collect your survey results in FormHub or OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap"
     }
   ]
 }
