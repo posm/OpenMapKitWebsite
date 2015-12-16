@@ -8,15 +8,5 @@
     "name": "Documentation",
     "path": "docs.html",
     "section_id": "docs"
-  },
-  {
-    "name": "About",
-    "path": "about.html",
-    "section_id": "about"
-  },
-  {
-    "name": "Blog",
-    "path": "blog/",
-    "section_id": "blog"
   }
 ]
