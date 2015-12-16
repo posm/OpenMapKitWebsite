@@ -2,17 +2,21 @@
    font-size:14px;
  }
 
+ .brand-green {
+     color: #639B3D;
+ }
+
  /* Navbar logo */
  .top-bar .title-area .name h1 a {
      font-size: 150px;
      position: relative;
      bottom: 25px;
-     color:#fff;
+     color:#5E695C;
  }
 
  /** Navbar when expanded */
  .top-bar.expanded .title-area {
-     background: #639B3D;
+     background: #fff;
  }
 
  .contain-to-grid .top-bar-section ul li {
@@ -20,7 +24,7 @@
  }
 
  .top-bar .toggle-topbar.menu-icon a {
-     color: #fff;
+     color: #639B3D;
  }
 
  .top-bar.expanded .toggle-topbar a {
@@ -28,7 +32,7 @@
  }
 
  .top-bar, .contain-to-grid {
-     background-color: #639B3D;
+     background-color: #fff;
  }
 
  .f-topbar-fixed.shrink .top-bar .title-area, .f-topbar-fixed.shrink .top-bar .title-area li, .f-topbar-fixed.shrink .top-bar .title-area a {
@@ -55,13 +59,13 @@
      text-align: center;
  }
 
+ .modIconText .icon-text-circle:hover i {
+     color: #639B3D;
+ }
 
- /** theDocs header **/
-
- /*.navbar-toggle {*/
-     /*float: left;*/
-     /*margin: 0px;*/
- /*}*/
+ .modSectionHeader .special-title h2::after {
+     background: #639B3D;
+ }
 
  @media (max-width: 767px) {
      .open-sidebar .contain-to-grid.sticky.fixed, .open-sidebar .contain-to-grid.sticky, body.open-sidebar {
@@ -87,10 +91,35 @@
      bottom:0 !important;
  }
 
- .black-font {
-     color: #000 !important;
+ .hero2-font {
+     color: #464646 !important;
  }
+
+ .hero2-spacing {
+     font-size: 3.14286rem;
+     line-height: 3.14286rem;
+ }
+
 /** Hero text **/
  .modDefaultSlider .sequence .title h2, .modDefaultSlider .sequence .small-title h2 {
      text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.35);
  }
+
+ /** Buttons **/
+ .button {
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     color: #fff;
+     background: #639B3D;
+     border: 2px solid #639B3D;
+ }
+
+ .button:hover {
+     background-color: rgba(99, 155, 61, 0.8);
+ }
+
+ .modMilestone i {
+     background: #639B3D;
+ }
+
+

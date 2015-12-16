@@ -1,0 +1,8 @@
+{
+    "name": "Documentation",
+    "section_id": "docs-home",
+    "header":{
+        "title":"OMK Platform Documentation",
+        "text": "is a html online documentation template which can help you rapidly develop your next software's documentation. It can be used for documenting API, frameworks,plugins, templates, etc. It's based on Bootstrap and contains a lot of components to easily makeyour interactive documentation."
+    }
+}

@@ -6,7 +6,6 @@
 
 ---
 
-
 <div class='mod modDefaultSlider'>
   <div class='sequence' data-autostop='on' data-timeout='0'>
     <a class='sequence-prev' href='javascript:void(0);'>
@@ -37,14 +36,14 @@
           <div class='bg' style='background-image: url({{ slide.bg}});'></div>
           <div class='small-title {{ slide.small_title.klass }}'>
             <div class='row'>
-              <div class='large-12 columns'>
+              <div class='small-8 medium-12 large-12 columns'>
                 <h2 class="{{slide.small_title.font_color}}">{{ slide.small_title.text }}</h2>
               </div>
             </div>
           </div>
           <div class='title {{ slide.title.klass }}'>
             <div class='row'>
-              <div class='large-12 columns'>
+              <div class='small-6 medium-6 large-6 columns'>
                 <h2 class="{{slide.title.font_color}}">{{ slide.title.text }}</h2>
               </div>
             </div>
@@ -54,7 +53,7 @@
               <div class='large-12 columns'>
                 <div class='two spacing'></div>
                 {% for button in slide.buttons.items %}
-                  <a class='button {{ button.klass }}' href='{{ button.link_to }}'>{{ button.text }}</a>
+                  <a class='button' href='{{ button.link_to }}'>{{ button.text }}</a>
                 {% endfor %}
               </div>
             </div>
@@ -76,51 +75,6 @@
 </div>
 
 <div class="spacing"></div>
-
-<!--<div class="full" style="background: #f5f5f5;">-->
-  <!--<div class="row">-->
-    <!--<div class="large-12 columns">-->
-      <!--{% include section-header.html title="Our works" %}-->
-      <!--<div class="spacing"></div>-->
-      <!--<p>-->
-        <!--Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.-->
-      <!--</p>-->
-      <!--<div class="three spacing"></div>-->
-    <!--</div>-->
-  <!--</div>-->
-
-  <!--<div class="mod modGallery">-->
-    <!--<ul class="gallery small-block-grid-2 medium-block-grid-3 large-block-grid-4">-->
-      <!--{% for work in page.works %}-->
-        <!--<li class="{{ work.klass }}">-->
-          <!--<a href='{{ work.link_to }}'>-->
-            <!--<img alt="" src="{{ work.image }}" />-->
-            <!--<div class='overlay'>-->
-              <!--<div class='thumb-info'>-->
-                <!--<h3>{{ work.title }}</h3>-->
-                <!--<p>{{ work.desc }}</p>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--{% endfor %}-->
-    <!--</ul>-->
-  <!--</div>-->
-<!--</div>-->
-
-<!--<div class='full'>-->
-  <!--<div class='row'>-->
-    <!--<div class='large-12 columns'>-->
-      <!--{% include section-header.html title="How it works" %}-->
-      <!--<div class='spacing'></div>-->
-      <!--<p>-->
-          <!--{{ site.data.index.how_works.text }}-->
-      <!--</p>-->
-      <!--<div class='three spacing'></div>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<div class='spacing'></div>-->
-<!--</div>-->
 
 <div class='full' style='background: #f5f5f5'>
   <div class='row'>
@@ -174,8 +128,8 @@
 
 <div class='full'>
   <div class='row'>
-    <div class='medium-6 columns'>
-      <img class="fadeinleft" alt="" src="images/large_phone.jpg" />
+    <div class='medium-6 columns text-center'>
+      <img class="fadeinleft" alt="" src="images/large_phone.png" />
       <div class='three spacing'></div>
     </div>
     <div class='medium-6 columns'>
@@ -191,60 +145,4 @@
       {% endfor %}
     </div>
   </div>
-
-  <!--<div class='row'>-->
-    <!--<div class='large-12 columns'>-->
-      <!--{% include section-header.html title="Our team" %}-->
-      <!--<div class='spacing'></div>-->
-      <!--<p>-->
-        <!--Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.-->
-      <!--</p>-->
-      <!--<div class='two spacing'></div>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<div class='row'>-->
-    <!--{% for member in site.data.members %}-->
-      <!--<div class='small-6 medium-3 large-3 columns'>-->
-        <!--<div class='mod modTeamMember'>-->
-          <!--<div class='member'>-->
-            <!--<img class="avatar" alt="" src="{{ member.avatar }}" />-->
-            <!--<div class='overlay'>-->
-              <!--<div class='intro'>-->
-                <!--<h3>{{member.name}}</h3>-->
-                <!--<p>{{member.position}}</p>-->
-                <!--<ul class='socials'>-->
-                  <!--{% for social in member.socials %}-->
-                    <!--<li>-->
-                      <!--<a href='{{social.link}}'>-->
-                        <!--<i class='fa fa-{{social.icon}}'></i>-->
-                      <!--</a>-->
-                    <!--</li>-->
-                  <!--{% endfor %}-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class='two spacing'></div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--{% endfor %}-->
-  <!--</div>-->
 </div>
-
-<!--{% include our-customers.html %}-->
-
-
-<!--<div class='full no-padding' style='background: #fff'>-->
-  <!--<div class='two spacing'></div>-->
-  <!--<div class='mod modCallToAction'>-->
-    <!--<div class='row'>-->
-      <!--<div class='medium-9 large-9 columns'>-->
-        <!--<p>Like what you see here? Checkout this theme and start to build your site immediately.</p>-->
-      <!--</div>-->
-      <!--<div class='medium-3 large-3 columns'>-->
-        <!--<a class='button' href='http://themeforest.net/user/honryou/portfolio?ref=honryou'>Learn more</a>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<div class='spacing'></div>-->
-<!--</div>-->

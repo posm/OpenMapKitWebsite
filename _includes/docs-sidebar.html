@@ -1,8 +1,8 @@
 <!-- Sidebar -->
 <aside class="col-md-3 col-sm-3 sidebar sidebar-line">
 
-    <ul class="sidenav dropable sticky">
-        {% for item in site.data.docnav %}
+    <ul class="sidenav sticky">
+        {% for item in site.data.docs-contents %}
 
         {% if item.name == "Overview" %}
         <li><a class="active" href="{{site.baseurl}}/{{item.path}}">{{ item.name }}</a></li>
@@ -10,7 +10,7 @@
         <li>
             <a href="#">{{ item.name }}</a>
             {% if item.children %}
-            <ul>
+            <ul class="open">
                 {% for child in item.children %}
                 <li><a href="{{site.baseurl}}/{{child.path}}"> {{child.name}}</a></li>
                 {% endfor %}
@@ -21,23 +21,6 @@
         {% endif %}
 
         {% endfor %}
-
-        <!--<li>-->
-        <!--<a href="#">Elements</a>-->
-        <!--<ul>-->
-        <!--<li><a href="element_toc.html">Table of contents</a></li>-->
-        <!--<li><a href="element_code.html">Code view</a></li>-->
-        <!--<li><a href="element_view.html">Views</a></li>-->
-        <!--<li><a href="element_promo.html">Promo</a></li>-->
-        <!--<li><a href="element_files.html">Included files</a></li>-->
-        <!--<li><a href="element_requirement.html">Requirements</a></li>-->
-        <!--<li><a href="element_tab.html">Tabs</a></li>-->
-        <!--<li><a href="element_step.html">Steps</a></li>-->
-        <!--<li><a href="element_media.html">Media</a></li>-->
-        <!--<li><a href="element_jumbotron.html">Jumbotron</a></li>-->
-        <!--<li><a href="element_faq.html">FAQ</a></li>-->
-        <!--</ul>-->
-        <!--</li>-->
 
     </ul>
 

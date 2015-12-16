@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Overview",
+    "path": "index.html",
+    "section_id": "home"
+  },
+  {
+    "name": "Developers",
+    "section_id": "developers",
+    "children": [
+      {
+        "name": "Sub Section 1",
+        "path": "docs_component_banner.html"
+      },
+      {
+        "name": "Sub Section 2",
+        "path": "docs_component_sidebar.html"
+      }
+    ]
+  },
+  {
+    "name": "Users",
+    "section_id": "users",
+    "children": [
+      {
+        "name": "Sub Section 1",
+        "path": "docs_docs_component_banner.html"
+      }
+    ]
+  },
+  {
+    "name": "Setup",
+    "section_id": "portfolio",
+    "children": [
+      {
+        "name": "Sub section 1",
+        "path": "docs_component_banner.html"
+      },
+      {
+        "name": "Sub Section 2",
+        "path": "component_sidebar.html"
+      }
+    ]
+  },
+  {
+    "name": "Tutorials",
+    "section_id": "tutorials",
+    "children": [
+      {
+        "name": "Sub Section 1",
+        "path": "docs_docs_component_banner.html"
+      }
+    ]
+  }
+]

@@ -5,15 +5,12 @@
     {
       "bg": "images/hero_1.jpg",
       "small_title": {
-        "klass": "bottom-to-top",
         "text": "Open Map Kit"
       },
       "title": {
-        "klass": "bottom-to-top",
         "text": "The Open Data Collection Platform"
       },
       "buttons": {
-        "klass": "bottom-to-top",
         "items": [
           {
             "text": "Learn More",
@@ -27,12 +24,12 @@
       "small_title": {
         "klass": "bottom-to-top",
         "text": "Open Data Collection Platform",
-        "font_color":"black-font"
+        "font_color":"hero2-font"
       },
       "title": {
         "klass": "bottom-to-top",
         "text": "Field data collection integrated with Open Street Map Editing",
-        "font_color": "black-font"
+        "font_color": "hero2-font hero2-spacing"
       },
       "buttons": {
         "klass": "bottom-to-top",
@@ -43,64 +40,6 @@
           }
         ]
       }
-    }
-  ],
-  "works": [
-    {
-      "image": null,
-      "title": "Beautiful Girl",
-      "link_to": "portfolio-item.html",
-      "klass": "graphi-design",
-      "desc": "Design &amp; Development"
-    },
-    {
-      "image": null,
-      "title": "Beautiful Girl",
-      "link_to": "portfolio-item.html",
-      "klass": "graphi-design",
-      "desc": "Design &amp; Development"
-    },
-    {
-      "image": null,
-      "title": "Beautiful Girl",
-      "link_to": "portfolio-item.html",
-      "klass": "graphi-design",
-      "desc": "Design &amp; Development"
-    },
-    {
-      "image": null,
-      "title": "Beautiful Girl",
-      "link_to": "portfolio-item.html",
-      "klass": "graphi-design",
-      "desc": "Design &amp; Development"
-    },
-    {
-      "image": null,
-      "title": "Beautiful Girl",
-      "link_to": "portfolio-item.html",
-      "klass": "graphi-design",
-      "desc": "Design &amp; Development"
-    },
-    {
-      "image": null,
-      "title": "Beautiful Girl",
-      "link_to": "portfolio-item.html",
-      "klass": "graphi-design",
-      "desc": "Design &amp; Development"
-    },
-    {
-      "image": null,
-      "title": "Beautiful Girl",
-      "link_to": "portfolio-item.html",
-      "klass": "graphi-design",
-      "desc": "Design &amp; Development"
-    },
-    {
-      "image": null,
-      "title": "Beautiful Girl",
-      "link_to": "portfolio-item.html",
-      "klass": "graphi-design",
-      "desc": "Design &amp; Development"
     }
   ],
   "services": [
