@@ -3,7 +3,7 @@
 
 @charset "UTF-8";
 
-@import "foundation/settings";
+@import "../_sass/foundation/settings";
 
 // Foundation by ZURB
 // foundation.zurb.com
@@ -12,40 +12,40 @@
 // Make sure the charset is set appropriately
 
 // Behold, here are all the Foundation components.
-  @import "foundation/components/grid";
-  @import "foundation/components/accordion";
-  @import "foundation/components/alert-boxes";
-  @import "foundation/components/block-grid";
-  @import "foundation/components/breadcrumbs";
-  @import "foundation/components/button-groups";
-  @import "foundation/components/buttons";
-  @import "foundation/components/clearing";
-  @import "foundation/components/dropdown";
-  @import "foundation/components/dropdown-buttons";
-  @import "foundation/components/flex-video";
-  @import "foundation/components/forms";
-  @import "foundation/components/icon-bar";
-  @import "foundation/components/inline-lists";
-  @import "foundation/components/joyride";
-  @import "foundation/components/keystrokes";
-  @import "foundation/components/labels";
-  @import "foundation/components/magellan";
-  @import "foundation/components/orbit";
-  @import "foundation/components/pagination";
-  @import "foundation/components/panels";
-  @import "foundation/components/pricing-tables";
-  @import "foundation/components/progress-bars";
-  @import "foundation/components/range-slider";
-  @import "foundation/components/reveal";
-  @import "foundation/components/side-nav";
-  @import "foundation/components/split-buttons";
-  @import "foundation/components/sub-nav";
-  @import "foundation/components/switches";
-  @import "foundation/components/tables";
-  @import "foundation/components/tabs";
-  @import "foundation/components/thumbs";
-  @import "foundation/components/tooltips";
-  @import "foundation/components/top-bar";
-  @import "foundation/components/type";
-  @import "foundation/components/offcanvas";
-  @import "foundation/components/visibility";
+  @import "../_sass/foundation/components/grid";
+  @import "../_sass/foundation/components/accordion";
+  @import "../_sass/foundation/components/alert-boxes";
+  @import "../_sass/foundation/components/block-grid";
+  @import "../_sass/foundation/components/breadcrumbs";
+  @import "../_sass/foundation/components/button-groups";
+  @import "../_sass/foundation/components/buttons";
+  @import "../_sass/foundation/components/clearing";
+  @import "../_sass/foundation/components/dropdown";
+  @import "../_sass/foundation/components/dropdown-buttons";
+  @import "../_sass/foundation/components/flex-video";
+  @import "../_sass/foundation/components/forms";
+  @import "../_sass/foundation/components/icon-bar";
+  @import "../_sass/foundation/components/inline-lists";
+  @import "../_sass/foundation/components/joyride";
+  @import "../_sass/foundation/components/keystrokes";
+  @import "../_sass/foundation/components/labels";
+  @import "../_sass/foundation/components/magellan";
+  @import "../_sass/foundation/components/orbit";
+  @import "../_sass/foundation/components/pagination";
+  @import "../_sass/foundation/components/panels";
+  @import "../_sass/foundation/components/pricing-tables";
+  @import "../_sass/foundation/components/progress-bars";
+  @import "../_sass/foundation/components/range-slider";
+  @import "../_sass/foundation/components/reveal";
+  @import "../_sass/foundation/components/side-nav";
+  @import "../_sass/foundation/components/split-buttons";
+  @import "../_sass/foundation/components/sub-nav";
+  @import "../_sass/foundation/components/switches";
+  @import "../_sass/foundation/components/tables";
+  @import "../_sass/foundation/components/tabs";
+  @import "../_sass/foundation/components/thumbs";
+  @import "../_sass/foundation/components/tooltips";
+  @import "../_sass/foundation/components/top-bar";
+  @import "../_sass/foundation/components/type";
+  @import "../_sass/foundation/components/offcanvas";
+  @import "../_sass/foundation/components/visibility";
