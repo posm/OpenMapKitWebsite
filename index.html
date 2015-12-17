@@ -36,24 +36,24 @@
           <div class='bg' style='background-image: url({{ slide.bg}});'></div>
           <div class='small-title {{ slide.small_title.klass }}'>
             <div class='row'>
-              <div class='small-8 medium-12 large-12 columns'>
+              <div class='small-8 medium-12 large-12 columns hero-padding'>
                 <h2 class="{{slide.small_title.font_color}}">{{ slide.small_title.text }}</h2>
               </div>
             </div>
           </div>
           <div class='title {{ slide.title.klass }}'>
             <div class='row'>
-              <div class='small-6 medium-6 large-6 columns'>
+              <div class='small-12 medium-8 large-6 columns hero-padding'>
                 <h2 class="{{slide.title.font_color}}">{{ slide.title.text }}</h2>
               </div>
             </div>
           </div>
           <div class='buttons-wrapper {{ slide.buttons.klass }}'>
             <div class='row'>
-              <div class='large-12 columns'>
+              <div class='large-12 columns hero-button-padding'>
                 <div class='two spacing'></div>
                 {% for button in slide.buttons.items %}
-                  <a class='button' href='{{ button.link_to }}'>{{ button.text }}</a>
+                  <a class='button {{button.class}}' href='{{ button.link_to }}'>{{ button.text }}</a>
                 {% endfor %}
               </div>
             </div>
@@ -69,26 +69,24 @@
 <div class="row">
   {% for feature in site.data.index.omk_features %}
   <div class="medium-4 large-4 columns">
-    {% include icon-text.html title=feature.title desc=feature.description icon_class=feature.icon delay='0' shape_class='icon-text-circle' %}
+    {% include icon-text.html title=feature.title desc=feature.description icon_class=feature.icon delay='0' link=feature.link_to shape_class='icon-text-circle' %}
   </div>
   {% endfor %}
 </div>
 
-<div class="spacing"></div>
-
 <div class='full' style='background: #f5f5f5'>
   <div class='row'>
     <div class='large-12 columns'>
-      {% include section-header.html title="How it works" %}
+      {% include section-header.html title=site.data.index.how_works.title %}
       <div class='spacing'></div>
-      <p>
-        {{ site.data.index.how_works.text }}
+      {% for paragraph in site.data.index.how_works.text %}
+      <p class="section-padding">
+        {{ paragraph }}
       </p>
-      <div class='two spacing'></div>
+      {% endfor %}
     </div>
   </div>
 
-  <div class='two spacing'></div>
   <div class='row'>
     <div class='large-12 columns'>
       <p class='centered-text'>
@@ -96,14 +94,13 @@
       </p>
     </div>
   </div>
-  <div class='two spacing'></div>
 
 </div>
 
 <div class='full parallax' style='background-image: url(images/parallax_bg.jpg); color: #fff;'>
   <div class='row'>
     <div class='large-12 columns'>
-      {% include section-header.html title="Parallax effect" color="#fff" %}
+      {% include section-header.html title="Some quick stats" color="#fff" %}
       <div class='spacing'></div>
       <p class='centered-text' style='color: #ccc;'>
         Dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.

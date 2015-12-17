@@ -13,7 +13,7 @@
       </li>
     </ul>
     <section class='top-bar-section'>
-      <ul class="right">
+      <ul class="right right-nav-spacing">
         {% for item in site.data.nav %}
           {% if item.section_id == page.section_id %}
             {% assign active_class = "active" %}
@@ -23,18 +23,18 @@
 
           {% if item.children %}
             <li class="has-dropdown {{active_class}}">
-              <a href="{{site.baseurl}}/{{ item.path }}">{{ item.name }}</a>
+              <a class="dark-grey" href="{{site.baseurl}}/{{ item.path }}">{{ item.name }}</a>
               <ul class='dropdown'>
                 {% for child in item.children %}
                   <li>
-                    <a href="{{site.baseurl}}/{{ child.path }}">{{ child.name }}</a>
+                    <a class="dark-grey" href="{{site.baseurl}}/{{ child.path }}">{{ child.name }}</a>
                   </li>
                 {% endfor %}
               </ul>
             </li>
           {% else %}
             <li class="{{active_class}}">
-              <a href="{{site.baseurl}}/{{ item.path }}">{{ item.name }}</a>
+              <a class="dark-grey" href="{{site.baseurl}}/{{ item.path }}">{{ item.name }}</a>
             </li>
           {% endif %}
         {% endfor %}

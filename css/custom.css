@@ -19,6 +19,11 @@
      background: #fff;
  }
 
+ .right-nav-spacing {
+     position: relative;
+     right: 7px;
+ }
+
  .contain-to-grid .top-bar-section ul li {
      background: #fff;
  }
@@ -43,6 +48,7 @@
  .f-topbar-fixed.shrink .top-bar .title-area img, .f-topbar-fixed.shrink .top-bar .title-area li img, .f-topbar-fixed.shrink .top-bar .title-area a {
      position: relative;
      bottom: 45px;
+     left:7px;
  }
 
  /* footer */
@@ -93,11 +99,17 @@
 
  .hero2-font {
      color: #464646 !important;
+     font-family: "Roboto";
  }
 
  .hero2-spacing {
      font-size: 3.14286rem;
      line-height: 3.14286rem;
+ }
+
+ .hero2-button {
+     position: relative;
+     bottom: 18px;
  }
 
 /** Hero text **/
@@ -122,4 +134,26 @@
      background: #639B3D;
  }
 
+.hero-padding {
+    padding:0px 0px 0px 25px;
+}
 
+.hero-button-padding {
+    padding: 0px 0px 0px 30px;
+}
+
+.roboto {
+    font-family: "Roboto";
+}
+
+.dark-grey {
+    color: #5E695C !important;;
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}
+
+.section-padding {
+    padding:0 0 0 20px;
+}
