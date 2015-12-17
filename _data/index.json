@@ -5,7 +5,7 @@
     {
       "bg": "images/hero_1.jpg",
       "small_title": {
-        "text": "Open Map Kit"
+        "text": "Streamline your workflow with"
       },
       "title": {
         "text": "The Open Data Collection Platform"
@@ -35,6 +35,7 @@
         "klass": "bottom-to-top",
         "items": [
           {
+            "class":"hero2-button",
             "text": "Get Android App",
             "link_to": "https://play.google.com/store/apps/details?id=org.redcross.openmapkit&hl=en"
           }
@@ -86,24 +87,30 @@
     }
   ],
   "how_works": {
-    "title": "How it works",
-    "text": "OpenMapKit launches directly from OpenDataKit when the OSM question type is enabled in a standard survey. Simply include OSM questions and tags in your survey to collect information on OSM in the field. OpenMapKit confirms to the XForm standard and allows complex questions and logic right in the survey form. "
+    "title": "What is OMK?",
+    "text": [
+      "OpenMapKit (OMK) is an extension of OpenDataKit allowing users to create professional quality mobile data collection surveys for field data collection.",
+      "American Red Cross, supported by USAID, created the game changing OpenMapKit.",
+      "Traditional field data collection tools for OpenStreetMap have either relied on paper or are too complicated, targeted at GIS professionals, or lack an understanding of traditional survey techniques. As new projects suchas Missing Maps (link: missingmaps.org) and other humanitarian field data collection projects focus on field data collection the need for a structured, yet simple, OpenStreetMap field data collection toolbecame apparent. OpenMapKit serves this need."]
   },
   "omk_features": [
     {
       "icon": "icn-icon_survey",
-      "title": "Create a Survey",
-      "description": "Use Excel to author a new survey. Include standard OpenStreetMap tags in your forms"
+      "title": "How to create a survey",
+      "description": "Use Excel to author a new survey. Include standard OpenStreetMap tags in your forms.",
+      "link_to": "/docs.html"
     },
     {
       "icon": "icn-icon_OMK",
-      "title": "Open OMK App",
-      "description": "Use the app to answer questions in the field. Drop a pin to create new Points of Interest or update information already on the map"
+      "title": "How to use the OMK app",
+      "description": "Use the app to answer questions in the field. Drop a pin to create new Points of Interest or update information already on the map.",
+      "link_to": "/docs.html"
     },
     {
       "icon": "icn-icn_surey_filled",
-      "title": "Implement Survey",
-      "description": "Securely collect your survey results in FormHub or OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap"
+      "title": "How to complete a survey",
+      "description": "Securely collect your survey results in FormHub or OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap.",
+      "link_to": "/docs.html"
     }
   ]
 }
