@@ -5,12 +5,15 @@
     {
       "bg": "images/hero_1.jpg",
       "small_title": {
-        "text": "Streamline your workflow with"
+        "text": "Streamline your workflow with",
+        "klass": "bottom-to-top"
       },
       "title": {
+        "klass": "bottom-to-top",
         "text": "The Open Data Collection Platform"
       },
       "buttons": {
+        "klass": "bottom-to-top",
         "items": [
           {
             "text": "Learn More",
