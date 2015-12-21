@@ -24,6 +24,10 @@
       {
         "name": "Creating OSM Basemap",
         "path": "docs_docs_component_banner.html"
+      },
+      {
+        "name": "Additional Resources",
+        "path": "docs_docs_component_banner.html"
       }
     ]
   },
