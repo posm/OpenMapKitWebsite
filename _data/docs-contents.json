@@ -4,41 +4,48 @@
     "path": "index.html",
     "section_id": "home"
   },
-  {
-    "name": "Developers",
-    "section_id": "developers",
-    "children": [
-      {
-        "name": "Sub Section 1",
-        "path": "docs_component_banner.html"
-      },
-      {
-        "name": "Sub Section 2",
-        "path": "docs_component_sidebar.html"
-      }
-    ]
-  },
+
   {
     "name": "Users",
     "section_id": "users",
     "children": [
       {
-        "name": "Sub Section 1",
+        "name": "Installation",
+        "path": "docs_docs_component_banner.html"
+      },
+      {
+        "name": "Setup",
+        "path": "docs_docs_component_banner.html"
+      },
+      {
+        "name": "Creating Surveys for OMK",
+        "path": "docs_docs_component_banner.html"
+      },
+      {
+        "name": "Creating OSM Basemap",
+        "path": "docs_docs_component_banner.html"
+      },
+      {
+        "name": "Additional Resources",
         "path": "docs_docs_component_banner.html"
       }
     ]
   },
   {
-    "name": "Setup",
-    "section_id": "portfolio",
+    "name": "For Developers",
+    "section_id": "developers",
     "children": [
       {
-        "name": "Sub section 1",
+        "name": "Architecture",
         "path": "docs_component_banner.html"
       },
       {
-        "name": "Sub Section 2",
-        "path": "component_sidebar.html"
+        "name": "Technical Specs",
+        "path": "docs_component_sidebar.html"
+      },
+      {
+        "name": "Contributing Code",
+        "path": "docs_component_sidebar.html"
       }
     ]
   },
@@ -47,9 +54,14 @@
     "section_id": "tutorials",
     "children": [
       {
-        "name": "Sub Section 1",
+        "name": "Walkthrough",
+        "path": "docs_docs_component_banner.html"
+      },
+      {
+        "name": "Sample Data",
         "path": "docs_docs_component_banner.html"
       }
     ]
+
   }
 ]
