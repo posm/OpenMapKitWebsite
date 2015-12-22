@@ -11,23 +11,23 @@
     "children": [
       {
         "name": "Installation",
-        "path": "CreateSurveyForOMK.html"
+        "path": "docs_CreateSurveyForOMK.html"
       },
       {
         "name": "Setup",
-        "path": "CreateSurveyForOMK.html"
+        "path": "docs_CreateSurveyForOMK.html"
       },
       {
         "name": "Creating Surveys for OMK",
-        "path": "CreateSurveyForOMK.html"
+        "path": "docs_CreateSurveyForOMK.html"
       },
       {
         "name": "Creating OSM Basemap",
-        "path": "CreateSurveyForOMK.html"
+        "path": "docs_CreateSurveyForOMK.html"
       },
       {
         "name": "Additional Resources",
-        "path": "CreateSurveyForOMK.html"
+        "path": "docs_CreateSurveyForOMK.html"
       }
     ]
   },
@@ -55,11 +55,11 @@
     "children": [
       {
         "name": "Walkthrough",
-        "path": "CreateSurveyForOMK.html"
+        "path": "docs_CreateSurveyForOMK.html"
       },
       {
         "name": "Sample Data",
-        "path": "CreateSurveyForOMK.html"
+        "path": "docs_CreateSurveyForOMK.html"
       }
     ]
 
