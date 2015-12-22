@@ -161,7 +161,7 @@
 }
 
 .sidenav-margin {
-    margin-left:25px;
+    margin-left:35px;
 }
 
 .hero2-text-position {
@@ -171,3 +171,13 @@
 .screenshot {
     height:600px;
 }
+
+@media (min-width: 960px) {
+    .docs-nav-width {
+        max-width: none !important;
+    }
+}
+
+ .sidenav ul {
+      padding-left: 0 !important
+ }
