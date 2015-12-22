@@ -24,6 +24,7 @@
     },
     {
       "bg": "images/hero_2.jpg",
+      "position":"hero2-text-position",
       "small_title": {
         "klass": "bottom-to-top",
         "text": "Open Data Collection Platform",

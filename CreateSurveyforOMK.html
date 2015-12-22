@@ -1,0 +1,96 @@
+---
+layout: docs-default
+title: Users
+section_id: docs-users
+---
+
+<body>
+
+<main class="container">
+
+    <div class="row">
+
+        {% include docs-sidebar.html %}
+
+        <article class="col-lg-10 col-md-9 col-sm-9 main-content" role="main">
+
+            <header>
+                <h1>{{site.data.CreateSurveyforOMK.title}}</h1>
+
+                <ol class="toc">
+                    <li>
+                        <a href="#main-description">Description</a>
+                    </li>
+                    {% for section in site.data.CreateSurveyforOMK.sections %}
+                    <li>
+                        <a href="#{{section.id}}">{{section.id}}</a>
+                        <!--<ol>-->
+                            <!--<li><a href="#">Sub topic 1</a></li>-->
+                            <!--<li><a href="#">Sub topic 2</a></li>-->
+                        <!--</ol>-->
+                    </li>
+                    {% endfor %}
+                </ol>
+
+
+                {% for paragraph in site.data.CreateSurveyforOMK.description%}
+                <p id="main-description">{{paragraph.main}}</p>
+                {%if paragraph.points%}
+                <ol>
+                    {% for pts in paragraph.points%}
+                    <li>{{pts}}</li>
+                    {% endfor%}
+                </ol>
+                {% endif %}
+                {% endfor %}
+            </header>
+
+            {% for section in site.data.CreateSurveyforOMK.sections %}
+            <section>
+                <h3 id="{{section.id}}">{{ section.title }}</h3>
+
+                {% if section.image %}
+                <img src="{{site.baseurl}}/images/{{section.image.path}}"/>
+                {% endif %}
+
+                {% for paragraph in section.paragraphs%}
+                <p>
+                    {{paragraph.main}}
+                    {% if paragraph.image %}
+                    <div>
+                        <img class="{{paragraph.image.img-class}}" src="{{site.baseurl}}/images/{{paragraph.image.path}}"/>
+                    </div>
+                    {% endif %}
+
+                    {%if paragraph.points%}
+                    <ol>
+                        {% for pts in paragraph.points%}
+                        <li>{{pts}}</li>
+                        {% endfor%}
+                    </ol>
+                    {% endif %}
+
+                </p>
+                {% endfor%}
+
+
+                <!--<div class="code-window">-->
+                    <!--<div class="code-preview">-->
+                        <!--code code code-->
+                    <!--</div>-->
+                    <!--<pre class="line-numbers">-->
+                        <!--<code class="language-markup">-->
+                            <!--code code-->
+                        <!--</code>-->
+                    <!--</pre>-->
+                <!--</div>-->
+
+            </section>
+            {% endfor %}
+
+        </article>
+
+    </div>
+</main>
+
+</body>

@@ -105,8 +105,8 @@
  }
 
  .hero2-spacing {
-     font-size: 3.14286rem;
-     line-height: 3.14286rem;
+     font-size: 4.4rem !important;
+     line-height: 4.4rem !important;
  }
 
  .hero2-button {
@@ -158,4 +158,16 @@
 
 .section-padding {
     padding:0 0 0 20px;
+}
+
+.sidenav-margin {
+    margin-left:25px;
+}
+
+.hero2-text-position {
+    top:100px;
+}
+
+.screenshot {
+    height:600px;
 }

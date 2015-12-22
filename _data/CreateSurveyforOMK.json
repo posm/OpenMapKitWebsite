@@ -1,0 +1,52 @@
+{
+  "title":"Creating surveys for OMK",
+  "description":[
+    {"main":"The primary feature to the forms in OpenDataKit that we have added is the addition of the osm question type. Rather than including a geographic point or shape directly in the data of a form, we instead have an osm question that refers to an OSM file that gets created in OpenMapKit."},
+    {"main":"This is particularly important for two reasons:",
+      "points":[
+        "A survey about a specific, identifiable feature on a map is far more useful than a GPS point. There is no ambiguity about the place you are surveying.",
+        "Surveys can directly enrich OpenStreetMap by systematically adding tags to OSM features. You can create easily accessible public tag information in OpenStreetMap in addition to your private, domain specific ODK survey data."]},
+    {"main":"You can use all of the form functionality currently available in OpenDataKit, but now you can also add osm questions. An OSM question is a new 'media type', which means that it functions in the survey in the same manor as a photo or video. When an osm question is specified in a survey, ODK Collect opens OpenMapKit, providing parameters for the tags to be entered for an OSM feature that you will select."}
+  ],
+  "sections":[
+    {
+      "id":"BasicOpenMapKitExampleForm",
+      "title":"Basic OpenMapKit Example Form",
+      "paragraphs":[
+        {"main":"If you download this Basic OpenMapKit Example form, you can see a simple OSM question. This question is named osm_building. In the type column, it is defined to be osm. It also has a parameter of building_tags."},
+        {"main":"osm question", "image":{"path":"osmexampleform1.png"}},
+        {"main":"This parameter is referenced in the osm sheet, between choices and settings."}
+      ]
+    },
+    {
+      "id":"OSMSheet",
+      "title":"OSM Sheet",
+      "image":{"path":"osmexampleform2.png"},
+      "paragraphs":[
+        {"main":"osm sheet"},
+        {
+          "main":"The osm sheet has three columns: list name, name, and label. This sheet defines the tagging parameters that will be sent to OpenMapKit.",
+          "image":{"path":"osmexampleform3.png"}
+        },
+        {"main":"columns"},
+        {
+          "main":"list name has two functions.",
+          "points":[
+            "It defines the set of tags that OpenMapKit will add to an OSM feature.",
+            "It defines the set of tag values selectable for a given OSM tag. (optional)"
+          ]
+        },
+        {"main":"In the survey sheet, our osm_building question had a type parameter of building_tabs. In the osm sheet, we have several rows with the list name of building_tabs. This is the set of OSM tags the user will answer in OpenMapKit."},
+        {"main:":"The set of OSM tags has a list name suffix of _tags. The values in the name column are the tag keys that are recognized in OSM. The values in the label column are the labels that will be presented to the user when entering values for the given OSM tag."},
+        {"main":"Often times we do not want the user directly typing in values for an OSM tag. Typing in a specific string value is error prone, and if there is a set of possible values that we want for a given tag, we want to present these values as a multiple choice question to the user."},
+        {"main":"Notice that one of the building_tags has the name building.", "image":{"path":"osmexampleform4.png"}},
+        {"main":"building_tags"},
+        {"main":"We want to give the user multiple choices of values for a building tag. These are the corresponding tag value choices that will be presented to the user in OpenMapKit:","image":{"path":"osmexampleform5.png"}},
+        {"main":"value choices"},
+        {"main":"This step is optional, and if you do not provide a set of tag values, the user will manually type in a value for a given question."},
+        {"main":"Multiple Choice OpenMapKit Tag Question", "image":{"path":"osmexampleform6.png","img-class":"screenshot"}},
+        {"main":"Manual String Value OpenMapKit Tag Question", "image":{"path":"osmexampleform7.png", "img-class":"screenshot"}}
+      ]
+    }
+  ]
+}

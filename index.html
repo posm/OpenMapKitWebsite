@@ -34,16 +34,16 @@
 
         <li class='frame {{style}} {{ slide.klass }}'>
           <div class='bg' style='background-image: url({{ slide.bg}});'></div>
-          <div class='small-title {{ slide.small_title.klass }}'>
+          <div class='small-title {{ slide.small_title.klass }} {{slide.position}}'>
             <div class='row'>
               <div class='small-8 medium-12 large-12 columns hero-padding'>
                 <h2 class="{{slide.small_title.font_color}}">{{ slide.small_title.text }}</h2>
               </div>
             </div>
           </div>
-          <div class='title {{ slide.title.klass }}'>
+          <div class='title {{ slide.title.klass }} {{slide.position}}'>
             <div class='row'>
-              <div class='small-12 medium-8 large-6 columns hero-padding'>
+              <div class='small-12 medium-6 large-6 columns hero-padding'>
                 <h2 class="{{slide.title.font_color}}">{{ slide.title.text }}</h2>
               </div>
             </div>
