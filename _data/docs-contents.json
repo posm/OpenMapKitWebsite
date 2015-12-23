@@ -11,7 +11,7 @@
     "children": [
       {
         "name": "Installation",
-        "path": "docs_createomksurvey.html"
+        "path": "docs_install.html"
       },
       {
         "name": "Setup",
@@ -19,11 +19,11 @@
       },
       {
         "name": "Creating Surveys for OMK",
-        "path": "docs_createomksurvey.html"
+        "path": "docs_odkformsforomk.html"
       },
       {
         "name": "Creating OSM Basemap",
-        "path": "docs_createomksurvey.html"
+        "path": "docs_creatingbasemaps.html"
       },
       {
         "name": "Additional Resources",
