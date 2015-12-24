@@ -37,15 +37,15 @@
     "children": [
       {
         "name": "Architecture",
-        "path": "docs_component_banner.html"
+        "path": "docs_developers.html"
       },
       {
         "name": "Technical Specs",
-        "path": "docs_component_sidebar.html"
+        "path": "docs_developers.html"
       },
       {
         "name": "Contributing Code",
-        "path": "docs_component_sidebar.html"
+        "path": "docs_developers.html"
       }
     ]
   },
