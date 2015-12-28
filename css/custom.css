@@ -174,7 +174,7 @@
 
 @media (min-width: 960px) {
     .docs-nav-width {
-        max-width: none !important;
+        /*max-width: none !important;*/
     }
 }
 
