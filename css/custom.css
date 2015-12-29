@@ -257,3 +257,8 @@
  .open-sidebar #new-sidebar .new-sidebar-content {
      top: 20px;
  }
+
+ #footer {
+     position: relative;
+     top: 50%;
+ }
