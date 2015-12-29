@@ -231,6 +231,7 @@
 
  #new-sidebar~.new-sidebar-main-padding {
      padding: 50px 50px 50px 315px;
+     min-height: 467px;
  }
 
  @media screen and (max-width: 767px) {
@@ -247,8 +248,8 @@
      right: 0px !important;
      display: block !important;
      top: 0;
-     left: 80px;
      width: 80%;
+     left: inherit;
      height: 100%;
      overflow-y: auto;
  }
