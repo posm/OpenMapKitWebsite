@@ -1,12 +1,12 @@
-The primary feature to the forms in OpenDataKit that we have added is the addition of the `osm` question type. Rather than including a geographic point or shape directly in the data of a form, we instead have an `osm` question that refers to an OSM file that gets created in OpenMapKit.
+We've extended forms in the OpenDataKit to include a new *osm* question type. Rather than including a geographic point or shape directly in the data of a form, we instead have an *osm* question that refers to an OpenStreetMap file that gets created within OpenMapKit.
 
 This is particularly important for two reasons:
 
-1. A survey about a specific, identifiable feature on a map is far more useful than a GPS point. There is no ambiguity about the __place__ you are surveying.
+1. A survey about a specific, identifiable feature on a map is far more useful than a GPS point. There is no ambiguity about the **place** you are surveying.
 
-2. Surveys can directly enrich OpenStreetMap by systematically adding tags to OSM features. You can create easily accessible public tag information in OpenStreetMap in addition to your private, domain specific ODK survey data.
+2. Field surveys can directly enrich OpenStreetMap by systematically adding tags to existing OSM features. You can easily create public tags for OpenStreetMap in addition to your private, domain specific ODK survey data.
 
-You can use all of the form functionality currently available in OpenDataKit, but now you can also add `osm` questions. An OSM question is a new "media type", which means that it functions in the survey in the same manor as a photo or video. When an `osm` question is specified in a survey, ODK Collect opens OpenMapKit, providing parameters for the tags to be entered for an OSM feature that you will select.
+You can use all of the form functionality currently available in OpenDataKit, but now you can also add *osm* questions. An OSM question is a new "media type" that functions in the survey in the same manor as a photo or video. When an *osm* question is specified in a survey, ODK Collect opens OpenMapKit, providing parameters for the tags to be entered for an OSM feature that you will select.
 
 ## Basic OpenMapKit Example Form
 
@@ -18,7 +18,7 @@ This parameter is referenced in the _osm sheet_, between choices and settings.
 
 ## OSM Sheet
 
-![osm sheet](https://cloud.githubusercontent.com/assets/556367/7404929/9418893c-ee9f-11e4-9249-b684ff33e16a.png)
+osm sheet
 
 The _osm sheet_ has three columns: list name, name, and label. This sheet defines the tagging parameters that will be sent to OpenMapKit.
 
@@ -49,3 +49,4 @@ This step is optional, and if you do not provide a set of tag values, the user w
 Multiple Choice OpenMapKit Tag Question             |  Manual String Value OpenMapKit Tag Question
 :-------------------------:|:-------------------------:
 ![multiple choice question](https://cloud.githubusercontent.com/assets/556367/7404896/31078528-ee9f-11e4-851f-a8943a66584b.png)  |  ![string value question](https://cloud.githubusercontent.com/assets/556367/7404898/37291566-ee9f-11e4-9f23-b5eee42bdfea.png)
+
