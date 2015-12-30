@@ -17,3 +17,4 @@ gems: ["jekyll-paginate", "rouge", "kramdown","jekyll-watch", "markdown"]
 
 paginate: 3
 paginate_path: "blog/page:num"
+
