@@ -5,7 +5,7 @@
     {
       "bg": "images/hero_1.jpg",
       "small_title": {
-        "text": "Streamline your workflow with",
+        "text": "Open Map Kit",
         "klass": "bottom-to-top"
       },
       "title": {
@@ -17,7 +17,7 @@
         "items": [
           {
             "text": "Learn More",
-            "link_to": "/docs.html"
+            "link_to": "docs.html"
           }
         ]
       }
@@ -51,17 +51,17 @@
     {
       "icon": "icon_label",
       "title": "Open Street Map Tags",
-      "desc": "Use Excel to author a survey including standard OpenStreetMap tags"
+      "desc": "Include standard OpenStreetMap tags in your survey."
     },
     {
       "icon": "icon_wifi",
       "title": "Points of Interest",
-      "desc": "Create new Points of Interest and load into OpenStreetMap. Simply drop a pin to create a POI and add tags"
+      "desc": "Create new Points of Interest and load those into OpenStreetMap. Simply drop a pin to create a POI and add tags."
     },
     {
       "icon": "icon_mapPin",
       "title": "Collect Surveys",
-      "desc": "Securely collect your survey results in OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap"
+      "desc": "Securely collect your survey results in OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap."
     }
   ],
   "milestones": [
@@ -91,30 +91,29 @@
     }
   ],
   "how_works": {
-    "title": "What is OMK?",
+    "title": "How it works",
     "text": [
       "OpenMapKit (OMK) is an extension of OpenDataKit allowing users to create professional quality mobile data collection surveys for field data collection.",
-      "American Red Cross, supported by USAID, created the game changing OpenMapKit.",
-      "Traditional field data collection tools for OpenStreetMap have either relied on paper or are too complicated, targeted at GIS professionals, or lack an understanding of traditional survey techniques. As new projects suchas Missing Maps (link: missingmaps.org) and other humanitarian field data collection projects focus on field data collection the need for a structured, yet simple, OpenStreetMap field data collection toolbecame apparent. OpenMapKit serves this need."]
+      "OpenMapKit launches directly from OpenDataKit when the OSM question type is enabled in a standard survey. Simply include OSM questions and tags in your survey to collect information on OSM in the field."]
   },
   "omk_features": [
     {
       "icon": "icn-icon_survey",
       "title": "How to create a survey",
-      "description": "Use Excel to author a new survey. Include standard OpenStreetMap tags in your forms.",
-      "link_to": "/docs.html"
+      "description": "Use XForms (link) to create a standard survey using OpenDataKit.",
+      "link_to": "docs_odkformsforomk.html"
     },
     {
       "icon": "icn-icon_OMK",
-      "title": "How to use the OMK app",
-      "description": "Use the app to answer questions in the field. Drop a pin to create new Points of Interest or update information already on the map.",
-      "link_to": "/docs.html"
+      "title": "Open OMK App",
+      "description": "The OpenStreetMap question launches the OMK app to enable OpenStreetMap editing.",
+      "link_to": "docs.html"
     },
     {
       "icon": "icn-icn_surey_filled",
-      "title": "How to complete a survey",
-      "description": "Securely collect your survey results in FormHub or OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap.",
-      "link_to": "/docs.html"
+      "title": "Implement Survey",
+      "description": "Take your survey to the field to collect data and geographic information.",
+      "link_to": "docs_odkformsforomk.html"
     }
   ]
 }
