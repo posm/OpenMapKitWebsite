@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   OpenMapKitWebsite is the website for the OpenMapKit project. We are moving all training
   material within the wiki to the website
 baseurl: "/OpenMapKitWebsite" # the subpath of your site, e.g. /blog/
-url: "http://54.201.29.191/" # the base hostname & protocol for your site
+url: "http://54.201.29.191" # the base hostname & protocol for your site
 twitter_username: OpenMapKit
 github_username:  AmericanRedCross
 
