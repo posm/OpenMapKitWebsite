@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Home",
+    "path": "index.html",
+    "section_id": "home"
+  },
+  {
+    "name": "Documentation",
+    "path": "docs.html",
+    "section_id": "docs"
+  }
+]

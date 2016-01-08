@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Overview",
+    "path": "index.html",
+    "section_id": "home"
+  },
+
+  {
+    "name": "Users",
+    "section_id": "users",
+    "children": [
+      {
+        "name": "Installation",
+        "path": "docs_install.html"
+      },
+      {
+        "name": "Setup",
+        "path": "docs_createomksurvey.html"
+      },
+      {
+        "name": "Creating Surveys for OMK",
+        "path": "docs_odkformsforomk.html"
+      },
+      {
+        "name": "Creating OSM Basemap",
+        "path": "docs_creatingbasemaps.html"
+      },
+      {
+        "name": "Additional Resources",
+        "path": "docs_createomksurvey.html"
+      }
+    ]
+  },
+  {
+    "name": "For Developers",
+    "section_id": "developers",
+    "children": [
+      {
+        "name": "Architecture",
+        "path": "docs_developers.html"
+      },
+      {
+        "name": "Technical Specs",
+        "path": "docs_developers.html"
+      },
+      {
+        "name": "Contributing Code",
+        "path": "docs_developers.html"
+      }
+    ]
+  },
+  {
+    "name": "Tutorials",
+    "section_id": "tutorials",
+    "children": [
+      {
+        "name": "Walkthrough",
+        "path": "docs_walkthrough.html"
+      },
+      {
+        "name": "Sample Data",
+        "path": "docs_sampledata.html"
+      }
+    ]
+
+  }
+]

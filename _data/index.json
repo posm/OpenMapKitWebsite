@@ -1,0 +1,119 @@
+{
+  "layout": "default",
+  "section_id": "home",
+  "slides": [
+    {
+      "bg": "images/hero_1.jpg",
+      "small_title": {
+        "text": "Open Map Kit",
+        "klass": "bottom-to-top"
+      },
+      "title": {
+        "klass": "bottom-to-top",
+        "text": "The Open Data Collection Platform"
+      },
+      "buttons": {
+        "klass": "bottom-to-top",
+        "items": [
+          {
+            "text": "Learn More",
+            "link_to": "docs.html"
+          }
+        ]
+      }
+    },
+    {
+      "bg": "images/hero_2.jpg",
+      "position":"hero2-text-position",
+      "small_title": {
+        "klass": "bottom-to-top",
+        "text": "Open Data Collection Platform",
+        "font_color":"hero2-font"
+      },
+      "title": {
+        "klass": "bottom-to-top",
+        "text": "Field data collection integrated with Open Street Map Editing",
+        "font_color": "hero2-font hero2-spacing"
+      },
+      "buttons": {
+        "klass": "bottom-to-top",
+        "items": [
+          {
+            "class":"hero2-button",
+            "text": "Get Android App",
+            "link_to": "https://play.google.com/store/apps/details?id=org.redcross.openmapkit&hl=en"
+          }
+        ]
+      }
+    }
+  ],
+  "services": [
+    {
+      "icon": "icon_label",
+      "title": "Open Street Map Tags",
+      "desc": "Include standard OpenStreetMap tags in your survey."
+    },
+    {
+      "icon": "icon_wifi",
+      "title": "Points of Interest",
+      "desc": "Create new Points of Interest and load those into OpenStreetMap. Simply drop a pin to create a POI and add tags."
+    },
+    {
+      "icon": "icon_mapPin",
+      "title": "Collect Surveys",
+      "desc": "Securely collect your survey results in OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap."
+    }
+  ],
+  "milestones": [
+    {
+      "icon": "folder-open",
+      "from": 0,
+      "to": 9,
+      "title": "Projects Completed"
+    },
+    {
+      "icon": "coffee",
+      "from": 0,
+      "to": 3900,
+      "title": "OSM Edits"
+    },
+    {
+      "icon": "thumbs-up",
+      "from": 0,
+      "to": 5,
+      "title": "Country Deployments"
+    },
+    {
+      "icon": "file-text",
+      "from": 0,
+      "to": 21,
+      "title": "Articles Published"
+    }
+  ],
+  "how_works": {
+    "title": "How it works",
+    "text": [
+      "OpenMapKit (OMK) is an extension of OpenDataKit allowing users to create professional quality mobile data collection surveys for field data collection.",
+      "OpenMapKit launches directly from OpenDataKit when the OSM question type is enabled in a standard survey. Simply include OSM questions and tags in your survey to collect information on OSM in the field."]
+  },
+  "omk_features": [
+    {
+      "icon": "icn-icon_survey",
+      "title": "How to create a survey",
+      "description": "Use XForms (link) to create a standard survey using OpenDataKit.",
+      "link_to": "docs_odkformsforomk.html"
+    },
+    {
+      "icon": "icn-icon_OMK",
+      "title": "Open OMK App",
+      "description": "The OpenStreetMap question launches the OMK app to enable OpenStreetMap editing.",
+      "link_to": "docs.html"
+    },
+    {
+      "icon": "icn-icn_surey_filled",
+      "title": "Implement Survey",
+      "description": "Take your survey to the field to collect data and geographic information.",
+      "link_to": "docs_odkformsforomk.html"
+    }
+  ]
+}
