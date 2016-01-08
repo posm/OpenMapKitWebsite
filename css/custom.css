@@ -243,8 +243,8 @@
      }
  }
 
- button:hover, button:focus, .button:hover, .button:focus {
-     background-color: #639B3D;
+ .custom-topbar button:hover {
+     background-color: #ffffff;
  }
 
  .open-sidebar #new-sidebar {
@@ -272,6 +272,11 @@
 
  .modDefaultSlider .sequence .animate-in .buttons-wrapper.bottom-to-top {
      top:75px;
+ }
+
+ .service-vertical-spacing {
+     position: relative;
+     top: 14px;
  }
 
  a {
