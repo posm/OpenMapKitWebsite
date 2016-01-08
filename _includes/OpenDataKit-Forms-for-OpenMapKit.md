@@ -1,4 +1,4 @@
-Creating survey forms for OpenMapKit is exactly the same as creating survey forms for ODK. If you're new to designing forms for mobile surveys you might want to start out [here](https://opendatakit.org/help/form-design/)
+Creating survey forms for OpenMapKit is exactly the same as creating survey forms for ODK. If you're new to designing forms for mobile surveys you might want to start out [here](http://xlsform.org/)
 
 The primary change to the forms in OpenDataKit is that we've added an`osm` question type. Rather than including a geographic point or shape directly in the data of a form, we instead have an `osm` question that refers to an OSM file that gets created in OpenMapKit.
 
