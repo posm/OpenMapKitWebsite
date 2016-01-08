@@ -279,6 +279,10 @@
      top: 14px;
  }
 
+ .license {
+     margin: 0px 14px 25px 10px;
+ }
+
  a {
      color: #639B3D;
      -moz-transition-duration: 0.3s;
