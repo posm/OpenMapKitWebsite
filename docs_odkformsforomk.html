@@ -1,18 +1,323 @@
----
-layout: docs-default
-title: odk forms
-section_id: users
----
-<div class="row">
+<!DOCTYPE html>
+<html>
 
-    {% include docs-sidebar.html %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>odk forms</title>
+  <meta name="description" content="OpenMapKitWebsite is the website for the OpenMapKit project. We are moving all training material within the wiki to the website
+">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+<link rel="manifest" href="../images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="..images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/css/foundation.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <!--<link rel="stylesheet" href="/css/theDocs.css">-->
+    <!--<link rel="stylesheet" href="/css/theDocs.all.min.css">-->
+
+    <!--<link rel="stylesheet" href="/css/font-awesome.css">-->
+  <script src="/javascripts/libs.js" type="text/javascript"></script>
+  <script>
+    // terrificjs bootstrap
+    (function($) {
+        $(document).ready(function() {
+            var $page = $('body');
+            var config = {
+              dependencyPath: {
+                plugin: 'javascripts/'
+              }
+            }
+            var application = new Tc.Application($page, config);
+            application.registerModules();
+            application.start();
+        });
+    })(Tc.$);
+  </script>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,700,300" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/masonry.pkgd.js" type="text/javascript"></script>
+  <script src="/javascripts/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+  <script src="/javascripts/slick.min.js" type="text/javascript"></script>
+  <script src="/javascripts/json2.js" type="text/javascript"></script>
+  <link rel="canonical" href="http://54.201.29.191//docs_odkformsforomk.html">
+  <link rel="alternate" type="application/rss+xml" title="OpenMapKit Website" href="http://54.201.29.191//feed.xml" />
+
+</head>
+
+<head>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/theDocs.all.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+
+</head>
+
+
+<body class="shrink">
+
+<div class='contain-to-grid sticky fixed'>
+    <nav class='top-bar docs-nav-width' data-options='sticky_on: large' data-topbar=''>
+
+        <ul class='title-area'>
+            <li class='name'>
+                <h1>
+                    <a class ="OMK-logo" href='/index.html'>
+                        <div class="icn-logo_OMK"></div>
+                    </a>
+                </h1>
+            </li>
+
+            <li class="custom-topbar">
+                <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            </li>
+
+        </ul>
+        <section class='top-bar-section'>
+            <ul class="right">
+                
+                
+
+                
+                <li class="">
+                    <a href="/index.html">Home</a>
+                </li>
+                
+                
+                
+
+                
+                <li class="">
+                    <a href="/docs.html">Documentation</a>
+                </li>
+                
+                
+            </ul>
+        </section>
+    </nav>
+</div>
+
+
+<div role='main'>
+    <div class="row">
+
+    <!-- Sidebar -->
+<aside id="new-sidebar">
+
+    <div class="new-sidebar-content">
+        <ul class="">
+        
+
+        
+        <li><a class="active" href="/index.html">Overview</a></li>
+        
+
+        
+
+        
+        <li>
+            <a href="#">Users</a>
+            
+            <ul class="open">
+                
+                <li><a href="/docs_install.html"> Installation</a></li>
+                
+                <li><a href="/docs_createomksurvey.html"> Setup</a></li>
+                
+                <li><a href="/docs_odkformsforomk.html"> Creating Surveys for OMK</a></li>
+                
+                <li><a href="/docs_creatingbasemaps.html"> Creating OSM Basemap</a></li>
+                
+                <li><a href="/docs_createomksurvey.html"> Additional Resources</a></li>
+                
+            </ul>
+            
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a href="#">For Developers</a>
+            
+            <ul class="open">
+                
+                <li><a href="/docs_developers.html"> Architecture</a></li>
+                
+                <li><a href="/docs_developers.html"> Technical Specs</a></li>
+                
+                <li><a href="/docs_developers.html"> Contributing Code</a></li>
+                
+            </ul>
+            
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a href="#">Tutorials</a>
+            
+            <ul class="open">
+                
+                <li><a href="/docs_walkthrough.html"> Walkthrough</a></li>
+                
+                <li><a href="/docs_sampledata.html"> Sample Data</a></li>
+                
+            </ul>
+            
+        </li>
+        
+
+        
+
+    </ul>
+    </div>
+</aside>
+<!-- END Sidebar -->
 
     <article class="col-md-12 col-sm-12 main-content new-sidebar-main-padding" role="main">
 
         <section>
-            {% markdown OpenDataKit-Forms-for-OpenMapKit.md %}
+            <p>We’ve extended forms in the OpenDataKit to include a new <em>osm</em> question type. Rather than including a geographic point or shape directly in the data of a form, we instead have an <em>osm</em> question that refers to an OpenStreetMap file that gets created within OpenMapKit.</p>
+
+<p>This is particularly important for two reasons:</p>
+
+<ol>
+  <li>
+    <p>A survey about a specific, identifiable feature on a map is far more useful than a GPS point. There is no ambiguity about the <strong>place</strong> you are surveying.</p>
+  </li>
+  <li>
+    <p>Field surveys can directly enrich OpenStreetMap by systematically adding tags to existing OSM features. You can easily create public tags for OpenStreetMap in addition to your private, domain specific ODK survey data.</p>
+  </li>
+</ol>
+
+<p>You can use all of the form functionality currently available in OpenDataKit, but now you can also add <em>osm</em> questions. An OSM question is a new “media type” that functions in the survey in the same manor as a photo or video. When an <em>osm</em> question is specified in a survey, ODK Collect opens OpenMapKit, providing parameters for the tags to be entered for an OSM feature that you will select.</p>
+
+<h2 id="basic-openmapkit-example-form">Basic OpenMapKit Example Form</h2>
+
+<p>If you download this <a href="http://openmapkit.org/downloads/XLSForms/example_basic.xlsx">Basic OpenMapKit Example</a> form, you can see a simple OSM question. This question is named <code>osm_building</code>. In the type column, it is defined to be <code>osm</code>. It also has a parameter of <code>building_tags</code>.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/556367/7404927/8fcfdbaa-ee9f-11e4-98a8-58b5a74e5433.png" alt="osm question" /></p>
+
+<p>This parameter is referenced in the <em>osm sheet</em>, between choices and settings.</p>
+
+<h2 id="osm-sheet">OSM Sheet</h2>
+
+<p>osm sheet</p>
+
+<p>The <em>osm sheet</em> has three columns: list name, name, and label. This sheet defines the tagging parameters that will be sent to OpenMapKit.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/556367/7406236/e86fcefa-eeb3-11e4-9b71-f90a0e3e593a.png" alt="columns" /></p>
+
+<p><strong>list name</strong> has two functions.</p>
+
+<ol>
+  <li>
+    <p>It defines the set of tags that OpenMapKit will add to an OSM feature.</p>
+  </li>
+  <li>
+    <p>It defines the set of tag values selectable for a given OSM tag. <em>(optional)</em></p>
+  </li>
+</ol>
+
+<p>In the survey sheet, our <code>osm_building</code> question had a type parameter of <code>building_tabs</code>. In the osm sheet, we have several rows with the <em>list name</em> of <code>building_tabs</code>. This is the set of OSM tags the user will answer in OpenMapKit.</p>
+
+<p>The set of OSM tags has a <em>list name</em> suffix of <code>_tags</code>. The values in the <strong>name</strong> column are the tag keys that are recognized in OSM. The values in the <strong>label</strong> column are the labels that will be presented to the user when entering values for the given OSM tag.</p>
+
+<p>Often times we do not want the user directly typing in values for an OSM tag. Typing in a specific string value is error prone, and if there is a set of possible values that we want for a given tag, we want to present these values as a multiple choice question to the user.</p>
+
+<p>Notice that one of the <code>building_tags</code> has the name <code>building</code>.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/556367/7404922/8c1d221a-ee9f-11e4-8bd8-d289e85a1fa9.png" alt="building_tags" /></p>
+
+<p>We want to give the user multiple choices of values for a building tag. These are the corresponding tag value choices that will be presented to the user in OpenMapKit:</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/556367/7404920/875f2386-ee9f-11e4-9d00-773eb8ac481b.png" alt="value choices" /></p>
+
+<p>This step is optional, and if you do not provide a set of tag values, the user will manually type in a value for a given question.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Multiple Choice OpenMapKit Tag Question</th>
+      <th style="text-align: center">Manual String Value OpenMapKit Tag Question</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://cloud.githubusercontent.com/assets/556367/7404896/31078528-ee9f-11e4-851f-a8943a66584b.png" alt="multiple choice question" /></td>
+      <td style="text-align: center"><img src="https://cloud.githubusercontent.com/assets/556367/7404898/37291566-ee9f-11e4-9f23-b5eee42bdfea.png" alt="string value question" /></td>
+    </tr>
+  </tbody>
+</table>
+
+
         </section>
 
     </article>
 
 </div>
+
+</div>
+
+<div id='footer'>
+  <div class='row'>
+    <div class='small-12 medium-12 large-12  columns'>
+      <h1 class="pull-right text-right">
+        <a href='http://www.redcross.org' target="_blank" >
+          <img src="/images/logo_RC.png" class="footer-logo"/>
+        </a>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<script src="/javascripts/jquery.countTo.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.appear.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.validate.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.sequence-min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="/javascripts/app.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.min.js" type="text/javascript"></script>
+<script src="/javascripts/matchHeight.min.js" type="text/javascript"></script>
+<script src="/javascripts/clipboard.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.fitvids.js" type="text/javascript"></script>
+<script src="/javascripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/theDocs.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>
