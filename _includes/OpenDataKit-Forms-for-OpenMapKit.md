@@ -1,6 +1,6 @@
 Creating survey forms for OpenMapKit is exactly the same as creating survey forms for ODK. If you're new to designing forms for mobile surveys you might want to start out [here](https://opendatakit.org/help/form-design/)
 
-The primary change to the forms in OpenDataKit is that we've added an`osm` question type. Rather than including a geographic point or shape directly in the data of a form, we instead have an `osm` question that refers to an OSM file that gets created in OpenMapKit.
+The primary change to the forms in OpenDataKit is that we've added an **_osm_** question type. Rather than including a geographic point or shape directly in the data of a form, we instead have an **_osm_** question that refers to an OSM file that gets created in OpenMapKit.
 
 This is particularly important for two reasons:
 
@@ -8,13 +8,15 @@ This is particularly important for two reasons:
 
 2. Surveys can directly enrich OpenStreetMap by adding tags to OSM features. You can create easily accessible public information for OpenStreetMap in addition to your private, domain specific ODK survey data.
 
-An OSM question is a new "media type", which means that it functions in the survey in the same manor as a photo or video. When an `osm` question is specified in a survey, ODK Collect opens OpenMapKit, providing parameters for the tags to be entered for an OSM feature that you will select.
+An OSM question is a new "media type", which means that it functions in the survey in the same manor as a photo or video. When an **_osm_** question is specified in a survey, ODK Collect opens OpenMapKit, providing parameters for the tags to be entered for an OSM feature that you will select.
 
 ## Basic OpenMapKit Example Form
 
-If you download this [Basic OpenMapKit Example](http://openmapkit.org/downloads/XLSForms/example_basic.xlsx) form, you can see a simple OSM question. This question is named `osm_building`. In the type column, it is defined to be `osm`. It also has a parameter of `building_tags`.
+If you download this [Basic OpenMapKit Example](http://openmapkit.org/downloads/XLSForms/example_basic.xlsx) form, you can see a simple OSM question. This question is named **_osm_building_**. In the type column, it is defined to be **_osm_**. It also has a parameter of `building_tags`.
 
-![osm question](https://cloud.githubusercontent.com/assets/556367/7404927/8fcfdbaa-ee9f-11e4-98a8-58b5a74e5433.png)
+| 9 | osm building_tags      | osm_building | Building | Tag attributes about this building |
+
+
 
 This parameter is referenced in the _osm sheet_, between choices and settings.
 
@@ -24,7 +26,9 @@ This parameter is referenced in the _osm sheet_, between choices and settings.
 
 The _osm sheet_ has three columns: list name, name, and label. This sheet defines the tagging parameters that will be sent to OpenMapKit.
 
-![columns](https://cloud.githubusercontent.com/assets/556367/7406236/e86fcefa-eeb3-11e4-9b71-f90a0e3e593a.png)
+|   | A | B | C |
+| -- |--- | --- | --- |
+| 1 | list name | name | label |
 
 __list name__ has two functions. 
 
