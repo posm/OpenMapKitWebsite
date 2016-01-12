@@ -10,7 +10,7 @@ This is particularly important for two reasons:
 
 An OSM question is a new "media type", which means that it functions in the survey in the same manor as a photo or video. When an **_osm_** question is specified in a survey, ODK Collect opens OpenMapKit, providing parameters for the tags to be entered for an OSM feature that you will select.
 
-## Basic OpenMapKit Example Form
+### Basic OpenMapKit Example Form
 
 If you download this [Basic OpenMapKit Example](http://openmapkit.org/downloads/XLSForms/example_basic.xlsx) form, you can see a simple OSM question. This question is named **_osm_building_**. In the type column, it is defined to be **_osm_**. It also has a parameter of **_building_tags_**.
 
@@ -20,7 +20,7 @@ If you download this [Basic OpenMapKit Example](http://openmapkit.org/downloads/
 
 This parameter is referenced in the _osm sheet_, between choices and settings.
 
-## OSM Sheet
+#### OSM Sheet
 
 ![osm sheet](https://cloud.githubusercontent.com/assets/556367/7404929/9418893c-ee9f-11e4-9249-b684ff33e16a.png)
 
