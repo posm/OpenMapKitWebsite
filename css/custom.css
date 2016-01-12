@@ -306,6 +306,14 @@
      width: 60%;
  }
 
+ code {
+     color: #000000;
+     background-color: #f7f7f7;
+     text-shadow: 0 1px #ffffff;
+     line-height: 1.45;
+     border-radius: 3px;
+ }
+
 
  /*!**/
  /*Max width before this PARTICULAR table gets nasty*/

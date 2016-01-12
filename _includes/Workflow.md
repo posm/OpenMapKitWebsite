@@ -1,4 +1,4 @@
-# Create or Modify XLSForm
+### Create or Modify XLSForm
 
 ![](https://cloud.githubusercontent.com/assets/506078/7144405/1a1ae4a6-e29a-11e4-9467-ccc7404feaf5.png)
 
@@ -6,17 +6,17 @@
 
 ![](https://cloud.githubusercontent.com/assets/506078/7144403/1a194880-e29a-11e4-923a-f846cf81f379.png)
 
-# Configure XLSForm in ODK Form Server
+#### Configure XLSForm in ODK Form Server
 
 ![](https://cloud.githubusercontent.com/assets/506078/7144402/1a193dea-e29a-11e4-8e37-6439f1a1c8c0.png)
 
 ![](https://cloud.githubusercontent.com/assets/506078/7144401/1a104474-e29a-11e4-89a1-6cbee9acdb44.png)
 
-# Install Applications
+##### Install Applications
 
 ![](https://cloud.githubusercontent.com/assets/506078/7143724/e07ebd7a-e295-11e4-8c61-8730c4cf53cb.png)
 
-# Configure Form Server in ODK Collect App
+##### Configure Form Server in ODK Collect App
 
 ![](https://cloud.githubusercontent.com/assets/506078/7143725/e08011e8-e295-11e4-8df4-53db84657b5c.png)
 
@@ -31,7 +31,7 @@ E.g. ```http://ona.io/robertbanick```
 
 Now enter your username and password
 
-# Download forms from ODK Form Server
+##### Download forms from ODK Form Server
 
 Go to **Get Blank Form** to download your completed forms from the OMK Form Server.
 
@@ -41,7 +41,7 @@ Go to **Get Blank Form** to download your completed forms from the OMK Form Serv
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143733/e099c5b6-e295-11e4-8143-c2854cf093c7.png)
 
-# Copy OSM Data to OMK App Directory
+##### Copy OSM Data to OMK App Directory
 
 We need to download the map background file that goes along with the server. Plug your android phone into a computer with the map file.
 
@@ -51,7 +51,7 @@ We need to download the map background file that goes along with the server. Plu
 
 Put the .mbtiles file under the *openmapkit/mbtiles* folder. Now when you boot up OpenMapKit the map should load when your GPS locates you in the map's area.
 
-# Configure OSM Data in OMK App
+##### Configure OSM Data in OMK App
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143739/e0b5c284-e295-11e4-894e-72a68e4d7373.png)
 
@@ -69,7 +69,7 @@ This option selects the OSM background map you'll be using. Note that it default
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143745/e0dbe70c-e295-11e4-8859-d5aa4676cd32.png)
 
-# Start Blank form in ODK Collect
+##### Start Blank form in ODK Collect
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143725/e08011e8-e295-11e4-8df4-53db84657b5c.png)
 
@@ -83,7 +83,7 @@ This option selects the OSM background map you'll be using. Note that it default
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143737/e0ae9540-e295-11e4-8b4a-2a44d0e58618.png)
 
-# Continue Form in OMK App
+##### Continue Form in OMK App
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143738/e0aff584-e295-11e4-9438-0490e06decfd.png)
 
@@ -101,7 +101,7 @@ You can click on any feature on your map to edit it.
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143823/418bc694-e296-11e4-92c4-9acf989c95e9.png)
 
-# Complete Form in ODK Collect App
+##### Complete Form in ODK Collect App
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143824/418dea64-e296-11e4-8939-3fc81b30facd.png)
 
@@ -109,26 +109,26 @@ You can click on any feature on your map to edit it.
 
 Click on **Send Finalized Form(s)** to get to the upload dialogue.
 
-# Upload Form Data in ODK Collect App
+##### Upload Form Data in ODK Collect App
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143826/41946380-e296-11e4-9a4f-0c4ef0ed2e1e.png)
 
 Select all the forms you want or click **Toggle All**. When you're read click **Send Selected** to upload your completed data to the server.
 
-# View Form Data on ODK Collect Server
+##### View Form Data on ODK Collect Server
 *Not possible in new Ona version*
 
 ![]( https://cloud.githubusercontent.com/assets/1583376/11027822/081f2a28-86e1-11e5-8e1c-dbf0bfa9e1bc.png)
 
 ![]( https://cloud.githubusercontent.com/assets/1583376/11027823/088ddacc-86e1-11e5-8aec-95f6e13532ff.png)
 
-# Download Form OSM Data
+##### Download Form OSM Data
 
 ![]( https://cloud.githubusercontent.com/assets/1583376/11027649/8595c176-86df-11e5-9f92-cb7e01b05697.png)
 
 Data will download as a collection of .osm files that you will need to manually merge.
 
-# Validate/Verify OSM Data in JOSM
+##### Validate/Verify OSM Data in JOSM
 
 ![]( https://cloud.githubusercontent.com/assets/1583376/11027634/8515fd6a-86df-11e5-915b-e92d024d0574.png)
 In older versions of JOSM you can merge all the .osm files together with the merge command
@@ -140,6 +140,6 @@ In newer versions you will need to merge these files one-by-one
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143559/1d20df84-e295-11e4-898e-86649034c55d.png)
 
-# Upload OSM Data to OSM Planet
+##### Upload OSM Data to OSM Planet
 
 ![]( https://cloud.githubusercontent.com/assets/506078/7143538/1c0c3e68-e295-11e4-884b-09c64e5b80aa.png)

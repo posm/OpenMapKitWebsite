@@ -1,4 +1,4 @@
-#Creating Your Own Mobile Basemap
+###Creating Your Own Mobile Basemap
 
 The OpenMapKit has the ability to host map tiles on the phone even when it is disconnected from the Internet. This section shows you how to generate offline tiles to be used on the phone.
 
@@ -6,7 +6,7 @@ MBTiles is a format made by the folks at [Mapbox](https://www.mapbox.com/) that 
 
 For the purpose of OpenMapKit, you can easily scrape PNG tiles from an online endpoint and store them in an MBTiles file with a few NodeJS command-line tools.
 
-## Scraping an Online HTTP Tile Endpoint
+#### Scraping an Online HTTP Tile Endpoint
 
 A node module called [tl](https://www.npmjs.com/package/tl) allows you to scrape an HTTP map tile endpoint for PNG tiles and stuffs them into an MBTiles file. You can install it with the following command:
 
@@ -28,11 +28,11 @@ tl copy -z 13 -Z 19 -b '90.375853 23.700965 90.437307 23.754632' 'http://c.tile.
 * `'http://c.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'` is the http endpoint for the tiles
 * `mbtiles://./dhaka.mbtiles` is the MBTiles file the scraped PNGs will be saved to
 
-## Pre-generated Offline MBTiles Basemaps
+#### Pre-generated Offline MBTiles Basemaps
 
 Below is a list of links to previously generated MBTiles files to get you started. All you need to do to use them is to drag and drop them into the `openmapkit/mbitles` directory on your Android phone.
 
-### Humanitarian OpenStreetMap
+#### Humanitarian OpenStreetMap
 
 * [Dvizarasekwa, Harare, Zimbabwe - Mar 24 2015](https://www.dropbox.com/s/bcyg1qkdl502evn/dvziarasekwa-hot-all20.mbtiles)
     * Zoom 12 - 22 (Actually only fetched through 20)
@@ -42,7 +42,7 @@ Below is a list of links to previously generated MBTiles files to get you starte
     * Zoom 13 - 19
     * Bounding Box: 90.375853 23.700965 90.437307 23.754632
 
-## Standard OpenStreetMap
+#### Standard OpenStreetMap
 
 * [Dvizarasekwa, Harare, Zimbabwe - Mar 6 2015]
     * Zoom 13 - 20
@@ -54,7 +54,7 @@ Below is a list of links to previously generated MBTiles files to get you starte
     * Bounding Box: 
     * Command: `tl copy -z 13 -Z 20 -b '30.390930 -18.195434 31.709290 -17.551736' 'http://a.tile.openstreetmap.org/{z}/{x}/{y}.png' mbtiles://./harare-osm.mbtiles`
 
-## Preview MBTiles Locally
+#### Preview MBTiles Locally
 
 You can use [tessera](https://github.com/mojodna/tessera) to locally serve your MBTiles file to allow you to preview the basemap you have scraped.
 
