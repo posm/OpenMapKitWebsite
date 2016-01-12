@@ -292,6 +292,13 @@
     font-weight: bold;
  }
 
+
  td, th{
+     border: 1px darkgrey solid;
+ }
+ table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
+     display: table-cell;
+     line-height: 1.28571rem;
+     color: #000000;
      border: 1px darkgrey solid;
  }
