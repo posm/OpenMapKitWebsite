@@ -302,3 +302,21 @@
      color: #000000;
      border: 1px darkgrey solid;
  }
+
+ .imageSize{
+     width: 300px;
+ }
+ /*!**/
+ /*Max width before this PARTICULAR table gets nasty*/
+ /*This query will take effect for any screen smaller than 760px*/
+ /*and also iPads specifically.*/
+ /**!*/
+ @media
+ only screen and (max-width: 760px),
+ (min-device-width: 768px) and (max-device-width: 1024px) {
+
+ /* Force table to not be like tables anymore */
+ table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
+ font-size: 10px;
+ }
+ }
