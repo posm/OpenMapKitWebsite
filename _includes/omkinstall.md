@@ -1,4 +1,7 @@
-### Before getting started.  
+### Before getting started
+
+_Prerequisites:_
+You'll need the lastest version of both ODK Collect and OpenMapKit on your Android device. The OMK currently supports Android version 4.2 and higher.
 
 ### ODK Collect
 

@@ -1,6 +1,9 @@
-Creating survey forms for OpenMapKit is exactly the same as creating survey forms for ODK. If you're new to designing forms for mobile surveys you might want to start out [here](http://xlsform.org/)
+##Creating Surveys
 
-The primary change to the forms in OpenDataKit is that we've added an`osm` question type. Rather than including a geographic point or shape directly in the data of a form, we instead have an `osm` question that refers to an OSM file that gets created in OpenMapKit.
+
+Creating survey forms for OpenMapKit is the same as creating survey forms for ODK. If you're new to designing forms for mobile surveys you might want to start out [here](http://xlsform.org/)
+
+The primary change to the forms for OpenDataKit is the addition of an osm question type. Rather than including a geographic point or shape directly in the data of a form, we instead have an `osm` question that refers to an OSM file that gets created in OpenMapKit.
 
 This is particularly important for two reasons:
 
@@ -10,15 +13,15 @@ This is particularly important for two reasons:
 
 An OSM question is a new "media type", which means that it functions in the survey in the same manor as a photo or video. When an `osm` question is specified in a survey, ODK Collect opens OpenMapKit, providing parameters for the tags to be entered for an OSM feature that you will select.
 
-## Basic OpenMapKit Example Form
+### Basic OpenMapKit Example Form
 
-If you download this [Basic OpenMapKit Example](http://openmapkit.org/downloads/XLSForms/example_basic.xlsx) form, you can see a simple OSM question. This question is named `osm_building`. In the type column, it is defined to be `osm`. It also has a parameter of `building_tags`.
+If you download this [Basic OpenMapKit Example](https://docs.google.com/spreadsheets/d/11H4-mGYTS61GLjSbVoTbmhoI5DjlF5fcBwNwQcvd2Go/edit?usp=sharing) form, you can see a simple OSM question. This question is named `osm_building`. In the type column, it is defined to be `osm`. It also has a parameter of `building_tags`.
 
 ![osm question](https://cloud.githubusercontent.com/assets/556367/7404927/8fcfdbaa-ee9f-11e4-98a8-58b5a74e5433.png)
 
 This parameter is referenced in the _osm sheet_, between choices and settings.
 
-## OSM Sheet
+### OSM Sheet
 
 ![osm sheet](https://cloud.githubusercontent.com/assets/556367/7404929/9418893c-ee9f-11e4-9249-b684ff33e16a.png)
 

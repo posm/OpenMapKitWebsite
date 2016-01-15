@@ -13,10 +13,7 @@
         "name": "Installation",
         "path": "docs_install.html"
       },
-      {
-        "name": "Setup",
-        "path": "docs_createomksurvey.html"
-      },
+
       {
         "name": "Creating Surveys for OMK",
         "path": "docs_odkformsforomk.html"
