@@ -1,21 +1,32 @@
-### Create or Modify XLSForm
+## Walkthrough
+This walkthrough is intended to take you through the entire process from start to finish. 
+
+#### Create or Modify XLSForm using Excel
+Creating forms for ODK or OMK can be as simple or complex as the survey itself. In most cases this step can be completed in under an hour.
+
+Setting up the basic survey form:
 
 ![](https://cloud.githubusercontent.com/assets/506078/7144405/1a1ae4a6-e29a-11e4-9467-ccc7404feaf5.png) |
 
+Creating a drop down list of surveyor names:
 
+![](https://cloud.githubusercontent.com/assets/506078/7144404/1a195dc0-e29a-11e4-9034-9da6ea439c5f.png) |
+
+Createing survey questions consistent with Open Street Map tags:
 ![](https://cloud.githubusercontent.com/assets/506078/7144403/1a194880-e29a-11e4-923a-f846cf81f379.png) |
 
-#### Configure XLSForm in ODK Form Server
+##### Configure XLSForm in ODK Form Server
+There are two ways to configure your Excel based survey for the OpenMapKit; Ona.io or OpenMapKit Server. These instructions are for setting up the survey using Ona.
 
+Sign up for an Ona account in order to publish your survey.
 ![](https://cloud.githubusercontent.com/assets/506078/7144402/1a193dea-e29a-11e4-8e37-6439f1a1c8c0.png) |
 
+Once you have the forms uploaded you can see your forms in the Ona system.
 ![](https://cloud.githubusercontent.com/assets/506078/7144401/1a104474-e29a-11e4-89a1-6cbee9acdb44.png) |
 
-##### Install Applications
-
-![](https://cloud.githubusercontent.com/assets/506078/7143724/e07ebd7a-e295-11e4-8c61-8730c4cf53cb.png) |
 
 ##### Configure Form Server in ODK Collect App
+Once you have the form on Ona (or OpenMapKit Server) configure the app to use the Survey URL.
 
 ![](https://cloud.githubusercontent.com/assets/506078/7143725/e08011e8-e295-11e4-8df4-53db84657b5c.png) |
 

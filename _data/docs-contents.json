@@ -1,7 +1,7 @@
 [
   {
     "name": "Overview",
-    "path": "index.html",
+    "path": "docs.html",
     "section_id": "home"
   },
 
@@ -13,10 +13,7 @@
         "name": "Installation",
         "path": "docs_install.html"
       },
-      {
-        "name": "Setup",
-        "path": "docs_createomksurvey.html"
-      },
+
       {
         "name": "Creating Surveys for OMK",
         "path": "docs_odkformsforomk.html"
