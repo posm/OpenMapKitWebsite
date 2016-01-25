@@ -100,7 +100,7 @@
     {
       "icon": "icn-icon_survey",
       "title": "How to create a survey",
-      "description": "Use XForms (link) to create a standard survey using OpenDataKit.",
+      "description": "Use <a href = http://xlsform.org/>XForms</a> to create a standard survey using OpenDataKit.",
       "link_to": "docs_odkformsforomk.html"
     },
     {

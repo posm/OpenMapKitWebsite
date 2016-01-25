@@ -8,7 +8,7 @@ This is particularly important for two reasons:
 
 2. Surveys can directly enrich OpenStreetMap by adding tags to OSM features. You can create easily accessible public information for OpenStreetMap in addition to your private, domain specific ODK survey data.
 
-An OSM question is a new "media type", which means that it functions in the survey in the same manor as a photo or video. When an **_osm_** question is specified in a survey, ODK Collect opens OpenMapKit, providing parameters for the tags to be entered for an OSM feature that you will select.
+An OSM question is a new "media type", which means that it functions in the survey in the same manner as a photo or video. When an **_osm_** question is specified in a survey, ODK Collect opens OpenMapKit, providing parameters for the tags to be entered for an OSM feature that you will select.
 
 ##### Basic OpenMapKit Example Form
 
