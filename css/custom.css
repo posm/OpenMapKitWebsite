@@ -280,7 +280,7 @@
  }
 
  .license {
-     margin: 0px 14px 25px 10px;
+     margin: 0 15px 0 20px;
  }
 
  a {
@@ -338,3 +338,14 @@
      color: #639B3D !important;
      text-decoration: none;
  }
+
+.socials {
+    margin: 0 12px 0px 0 !important;
+}
+.mini-icon {
+    font-size: 12px;
+}
+
+.footer-spacing {
+    margin-bottom: 10px;
+}
