@@ -1,5 +1,8 @@
-## Developer Documentation
-**Proper documentation is coming soon. In the team time you can refer to the following resources:**
+## Additional Resources
+
+The team is working hard on the OMK & POSM project. Right now the best place to find out more is in the source code repository itself and related wiki pages. 
+
+### Source Code
 
 #### [Portable OpenStreetMap (aka POSM)](https://github.com/AmericanRedCross/posm)
 
