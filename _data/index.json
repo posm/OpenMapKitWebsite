@@ -49,22 +49,22 @@
   ],
   "services": [
     {
-      "icon": "icon_label",
+      "icon": "icn-icon_label",
       "title": "Open Street Map Tags",
       "desc": "Include standard OpenStreetMap tags in your survey."
     },
     {
-      "icon": "icon_wifi",
+      "icon": "icn-icon_wifi",
       "title": "Points of Interest",
       "desc": "Create new Points of Interest and load those into OpenStreetMap. Simply drop a pin to create a POI and add tags."
     },
     {
-      "icon": "icon_mapPin",
+      "icon": "icn-icon_mapPin",
       "title": "Collect Surveys",
       "desc": "Securely collect your survey results in OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap."
     },
     {
-      "icon": "icon_mapPin",
+      "icon": "fa fa-github",
       "title": "Open Source",
       "desc": "Code available on Github"
     }

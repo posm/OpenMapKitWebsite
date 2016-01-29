@@ -608,7 +608,7 @@
 }
 /*some basic settings */
 a {
-  color: #F9CE06;
+  color: #639B3D;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
@@ -670,7 +670,7 @@ ul.shortcode-list {
   margin: 0 0 20px;
 }
 ul.shortcode-list i {
-  color: #F9CE06;
+  color: #639B3D;
   margin-right: 3px;
 }
 
@@ -694,8 +694,8 @@ ul.shortcode-list i {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background-color: #f9ce06;
-  border: 3px solid #F9CE06;
+  background-color: #639B3D;
+  border: 3px solid #639B3D;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
@@ -705,7 +705,7 @@ ul.shortcode-list i {
   margin: 0;
 }
 .big-social i:hover {
-  border: 3px solid #F9CE06;
+  border: 3px solid #639B3D;
   background-color: rgba(249, 206, 6, 0);
 }
 
@@ -779,8 +779,8 @@ ul.shortcode-list i {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #fff;
-  background: #F9CE06;
-  border: 2px solid #F9CE06;
+  background: #639B3D;
+  border: 2px solid #639B3D;
 }
 
 .button:hover {
@@ -1004,7 +1004,7 @@ ul.info a {
   margin-right: 5px;
 }
 ul.info i {
-  border: 1px solid #F9CE06;
+  border: 1px solid #639B3D;
   padding: 5px;
   -moz-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;
@@ -1012,7 +1012,7 @@ ul.info i {
   transition: all 0.1s linear;
 }
 ul.info i:hover {
-  background: #F9CE06;
+  background: #639B3D;
   color: #fff;
 }
 
@@ -1053,7 +1053,7 @@ form input.error, form textarea.error {
   color: #999;
 }
 .pager a:hover {
-  color: #F9CE06;
+  color: #639B3D;
 }
 .pager .older {
   float: left;
@@ -1158,7 +1158,7 @@ form input.error, form textarea.error {
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  background: #F9CE06;
+  background: #639B3D;
 }
 #footer input.email-address {
   padding: 5px 15px;
@@ -1192,7 +1192,7 @@ form input.error, form textarea.error {
 }
 .modBarGraph .bars p.highlighted {
   width: 0;
-  background: #F9CE06;
+  background: #639B3D;
   height: 12px;
 }
 
@@ -1434,7 +1434,7 @@ form input.error, form textarea.error {
   color: #333;
 }
 .modBlogPost h4 a:hover {
-  color: #f9ce06;
+  color: #639B3D;
 }
 .modBlogPost .date {
   font-size: 0.78571rem;
@@ -1489,7 +1489,7 @@ form input.error, form textarea.error {
   color: #333;
 }
 .modBlogPost.big h3 a:hover {
-  color: #f9ce06;
+  color: #639B3D;
 }
 .modBlogPost.big h4 {
   font-size: 1.7rem;
@@ -1767,7 +1767,7 @@ form input.error, form textarea.error {
 }
 .modBoxedSlider .caption p {
   display: inline-block;
-  background: #F9CE06;
+  background: #639B3D;
   color: #fff;
   font-family: "droid serif";
   margin-bottom: 0;
@@ -1792,7 +1792,7 @@ form input.error, form textarea.error {
   margin-bottom: 40px;
 }
 .modBoxedTextSlider .box i {
-  color: #F9CE06;
+  color: #639B3D;
   font-size: 36px;
   width: 48px;
   height: 48px;
@@ -2911,10 +2911,10 @@ form input.error, form textarea.error {
   color: #999;
 }
 .modGallery .gallery-nav li.current {
-  border: 1px solid #F9CE06;
+  border: 1px solid #639B3D;
 }
 .modGallery .gallery-nav li.current a {
-  color: #F9CE06;
+  color: #639B3D;
 }
 .modGallery ul.gallery img {
   width: 100%;
@@ -3015,7 +3015,7 @@ form input.error, form textarea.error {
   margin: 0;
 }
 .modIconText .icon-text-circle:hover i {
-  color: #F9CE06;
+  color: #639B3D;
 }
 .modIconText .icon-text-simple i {
   font-size: 3.42857rem;
@@ -3048,10 +3048,10 @@ body {
   color: #999;
 }
 .modMasonryGallery .gallery-nav li.current {
-  border: 1px solid #F9CE06;
+  border: 1px solid #639B3D;
 }
 .modMasonryGallery .gallery-nav li.current a {
-  color: #F9CE06;
+  color: #639B3D;
 }
 .modMasonryGallery ul.gallery {
   margin: 0;
@@ -3138,7 +3138,7 @@ body {
 .modMilestone i {
   font-size: 36px;
   color: #333;
-  background: #F9CE06;
+  background: #639B3D;
   width: 90px;
   height: 90px;
   -moz-border-radius: 45px;
@@ -3229,7 +3229,7 @@ body {
 }
 
 .modPriceBox.featured .info {
-  border-top: 4px solid #F9CE06;
+  border-top: 4px solid #639B3D;
 }
 
 .modPriceBox:hover {
@@ -3244,7 +3244,7 @@ body {
   width: 66%;
   margin: 0 auto;
   height: 2px;
-  background: #F9CE06;
+  background: #639B3D;
   display: block;
 }
 
@@ -3287,7 +3287,7 @@ body {
   -moz-border-radius: 18px;
   -webkit-border-radius: 18px;
   border-radius: 18px;
-  background: #F9CE06;
+  background: #639B3D;
   color: #fff;
   text-align: center;
   font-size: 1.125rem;
