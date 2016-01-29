@@ -62,6 +62,11 @@
       "icon": "icon_mapPin",
       "title": "Collect Surveys",
       "desc": "Securely collect your survey results in OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap."
+    },
+    {
+      "icon": "icon_mapPin",
+      "title": "Open Source",
+      "desc": "Code available on Github"
     }
   ],
   "milestones": [
