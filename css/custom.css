@@ -61,6 +61,11 @@
      top: 50%;
  }
 
+ #footer .row {
+     margin-left: auto !important;
+     margin-right: auto !important;
+ }
+
  .modIconText .icon-text-simple .service-icon {
      font-size: 50px;
      float: left;
