@@ -1,7 +1,7 @@
 <!-- Sidebar -->
 <aside id="new-sidebar">
 
-    <div class="new-sidebar-content">
+    <div id="sideBar" class="new-sidebar-content">
         <ul class="">
         {% for item in site.data.docs-contents %}
 
@@ -13,7 +13,9 @@
             {% if item.children %}
             <ul class="open">
                 {% for child in item.children %}
-                <li><a href="{{site.baseurl}}/{{child.path}}"> {{child.name}}</a></li>
+                <li class="" id="{{child.name}}">
+                    <a href="{{site.baseurl}}/{{child.path}}"> {{child.name}}</a>
+                </li>
                 {% endfor %}
             </ul>
             {% else %}
@@ -26,4 +28,22 @@
     </ul>
     </div>
 </aside>
+
+<script type="text/javascript">
+
+    jQuery(window).ready(function() {
+
+        var pathname = window.location.pathname; // Returns path only
+        $("#sideBar ul li a").each(function(){
+            if (($(this).attr('href')) == pathname){
+                $(this).parent().addClass("activeMenu");
+//                return false;
+            }
+
+        });
+
+    });
+
+
+</script>
 <!-- END Sidebar -->

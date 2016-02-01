@@ -49,19 +49,24 @@
   ],
   "services": [
     {
-      "icon": "icon_label",
+      "icon": "icn-icon_label",
       "title": "Open Street Map Tags",
       "desc": "Include standard OpenStreetMap tags in your survey."
     },
     {
-      "icon": "icon_wifi",
+      "icon": "icn-icon_wifi",
       "title": "Points of Interest",
       "desc": "Create new Points of Interest and load those into OpenStreetMap. Simply drop a pin to create a POI and add tags."
     },
     {
-      "icon": "icon_mapPin",
+      "icon": "icn-icon_mapPin",
       "title": "Collect Surveys",
       "desc": "Securely collect your survey results in OpenMapKit Server. Save your edits and upload your public data to OpenStreetMap."
+    },
+    {
+      "icon": "fa fa-github",
+      "title": "Open Source",
+      "desc": "Contribute back to the project. It's Open Source and available on <a href='https://github.com/AmericanRedCross/openmapkit' target='_blank'>GitHub</a>"
     }
   ],
   "milestones": [
@@ -100,7 +105,7 @@
     {
       "icon": "icn-icon_survey",
       "title": "How to create a survey",
-      "description": "Use XForms (link) to create a standard survey using OpenDataKit.",
+      "description": "Use <a href = http://xlsform.org/>XForms</a> to create a standard survey using OpenDataKit.",
       "link_to": "docs_odkformsforomk.html"
     },
     {
