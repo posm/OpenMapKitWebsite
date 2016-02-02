@@ -1,5 +1,6 @@
  html, body  {
    font-size:14px;
+     /*font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif*/
  }
 
  .brand-green {
@@ -13,10 +14,21 @@
      bottom: 25px;
      color:#5E695C;
  }
+ button:hover, button:focus, .button:hover, .button:focus {
+     background-color: #fff;
+ }
+
+ .contain-to-grid{
+     overflow-y: hidden;
+ }
 
  /** Navbar when expanded */
- .top-bar.expanded .title-area {
-     background: #fff;
+ /*.top-bar.expanded .title-area {*/
+     /*background: #fff;*/
+ /*}*/
+
+ .top-bar.expanded .toggle-topbar a {
+     color: #639B3D;
  }
 
  .right-nav-spacing {
@@ -32,9 +44,9 @@
      color: #639B3D;
  }
 
- .top-bar.expanded .toggle-topbar a {
-      color: #fff;
- }
+ /*.top-bar.expanded .toggle-topbar a {*/
+      /*color: #fff;*/
+ /*}*/
 
  .top-bar, .contain-to-grid {
      background-color: #fff;
@@ -48,9 +60,18 @@
  .f-topbar-fixed.shrink .top-bar .title-area img, .f-topbar-fixed.shrink .top-bar .title-area li img, .f-topbar-fixed.shrink .top-bar .title-area a {
      position: relative;
      bottom: 45px;
-     left:7px;
+     left:0px;
  }
 
+ /** Hide Horizontal menu on mobile screen **/
+ .open-sidebar section.top-bar-section {
+     display: none;
+ }
+
+ .home  #new-sidebar {
+     display: none;
+ }
+ 
  /* footer */
  .footer-logo {
      height: 60px;
@@ -59,6 +80,7 @@
 
  #footer {
      top: 50%;
+     position: relative;
  }
 
  #footer .row {
@@ -95,6 +117,16 @@
      position: absolute !important;
      right: 0;
      top: 27px;
+ }
+
+ /** Nav bar hamburger**/
+
+ .contain-to-grid.sticky .top-bar .button, .top-bar button {
+     top:0;
+ }
+
+ .f-topbar-fixed.shrink nav button.main{
+     top:-40px;
  }
 
  .shrink .custom-topbar {
@@ -196,11 +228,20 @@
      }
  }
 
+ .f-topbar-fixed.shrink #new-sidebar {
+     top:60px;
+ }
+
+ .f-topbar-fixed.shrink #new-sidebar .new-sidebar-content {
+     position: relative;
+     top:20px;
+ }
+
  #new-sidebar {
      width: 270px;
      position: fixed;
      background: #f5f5f5;
-     top: 0px;
+     top: 100px;
      bottom: 0;
      left: 0;
      overflow-y: auto;
@@ -209,7 +250,7 @@
 
  #new-sidebar .new-sidebar-content {
      position: relative;
-     top:120px;
+     top:20px;
  }
 
  #new-sidebar ul {
@@ -338,6 +379,7 @@
      }
  }
 
+ 
 .activeMenu {
      background-color: #cfcfcf;
      color: #639B3D !important;
@@ -354,3 +396,24 @@
 .footer-spacing {
     margin-bottom: 10px;
 }
+
+.custom-nav {
+    background-color: transparent;
+    border: none;
+}
+
+ .navbar-toggle .icon-bar {
+     display: block;
+     width: 22px;
+     height: 2px;
+     border-radius: 1px;
+     margin-top:4px;
+ }
+
+ .navbar-toggle .icon-bar {
+     background-color: #639B3D;
+ }
+
+ :focus {
+     outline: none;
+ }
