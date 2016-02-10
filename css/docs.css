@@ -1,0 +1,16 @@
+/**
+
+Custom css for documentation page
+
+**/
+
+#footer {
+    margin-left: 270px;
+}
+
+@media (max-width: 770px) {
+    #footer {
+        margin-left: 0px !important;
+    }
+}
+
