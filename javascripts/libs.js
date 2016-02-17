@@ -16378,10 +16378,7 @@ if (!JSON) {
 
       S(this.scope)
         .off('.topbar')
-        .on('click.fndtn.topbar', '[' + this.attr_name() + '] .toggle-topbar', function (e) {
-          e.preventDefault();
-          self.toggle(this);
-        })
+
         .on('click.fndtn.topbar','.top-bar .top-bar-section li a[href^="#"],[' + this.attr_name() + '] .top-bar-section li a[href^="#"]',function (e) {
             var li = $(this).closest('li');
             if(self.breakpoint() && !li.hasClass('back') && !li.hasClass('has-dropdown'))
