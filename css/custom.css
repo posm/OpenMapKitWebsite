@@ -79,9 +79,22 @@
  }
 
  #footer .license {
-     margin: 0 15px 0 20px;
+     margin: 0 7px 0 20px;
      position: relative;
-     top: 18px;
+     top: 0;
+ }
+
+ #footer .group {
+     padding:0;
+ }
+
+ #footer .logo-width {
+     max-width: 175px;
+ }
+
+ #footer .row {
+     margin-left: auto !important;
+     margin-right: auto !important;
  }
 
  @media (max-width: 50em){
@@ -90,20 +103,36 @@
          text-align: left;
      }
 
-     #footer .license {
-         right:10px;
-         top: 0 !important;
+     #footer .license img {
+         min-width: 80px;
      }
      
      #footer .socials {
          right: 4px;
          top: 0 !important;
      }
+
+     #footer .social-media {
+         display: none;
+     }
+
  }
 
  @media (min-width: 50em){
      #footer .license-align {
          text-align: right;
+     }
+     
+     #footer .social-media-mobile {
+         display: none;
+     }
+
+     #footer .social-media {
+         display: block;
+     }
+
+     #footer .license {
+         top:15px;
      }
  }
 
@@ -123,14 +152,10 @@
  }
 
  #footer .footer-spacing {
-     margin-bottom: 10px;
+     margin: 0;
      display: inline-flex;
-     padding: 15px;
- }
-
- #footer .row {
-     margin-left: auto !important;
-     margin-right: auto !important;
+     padding: 15px 0;
+     max-width: none !important;
  }
 
  .modIconText .icon-text-simple .service-icon {
