@@ -1,8 +1,27 @@
-## Walkthrough
-This walkthrough is intended to take you through the entire process from start to finish. 
+## OMK Walkthrough
+This walkthrough is intended to take you through the entire process of setting up and using the OMK application from start to finish.
+
+The overview of the process is:
+
+1.  Creating and Adding a Survey
+    *   Directly to Android Device
+    *   To Ona.io*
+2.  Creating and Adding a Basemap (for Offline Use)
+    *   Directly to Android Device
+3.  Configuring Application with Custom Surveys and Basemaps
+    *   On local Android Device
+    *   With Ona.io*
+4.  Collecting Data Using Surveys
+    *   Using Android Device
+5.  Verifying Data in JOSM
+6.  Uploading data back to OSM
+
+*Using Ona.io as part of this process is possible but is not recommended as POSM ([Portable Open Street Map](http://github.com/AmericanRedCross/posm)), the umbrella project OMK is under, has become the priority and documentation for Ona will not be updated in the future.
+
+### Creating and Adding a Survey
 
 #### Create or Modify XLSForm using Excel
-Creating forms for ODK or OMK can be as simple or complex as the survey itself. In most cases this step can be completed in under an hour.
+Creating forms for ODK or OMK can be as simple or complex as the survey itself. In most cases this step can be completed in under an hour. 
 
 Setting up the basic survey form:
 
@@ -12,21 +31,77 @@ Creating a drop down list of surveyor names:
 
 ![](https://cloud.githubusercontent.com/assets/506078/7144404/1a195dc0-e29a-11e4-9034-9da6ea439c5f.png) |
 
-Createing survey questions consistent with Open Street Map tags:
+Creating survey questions consistent with Open Street Map tags:
 ![](https://cloud.githubusercontent.com/assets/506078/7144403/1a194880-e29a-11e4-923a-f846cf81f379.png) |
 
-##### Configure XLSForm in ODK Form Server
-There are two ways to configure your Excel based survey for the OpenMapKit; Ona.io or OpenMapKit Server. These instructions are for setting up the survey using Ona.
+A similar example can be viewed and downloaded [here](https://docs.google.com/spreadsheets/d/11H4-mGYTS61GLjSbVoTbmhoI5DjlF5fcBwNwQcvd2Go/edit#gid=0)
+
+More detailed documentation for how to correctly create a survey form can be found in the [Creating Surveys for OMK](http://openmapkit.com/docs_odkformsforomk.html) tab in the **Users** documentation. 
+
+#### Configure XLSForm in ODK Form Server
+In order to create a form that is usable in the OMK application, you have to convert, or configure, your XLSForm (used by Excel) to XForm XML (used by the application). There are two ways to configure your Excel based survey for OpenMapKit; pyxform, for POSM and for your local Android device, or Ona.io.
+
+##### Command Line XLSForm to XForm Using pyxform
+
+You can generate XForm XML from XLSForms easily on the command line using pyxform.
+
+*  Clone the [pyxform repo](https://github.com/onaio/pyxform) and checkout the onaio-osm branch.
+
+``` 
+git clone http://github.com/onaio/pyxform.git
+```
+
+*  Navigate to the pyxform repo on your local computer using `cd`
+
+```
+cd pyxform
+``` 
+
+*  Checkout the onaio-osm branch
+
+```
+git checkout onaio-osm
+``` 
+
+Before you can run the python script that will convert the XLSForm to XForm XML, you will need to install `xlrd` - a python package that is for reading data and formatting information from older Excel file formats, i.e. xls.
+
+```
+easy_install pip
+``` 
+
+```
+pip install xlrd
+``` 
+
+The python script that will do the command line conversion is `pyxform/xls2xform.py`. You can then convert an xls form as such:
+
+```
+python pyxform/xls2xform.py path-to-xls.xls outpath-xform-path.xml
+``` 
+
+Make sure that in the outpath you specify the name you want to give your form with the .xml extension. 
+
+Now you can drag-n-drop the generated xform XML file onto your android device at odk/forms/
+
+
+##### Configure XLSForm to XForm XML using Ona.io
+
+In contrast to using the pyxform tool, Ona.io will convert the XLSForm to a XForm XML automatically.
 
 Sign up for an Ona account in order to publish your survey.
-![](https://cloud.githubusercontent.com/assets/506078/7144402/1a193dea-e29a-11e4-8e37-6439f1a1c8c0.png) |
+![](https://cloud.githubusercontent.com/assets/506078/7144402/1a193dea-e29a-11e4-8e37-6439f1a1c8c0.png) 
 
 Once you have the forms uploaded you can see your forms in the Ona system.
-![](https://cloud.githubusercontent.com/assets/506078/7144401/1a104474-e29a-11e4-89a1-6cbee9acdb44.png) |
+![](https://cloud.githubusercontent.com/assets/506078/7144401/1a104474-e29a-11e4-89a1-6cbee9acdb44.png) 
 
+### Creating and Adding Custom Basemaps
 
-##### Configure Form Server in ODK Collect App
-Once you have the form on Ona (or OpenMapKit Server) configure the app to use the Survey URL.
+Documentation [here](http://openmapkit.com/docs_creatingbasemaps.html)
+
+### Configure Application for Custom Surveys and Basemaps
+
+#### Configure Form Server in ODK Collect App
+If you used Ona to create your survey, you will need to configure the app to connect to the Survey URL. If you used the pyxform tool you can skip this step as the survey is already on your device.
 
 {:.imageSize}
 ![](https://cloud.githubusercontent.com/assets/506078/7143725/e08011e8-e295-11e4-8df4-53db84657b5c.png) |
@@ -46,7 +121,7 @@ Now enter your username and password
 
 ##### Download forms from ODK Form Server
 
-Go to **Get Blank Form** to download your completed forms from the OMK Form Server.
+Go to **Get Blank Form** to download your completed forms from the OMK Form Server. If you used the pyxform tool you can skip this step as well.
 
 {:.imageSize}
 ![]( https://cloud.githubusercontent.com/assets/506078/7143731/e0964bde-e295-11e4-850b-b41c01306b51.png) |
@@ -79,8 +154,8 @@ This option selects the actual OSM data (not the map) that you'll be editing
 {:.imageSize}
 ![]( https://cloud.githubusercontent.com/assets/506078/7143740/e0c38054-e295-11e4-83c7-84211150720e.png) |
 
-This option selects the OSM background map you'll be using. Note that it defaults to the Online Humanitarian style unless you specify otherwise. This is useful when you have a strong data connection but won't work when you don't.
-
+This option selects the OSM background map you'll be using. Note that it defaults to the Online Humanitarian style unless you specify otherwise. If you do not have a strong data connection, you can use the custom, offline basemap you created using ```tilelive```. 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 {:.imageSize}
 ![]( https://cloud.githubusercontent.com/assets/506078/7143741/e0c3eb20-e295-11e4-8ae2-4b9e8dd615df.png) |
 
@@ -92,6 +167,8 @@ This option selects the OSM background map you'll be using. Note that it default
 
 {:.imageSize}
 ![]( https://cloud.githubusercontent.com/assets/506078/7143745/e0dbe70c-e295-11e4-8859-d5aa4676cd32.png) |
+
+### Collect Data Using Surveys
 
 ##### Start Blank form in ODK Collect
 
@@ -172,6 +249,8 @@ Select all the forms you want or click **Toggle All**. When you're read click **
 
 Data will download as a collection of .osm files that you will need to manually merge.
 
+### Validate Data
+
 ##### Validate/Verify OSM Data in JOSM
 
 {:.imageSize}
@@ -188,7 +267,9 @@ In newer versions you will need to merge these files one-by-one
 {:.imageSize}
 ![]( https://cloud.githubusercontent.com/assets/506078/7143559/1d20df84-e295-11e4-898e-86649034c55d.png) |
 
-##### Upload OSM Data to OSM Planet
+### Upload OSM Data to OSM
+
+##### Upload OSM Data to OSM
 
 {:.imageSize}
 ![]( https://cloud.githubusercontent.com/assets/506078/7143538/1c0c3e68-e295-11e4-884b-09c64e5b80aa.png) |
