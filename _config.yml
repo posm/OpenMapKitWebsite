@@ -12,5 +12,8 @@ github_username:  AmericanRedCross
 # Build settings
 markdown: kramdown
 
+kramdown:
+  input: GFM
+
 # Plugins
 gems: ["jekyll-paginate", "rouge", "kramdown","jekyll-watch", "markdown"]
