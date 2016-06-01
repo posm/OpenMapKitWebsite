@@ -95,13 +95,13 @@ It is a simple JSON object where the keys are the names of the OSM tag keys that
 
 For example, the `religion` OSM tag is only shown in OpenMapKit Android if you have selected `place_of_worship` for your `amenity` tag.
 
-```json
+~~~json
 "religion": {
 	"show_if": {
 	  "amenity": "place_of_worship"
 	}
 }
-```
+~~~
 
 Your form-specific JSON files are structured exactly the same, and they take a cascading effect, over-riding constraints for the same tags in `default.json`.
 
@@ -117,11 +117,11 @@ For tags that have a select one or a select many interface, if you enable the `c
 
 This is a `boolean` type constraint. You simply have a `"custom_value": true` for our given OSM tag.
 
-```json
+~~~json
 "building": {
   "custom_value": true
 }
-```
+~~~
 
 ### default
 
@@ -131,11 +131,11 @@ A `default` constraint for a tag applies a default value for a given OSM tag. Th
 
 This is a `string` type constraint.
 
-```json
+~~~json
 "addr:city": {
   "default": "Sacramento"
 }
-```
+~~~
 
 ### hide_if
 
@@ -143,7 +143,7 @@ A `hide_if_ constraint for a tag hides the given tag from the user interface if 
 
 This can be a `boolean` or a `string` type constraint. A `hide_if` constraint can have both. If the constraint condition is `true`, the constraint applies regardless of what the conditional tag value is. Or, if the constraint condition has a `string` value, it applies only if the dependent tag key and value is true.
 
-```json
+~~~json
 "shop": {
   "hide_if": {
     "building": "residential",
@@ -151,7 +151,7 @@ This can be a `boolean` or a `string` type constraint. A `hide_if` constraint ca
     "office": true
   }
 }
-```
+~~~
 
 This constraint applies for a `shop`. A `shop` is hidden if `building` is `residential` or if a value is given for `amenity` or `office`.
 
@@ -161,11 +161,11 @@ An `implicit` constraint gives a tag a specified value and does not show the tag
 
 This is a `boolean` type constraint.
 
-```json
+~~~json
 "source": {
   "implicit": "survey"
 }
-```
+~~~
 
 ### numeric
 
@@ -175,11 +175,11 @@ A `numeric` constraint makes the numeric keyboard pop up by default for a questi
 
 This is a `boolean` type constraint.
 
-```json
+~~~json
 "addr:housenumber": {
   "numeric": true
 }
-```
+~~~
 
 ### required
 
@@ -195,11 +195,11 @@ Clicking on OK will scroll you to the first missing required tag.
 
 This is a `boolean` type constraint.
 
-```json
+~~~json
 "addr:street": {
   "required": true
 }
-```
+~~~
 
 ### select_multiple
 
@@ -209,23 +209,23 @@ A `select_multiple` constraint allows the user to select multiple values for a g
 
 This is a `boolean` type constraint.
 
-```json
+~~~json
 "network": {
   "select_multiple": true
 }
-```
+~~~
 
 ### show_if
 
 `show_if` is the opposite of `hide_if`. A tag is hidden unless the constraint condition is met.
 
-```json
+~~~json
 "religion": {
   "show_if": {
     "amenity": "place_of_worship"
   }
 }
-```
+~~~
 
 In this example, the `religion` tag is only shown if the `amenity` is a `place_of_worship`.
 
