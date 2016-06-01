@@ -22,7 +22,7 @@ You can also see this title in OpenMapKit Server.
 
 [default.json](https://github.com/AmericanRedCross/OpenMapKitAndroid/blob/master/app/src/main/assets/constraints/default.json) is a good file for you to look at to see how to build your own constraint configuration.
 
-```json
+{% highlight json %}
 {
   "addr:city": {
     "default": "Sacramento"
@@ -89,7 +89,7 @@ You can also see this title in OpenMapKit Server.
     "implicit": "survey"
   }
 }
-```
+{% endhighlight %}
 
 It is a simple JSON object where the keys are the names of the OSM tag keys that have constraints applied. The values are the name of the constraint, with the condition of the constraint.
 
