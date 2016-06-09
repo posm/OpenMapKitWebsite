@@ -3,20 +3,86 @@ This walkthrough is intended to take you through the entire process of setting u
 
 The overview of the process is:
 
-1.  Creating and Adding a Survey
-    *   Directly to Android Device
-    *   To Ona.io*
-2.  Creating and Adding a Basemap (for Offline Use)
-    *   Directly to Android Device
-3.  Configuring Application with Custom Surveys and Basemaps
-    *   On local Android Device
-    *   With Ona.io*
-4.  Collecting Data Using Surveys
-    *   Using Android Device
-5.  Verifying Data in JOSM
-6.  Uploading data back to OSM
+1.  Build OMK Server
+2.  Create and Add Survey
+3.  Use HOT Export Tool to get OSM Data - basemap & vector data (POSM Bundle)
+4.  Deploy POSM Area of Interest with POSM Bundle
+5.  Deploy Field Papers
+6.  Deploy on Android
+7.  View & Download Survey Data
+8.  Submit to OSM
 
-*Using Ona.io as part of this process is possible but is not recommended as POSM ([Portable Open Street Map](http://github.com/AmericanRedCross/posm)), the umbrella project OMK is under, has become the priority and documentation for Ona will not be updated in the future.
+### OMK Server Production Installation
+
+For an actual deployment of OpenMapKit Server, it is recommended to use 
+[posm-build](https://github.com/AmericanRedCross/posm-build) to install your
+instance. posm-build is a lightweight shell build system used for POSM servers. 
+OpenMapKit Server is designed to be a part of a POSM server, however, the 
+posm-build allows you to be modular regarding what gets installed, so you can
+and should use it if you want to install a standalone OpenMapKit Server.
+
+The advantage is that in a few lines, you can have OpenMapKit Server installed
+and integrated as an Upstart service in Ubuntu Linux. This means that if
+OpenMapKit Server crashes or is restarted, the API will restart automatically.
+Also, posm-build only gets the dependencies you need and downloads only the 
+files you need, so the entire repo does not need to be cloned with git.
+
+Instructions for installing OMK Server on your development environment can be found [here](https://github.com/AmericanRedCross/OpenMapKitServer/blob/master/docs/development-installation.md)
+
+#### Tested On
+
+* Amazon EC2 Ubuntu Server 14.04 LTS
+	- Instance Type: t2.nano
+	- vCPUs: 1
+	- Memory: 500 MB
+	- Storage: 8 GB
+	- Open Ports: 22, 80, 3210
+
+OpenMapKit Server is intended to be as light-weight as possible, so you don't
+have to throw much hardware at it.
+
+#### Steps
+
+1. Download and extract posm-build.
+
+        sudo -s
+        wget -q -O - https://github.com/AmericanRedCross/posm-build/archive/master.tar.gz | tar -zxf - -C /root --strip=2
+
+2. Create a `settings.local` file in `/root/etc` with the following content:
+
+        posm_ip="54.191.109.128"
+
+ Replace the IP address for `posm_ip` with the actual public IP or your server. If you are on Amazon, this should be your Elastic IP.
+
+3. Execute `bootstrap.sh` and tell it to only install NGINX and OpenMapKit Server.
+
+        /root/scripts/bootstrap.sh base virt nodejs nginx omk
+
+
+Let the installation churn. That's it!
+
+#### Upstart
+
+You can start / stop / restart the `omk-service` like any Ubuntu Upstart service.
+
+    sudo service omk-server stop
+    sudo service omk-server start
+    sudo service omk-server restart
+    
+#### Your Data
+
+All of your data are stored in `/opt/omk/OpenMapKitServer/public`. 
+
+You can scp / sftp the 
+
+forms `/opt/omk/OpenMapKitServer/public/forms`
+
+deployments `/opt/omk/OpenMapKitServer/public/deployments`
+
+submissions `/opt/omk/OpenMapKitServer/public/submissions`
+
+from the server to backup and access your data. There is no database, so all of your data are in these files.
+
 
 ### Creating and Adding a Survey
 
@@ -38,135 +104,177 @@ A similar example can be viewed and downloaded [here](https://docs.google.com/sp
 
 More detailed documentation for how to correctly create a survey form can be found in the [Creating Surveys for OMK](http://openmapkit.com/docs_odkformsforomk.html) tab in the **Users** documentation. 
 
-#### Configure XLSForm in ODK Form Server
-In order to create a form that is usable in the OMK application, you have to convert, or configure, your XLSForm (used by Excel) to XForm XML (used by the application). There are two ways to configure your Excel based survey for OpenMapKit; pyxform, for POSM and for your local Android device, or Ona.io.
 
-##### Command Line XLSForm to XForm Using pyxform
+#### Upload Survey to OMK Server
 
-You can generate XForm XML from XLSForms easily on the command line using pyxform.
-
-*  Clone the [pyxform repo](https://github.com/onaio/pyxform) and checkout the onaio-osm branch.
-
-``` 
-git clone http://github.com/onaio/pyxform.git
+To use the survey you create in the field, it must be added to OMK Server. You can upload forms by using the API call
+```
+http://{your_host_url}/pages/upload-form/
 ```
 
-*  Navigate to the pyxform repo on your local computer using `cd`
+OR 
 
-```
-cd pyxform
-``` 
+By opening the OMK Server UI.
 
-*  Checkout the onaio-osm branch
+You will see all the forms currently on your server
 
-```
-git checkout onaio-osm
-``` 
+![OMK Server Forms](images/omkserver1.png)
+*OMK Server Forms*
 
-Before you can run the python script that will convert the XLSForm to XForm XML, you will need to install `xlrd` - a python package that is for reading data and formatting information from older Excel file formats, i.e. xls.
+Clicking in the upper right corner will give you a drop down menu, click **Upload Form** to upload your survey.
 
-```
-easy_install pip
-``` 
+![OMK Server Upload Form](images/omkserver2.png)
+*Upload Form*
 
-```
-pip install xlrd
-``` 
-
-The python script that will do the command line conversion is `pyxform/xls2xform.py`. You can then convert an xls form as such:
-
-```
-python pyxform/xls2xform.py path-to-xls.xls outpath-xform-path.xml
-``` 
-
-Make sure that in the outpath you specify the name you want to give your form with the .xml extension. 
-
-Now you can drag-n-drop the generated xform XML file onto your android device at odk/forms/
+You can drag-n-drop your form or click to select it. Then hit **Submit** to add your survey to your OMK Server.
 
 
-##### Configure XLSForm to XForm XML using Ona.io
+### HOT Export Tool - OSM Basemap & Data
 
-In contrast to using the pyxform tool, Ona.io will convert the XLSForm to a XForm XML automatically.
+The HOT Export Tool is used to get the larger Area of Interest data from OpenStreetMap onto the POSM. The two main components that it packages for you are 1) OSM PBF, the vector data,  and 2) MBTiles, basemap tiles.
 
-Sign up for an Ona account in order to publish your survey.
-![](https://cloud.githubusercontent.com/assets/506078/7144402/1a193dea-e29a-11e4-8e37-6439f1a1c8c0.png) 
+POSM itself generates tiles, called _POSM Carto_ on the device itself, but it is often useful to have the HOT Export Tool fetch tiles for you on the internet as well--especially if you want to have a satellite basemap.
 
-Once you have the forms uploaded you can see your forms in the Ona system.
-![](https://cloud.githubusercontent.com/assets/506078/7144401/1a104474-e29a-11e4-89a1-6cbee9acdb44.png) 
+Currently, the POSM HOT Export Tool can be reached at:
 
-### Creating and Adding Custom Basemaps
+http://ec2-52-32-62-7.us-west-2.compute.amazonaws.com
 
-Documentation [here](http://openmapkit.com/docs_creatingbasemaps.html)
+Name and describe your export. On the right, make sure you have selected _Select Export Area_, and draw a bounding box to server as your Area of Interest.
 
-### Configure Application for Custom Surveys and Basemaps
+![Describe Export](images/a-hot1.png)
+*Describe an Export*
 
-#### Configure Form Server in ODK Collect App
-If you used Ona to create your survey, you will need to configure the app to connect to the Survey URL. If you used the pyxform tool you can skip this step as the survey is already on your device.
+Choose the file formats you want. You want to at least have OSM PBF. OSMAnd OBF is a bonus, because you can load your extract in OSMAnd. If you want the export tool to generate an MBTiles basemap from the internet, check _MBTiles_.
 
-{:.imageSize}
-![](https://cloud.githubusercontent.com/assets/506078/7143725/e08011e8-e295-11e4-8df4-53db84657b5c.png) |
+![File Formats](images/a-hot2.png)
+*File Formats*
 
-Go to **settings** and adjust the Server URL as per the below image
+If you would like to have an MBTiles basemap fetched from the internet _(optional)_, you need to specify the tile template URL and zoom levels to be fetched. This task by far takes the longest, and the generated MBTiles file can be _huge_... You can use [Geofabrik's Tile Calculator](http://tools.geofabrik.de/calc/) to help you determine how big your MBTiles is likely to be.
 
-{:.imageSize}
-![](https://cloud.githubusercontent.com/assets/506078/7143730/e0955940-e295-11e4-8152-f5128f0374f1.png) |
+![MBTiles Source URL](images/a-hot3.png)
+*MBTiles Source URL*
 
-Enter the name of your Ona account after ```http://ona.io/```
-E.g. ```http://ona.io/robertbanick```
+Finally, you need to __Create Export__.
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143729/e08654d6-e295-11e4-9bca-abbb9f074a80.png) |
+![Export Details](images/a-hot4.png)
+*Export Details*
 
-Now enter your username and password
+The export begins by fetching OSM data from the Overpass API. This may take a while, and if you are creating  MBTiles, it may even take hours. You will be emailed when the export is complete.
 
-##### Download forms from ODK Form Server
+![Beginning of Export](images/a-hot5.png)
+*Beginning of Export*
 
-Go to **Get Blank Form** to download your completed forms from the OMK Form Server. If you used the pyxform tool you can skip this step as well.
+Once your export is completed, right click on __POSM Bundle__ and copy the URL.
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143731/e0964bde-e295-11e4-850b-b41c01306b51.png) |
+![Completed Export](images/a-hot6.png)
+*Completed Export*
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143732/e098c8a0-e295-11e4-871d-cdd6cc18747b.png) |
+### POSM Area of Interest Deployment
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143733/e099c5b6-e295-11e4-8143-c2854cf093c7.png) |
+The POSM needs to fetch the data generated by the HOT Export tool, load it's databases, and setup it's applications for the Area of Interest.
 
-##### Copy OSM Data to OMK App Directory
+Make sure you are connected to the __POSM__ wifi network. Then, connect to the POSM by going to:
 
-We need to download the map background file that goes along with the server. Plug your android phone into a computer with the map file.
+http://posm.io
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143552/1cf3858e-e295-11e4-8c13-66cd77653a1e.png) |
+go to __POSM ADMIN__.
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143550/1ccd2682-e295-11e4-8fc7-07327a62a3c1.png) |
+Paste the __POSM Bundle__ url in the text area and __START__.
 
-Put the .mbtiles file under the *openmapkit/mbtiles* folder. Now when you boot up OpenMapKit the map should load when your GPS locates you in the map's area.
+![Enter URL](images/b-aoi1.png)
+*Enter URL*
 
-##### Configure OSM Data in OMK App
+When the POSM Area of Interest (AOI) Deployment is complete, you will see a check box next to the task, and the console output will say `==> tessera-fp-reset.js: END false`. This means that it is finished.
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143739/e0b5c284-e295-11e4-894e-72a68e4d7373.png) |
+![Completed AOI](images/b-aoi2.png)
+*Completed AOI*
 
-This option selects the actual OSM data (not the map) that you'll be editing
+Now, let's do a sanity check to see if the data has loaded correctly. Click on __EDIT OPENSTREETMAP__ in the POSM Portal, or go to http://osm.posm.io
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143740/e0c38054-e295-11e4-83c7-84211150720e.png) |
+It may take a little while to start cutting tiles, but zoom out and zoom into the area that you loaded. You should see tiles being drawn.
 
-This option selects the OSM background map you'll be using. Note that it defaults to the Online Humanitarian style unless you specify otherwise. If you do not have a strong data connection, you can use the custom, offline basemap you created using ```tilelive```. 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143741/e0c3eb20-e295-11e4-8ae2-4b9e8dd615df.png) |
+![Tiles in OpenStreetMap](images/b-aoi3.png)
+*POSM Carto Tiles in OpenStreetMap*
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143743/e0c56306-e295-11e4-8f00-191cd286e070.png) |
+Also check Field Papers.
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143742/e0c46262-e295-11e4-9a87-eda6c4c94170.png) |
+![Tiles in Field Papers](images/b-aoi4.png)
+*Tiles in Field Papers*
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143745/e0dbe70c-e295-11e4-8859-d5aa4676cd32.png) |
+### Field Papers → OpenMapKit Atlas Deployment
+
+The deployments that you see in OpenMapKit are based off of the bounds of a Field Paper atlas. The entire Area of Interest is too large for the phone, so instead, our deployment is based off of a field paper atlas.
+
+When you create a field paper, an atlas is generated, and we are using it's slug for the __name__, the __title__ for the title you gave the field paper, and the __GeoJSON__ for drawing the bounds of each field paper page in OpenMapKit.
+
+![Field Paper Explained](images/fp.png)
+*Components of an Atlas*
+
+This step is soon to be automated, but now we manually enter the URL to the Atlas's GeoJSON. This data encompasses the shapes that make up both the atlas as a whole as well as each page in the atlas. It also includes necessary metadata. We are using this data to generate a deployment for OpenMapKit. The name of the deployment is the _slug_, and the title is the title you gave the field paper.
+
+![Enter URL](images/c-deploy1.png)
+*Pasting Atlas GeoJSON URL*
+
+POSM is generating OSM XML from the API Database, POSM Carto MBTiles, and an extract of any other MBTiles included with the AOI.
+
+![Progress](images/c-deploy2.png)
+*Generating Field Papers OpenMapKit Deployment*
+
+When the deployment is complete, you should see `==> gis_omk-posm-mbtiles.sh: END false`.
+
+![Deployment Complete](images/c-deploy3.png)
+*End of Script*
+
+You should also have all of the steps checked off.
+
+![Check Marks](images/c-deploy4.png)
+*Deployment Complete*
+
+### OpenMapKit Android - Download Deployment
+
+Now you are read to download a deployment on your phone. You can enter the server URL to your POSM, but scanning the QR Code on a field paper will also switch you to the correct URL of the POSM server. You can also manually enter the POSM Server's URL. It is http://posm.io
+
+Make sure your phone is connected to the __POSM__ wifi network.
+
+![No Server Setup](images/d-android1.png)
+*No Server Setup Yet*
+
+The QR Code will be read, and it will bring you to the corresponding deployment.
+
+![Deployment Details](images/d-android2.png)
+*Deployment Details*
+
+Now you can download it by pressing the button in the lower right.
+
+![Downloading](images/d-android3.png)
+*Downloading*
+
+If you jump back to the previous screen, you can see the list of deployments on the POSM's OpenMapKit Server.
+
+![List of Deployments](images/d-android4.png)
+*List of Deployments*
+
+Once your download is complete, there will be a new button in the bottom left to __Check Out__ your deployment. This will turn on the POSM Carto MBTiles and OSM XML on the map for you.
+
+![Download Complete](images/d-android5.png)
+*Download Complete*
+
+You should also see the bounds of your field paper atlas pages. The top of the map should show the page that is green below.
+
+![Field Paper with Pages](images/d-android6.png)
+*Field Paper with Pages*
+
+#### Also...
+
+Before, you always had to start with ODK Collect. Now, if you start from OpenMapKit and try to edit a feature, the app will lead you back to ODK Collect to fill in your survey.
+
+![Notice to Launch ODK Collect](images/d-android7.png)
+*Notice to Launch ODK Collect*
+
+Once you've gotten back into OpenMapKit _from_ ODK Collect, you can edit tags as usual.
+
+![Return from ODK Collect](images/d-android8.png)
+
 
 ### Collect Data Using Surveys
 
@@ -232,24 +340,31 @@ Click on **Send Finalized Form(s)** to get to the upload dialogue.
 
 Select all the forms you want or click **Toggle All**. When you're read click **Send Selected** to upload your completed data to the server.
 
-##### View Form Data on ODK Collect Server
-*Not possible in new Ona version*
+#### View Form Data on OMK Server
+
+##### See your ODK & OSM submissions:
+Submissions can be viewed, downloaded and submitted to OSM from OMK Server. To access submitted forms and data, first open the OMK Server UI.
+
+![OMK Server Forms](images/omkserver1.png)
+*OMK Server Forms*
 
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/1583376/11027822/081f2a28-86e1-11e5-8e1c-dbf0bfa9e1bc.png) |
+Click on the the **View Submissions** tab of the survey you would like to view.
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/1583376/11027823/088ddacc-86e1-11e5-8aec-95f6e13532ff.png) |
 
-##### Download Form OSM Data
+![OMK View Submissions](images/osm_submissions.png)
+*View Submissions*
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/1583376/11027649/8595c176-86df-11e5-9f92-cb7e01b05697.png) |
 
-Data will download as a collection of .osm files that you will need to manually merge.
+You have the options to view & download the ODK data, view & download the OSM data and the ability to submit the OSM data back to OSM. When you submit your surveyed data back to OSM, there may be conflicts. If this is the case, OSM will send back a conflict JSON. This will show up in metadata of the survey, which is also shown in the **View Submissions** page.
 
-### Validate Data
+
+![OMK Metadata](images/osm_metadata.png)
+*Survey Metadata*
+
+
+To resolve conflicts, download the OSM data and use JOSM to edit.  
+
 
 ##### Validate/Verify OSM Data in JOSM
 
@@ -267,9 +382,4 @@ In newer versions you will need to merge these files one-by-one
 {:.imageSize}
 ![]( https://cloud.githubusercontent.com/assets/506078/7143559/1d20df84-e295-11e4-898e-86649034c55d.png) |
 
-### Upload OSM Data to OSM
-
-##### Upload OSM Data to OSM
-
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143538/1c0c3e68-e295-11e4-884b-09c64e5b80aa.png) |
+Once the data merged and the conflicts are resolved, upload the correct data back to OMK Server and re-submit it to OSM. If no conflicts are detected, OMK Server will generate a change-set ID as well as a OpenStreetMap URL that will take you directly to the change. 
