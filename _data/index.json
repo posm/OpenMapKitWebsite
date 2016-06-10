@@ -66,7 +66,7 @@
     {
       "icon": "fa fa-github",
       "title": "Open Source",
-      "desc": "Contribute back to the project. It's Open Source and available on <a href='https://github.com/AmericanRedCross/openmapkit'>GitHub</a>"
+      "desc": "Contribute back to the project. It's Open Source and available on <a href='https://github.com/AmericanRedCross/openmapkit' target='_blank'>GitHub</a>"
     }
   ],
   "milestones": [

@@ -5,16 +5,23 @@
         <ul class="">
         {% for item in site.data.docs-contents %}
 
-        {% if item.name == "Overview" %}
-        <li><a class="active" href="{{site.baseurl}}/{{item.path}}">{{ item.name }}</a></li>
-        {% else %}
+        <!--{% if item.name == "Overview" %}-->
+        <!--<li><a class="active" href="{{site.baseurl}}/{{item.path}}">{{ item.name }}</a></li>-->
+        <!--{% else %}-->
         <li>
-            <a href="#">{{ item.name }}</a>
+            <a href="{{site.baseurl}}/{{item.path}}">{{ item.name }}</a>
             {% if item.children %}
             <ul class="open">
                 {% for child in item.children %}
                 <li class="" id="{{child.name}}">
-                    <a href="{{site.baseurl}}/{{child.path}}"> {{child.name}}</a>
+                    <a href="#"> {{child.name}}</a>
+                    <ul class="open">
+                        {% for grandchild in child.children %}
+                        <li class="" id="{{grandchild.name}}">
+                            <a href="{{site.baseurl}}/{{grandchild.path}}"> {{grandchild.name}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </li>
                 {% endfor %}
             </ul>
@@ -28,6 +35,7 @@
     </ul>
     </div>
 </aside>
+<!-- END Sidebar -->
 
 <script type="text/javascript">
 
@@ -36,7 +44,7 @@
         var pathname = window.location.pathname; // Returns path only
         $("#sideBar ul li a").each(function(){
             if (($(this).attr('href')) == pathname){
-                $(this).parent().addClass("activeMenu");
+                $(this).addClass("activeMenu");
 //                return false;
             }
 
@@ -46,4 +54,3 @@
 
 
 </script>
-<!-- END Sidebar -->

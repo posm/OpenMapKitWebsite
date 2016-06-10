@@ -3652,7 +3652,7 @@ body {
   }
   .contain-to-grid .top-bar-section li:not(.has-form) a:not(.button) {
     height: 60px;
-    line-height: 60px;
+    /*line-height: 60px;*/
     padding: 0 20px;
   }
   .contain-to-grid .top-bar-section .has-dropdown > a:after {

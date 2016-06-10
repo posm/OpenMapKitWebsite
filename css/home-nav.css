@@ -1,0 +1,51 @@
+/**
+
+Overwrite foundation navigation css to duplicate theDocs nav
+
+**/
+
+@media only screen and (min-width: 760px) {
+    .contain-to-grid .top-bar {
+        max-width: 80rem;
+        margin: 0 auto;
+        margin-bottom: 0;
+    }
+    .top-bar .title-area {
+        float: left;
+    }
+
+    .top-bar-section ul {
+        display: inline;
+        width: auto;
+        height: auto !important;
+    }
+
+    .toggle-topbar.custom-topbar {
+        display: none;
+    }
+
+    .contain-to-grid .top-bar-section li:not(.has-form) a:not(.button) {
+        line-height: 7.14286rem;
+    }
+
+    .top-bar-section li.active:not(.has-form) a:not(.button) {
+        padding: 0 1.42857rem;
+        line-height: 7.14286rem;
+        color: #888;
+        background: #f9f9f9;
+    }
+
+    .top-bar-section li:not(.has-form) a:not(.button) {
+        padding: 0 1.42857rem;
+        line-height: 7.14286rem;
+        background: #fff;
+    }
+
+    .contain-to-grid .top-bar-section li:not(.has-form) a:not(.button) {
+        height: 100px;
+    }
+
+    .top-bar-section ul li {
+        float: left;
+    }
+}
