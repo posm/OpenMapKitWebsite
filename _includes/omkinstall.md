@@ -92,4 +92,4 @@ submissions `/opt/omk/OpenMapKitServer/public/submissions`
 from the server to backup and access your data. There is no database, so all of your data are in these files.
 
 This is also included in the [Walkthrough Tutorial](http://openmapkit.com/docs_walkthrough.html).
->>>>>>> 6d4d35777365e3491ce03fd71ef36e08e2686f1f
+
