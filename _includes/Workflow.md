@@ -10,7 +10,7 @@ The overview of the process is:
 5.  Deploy Field Papers
 6.  Deploy on Android
 7.  View & Download Survey Data
-8.  Submit to OSM
+8.  Submit to OSM API
 
 ### OMK Server Production Installation
 
@@ -44,9 +44,10 @@ have to throw much hardware at it.
 #### Steps
 
 1. Download and extract posm-build.
-
+        
         sudo -s
         wget -q -O - https://github.com/AmericanRedCross/posm-build/archive/master.tar.gz | tar -zxf - -C /root --strip=2
+        
 
 2. Create a `settings.local` file in `/root/etc` with the following content:
 
@@ -137,7 +138,7 @@ POSM itself generates tiles, called _POSM Carto_ on the device itself, but it is
 
 Currently, the POSM HOT Export Tool can be reached at:
 
-http://posm.io/en/
+[http://posm.io/en/](http://posm.io/en/)
 
 Name and describe your export. On the right, make sure you have selected _Select Export Area_, and draw a bounding box to server as your Area of Interest.
 
@@ -356,30 +357,168 @@ Click on the the **View Submissions** tab of the survey you would like to view.
 *View Submissions*
 
 
-You have the options to view & download the ODK data, view & download the OSM data and the ability to submit the OSM data back to OSM. When you submit your surveyed data back to OSM, there may be conflicts. If this is the case, OSM will send back a conflict JSON. This will show up in metadata of the survey, which is also shown in the **View Submissions** page.
+You have the options to view & download the ODK data, view & download the OSM data and the ability to submit the OSM data back to the OSM API. 
 
 
 ![OMK Metadata](images/osm_metadata.png)
 *Survey Metadata*
 
 
-To resolve conflicts, download the OSM data and use JOSM to edit.  
+If there are any conflicts that occur when submitting data back to the OSM API, the submission will fail. Conflicts will be flagged and have to be resolved manually using the [POSM Changeset Replay Tool](https://github.com/AmericanRedCross/posm-replay-tool).  
 
 
-##### Validate/Verify OSM Data in JOSM
+#### Resolve Conflicts with the POSM Changeset Replay Tool
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/1583376/11027634/8515fd6a-86df-11e5-915b-e92d024d0574.png) |
-In older versions of JOSM you can merge all the .osm files together with the merge command
+The Changeset Replay Tool is a workflow for resolving conflicts. It uses a local Git repository containing the current state (local edits), transform it so that it contains the new desired upstream state (what OSM should look like after merging), and apply the necessary transformations (in the form of API calls) to update the upstream state. 
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/1583376/11113707/0d7122e8-8947-11e5-906b-cc7db9193ca3.png) |
-In newer versions you will need to merge these files one-by-one
+##### 1. Obtain AOI Extract at Branch Point
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143557/1d0137c4-e295-11e4-8afb-36f1adf6f80d.png) |
+You should already have a copy of this file.
 
-{:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143559/1d20df84-e295-11e4-898e-86649034c55d.png) |
+##### 2. Gather Local Changesets
 
-Once the data merged and the conflicts are resolved, upload the correct data back to OMK Server and re-submit it to OSM. If no conflicts are detected, OMK Server will generate a change-set ID as well as a OpenStreetMap URL that will take you directly to the change. 
+Determine the first local changeset. Assuming you have access to the local APIDB:
+
+```bash
+psql -d osm_posm -t -c "select id from changesets where num_changes > 0 order by id asc limit 1"
+```
+
+Gather changesets from the local OSM API into `changesets/`:
+
+```bash
+OSM_BASE_URL=http://localhost:3000 ./gather_changesets.sh <first changeset id>
+```
+
+##### 3. Initialize the git Repository from the Branch Point
+
+Filter the AOI extract according to entities referenced in local changesets:
+
+```bash
+node filter-by-use.js huaquillas-fixed.pbf posm/ changesets/*.osc
+cd posm/
+git init
+git add .
+git commit -m "Branch point"
+git tag start
+cd ..
+```
+
+##### 4. Obtain a Current AOI Extract
+
+Calculate the bounding box for all local changesets and fetch the corresponding area from Overpass,
+converting to PBF for good measure:
+
+```bash
+echo "(node($(node changeset-bbox.js changesets/*.xml | jq -r 'map(tostring) | [.[1], .[0], .[3], .[2]] | join(",")'));<;>>;>;);out meta;" > overpass.query
+wget -O aoi.xml --post-file=overpass.query http://overpass-api.de/api/interpreter
+osmconvert aoi.xml --out-pbf > aoi.pbf
+```
+
+##### 5. Extract and Apply Upstream Changes
+
+Filter the AOI extract according to entities referenced in local changesets and apply to a new
+branch. This ensures that there's a common ancestor when moving commits between branches.
+
+```bash
+cd posm/
+rm -rf *
+cd ..
+
+node filter-by-use.js aoi.pbf posm/ changesets/*.osc
+cd posm/
+git add .
+git checkout -b osm
+git commit -m "Current OSM"
+git tag upstream
+git gc
+cd ..
+```
+
+##### 6. Apply Local Changesets to the Branch Point
+
+This is effectively what has already occurred through editing using the OSM API, although doing it
+in `git` terms allows us to more easily move changes between branches.
+
+```bash
+cd posm/
+git checkout master
+cd ..
+
+REPO=posm ./preprocess-changesets.sh changesets/
+
+cd posm/
+git gc
+cd ..
+```
+
+##### 7-8. Apply Local Changesets to the Upstream Version and Resolve Conflicts
+
+Walk through all local changesets and apply them to the upstream branch. This will open your
+configured `git` mergetool (`opendiff` / FileMerge on OS X), allowing you to resolve conflicts
+manually.
+
+TODO extract this into a script
+
+```bash
+cd posm/
+git checkout osm
+git tag marker start
+git --no-pager log --reverse --format=%h marker..master | while read sha1; do
+  git cherry-pick $sha1
+  
+  echo Applying $sha1
+
+  if [ -f .git/CHERRY_PICK_HEAD ]; then
+    # remove files that were deleted by us (as we no longer refer to them and
+    # will submit the deletions as "if-unused")
+    git status --porcelain | grep ^UD | cut -d " " -f 2 | xargs git rm
+
+    # remove files that were deleted upstream
+    git status --porcelain | grep ^DU | cut -d " " -f 2 | xargs git rm
+
+    # data available to the mergetool:
+    #  * OSM version
+    #  * our version
+    #  * current version of OSM refs (via API) -- (we don't know the version ref'd)
+    #  * current version of our refs (via API, if POSM is available) -- (we don't know the version ref'd)
+
+    # In other words, we can show node movements, tag and ref/membership changes
+    # but not way/relation composition (visually)
+    # TODO sometimes this fails, in which case marker will have already been set to $sha1
+    git mergetool -y --no-prompt
+
+    git clean -f
+
+    git add */
+
+    git commit --allow-empty -C $sha1
+  fi
+
+  # remove temporary files
+  git clean -f
+
+  # update the marker
+  git tag -f marker $sha1
+done
+```
+
+##### 9. Submit Resolved Changesets Upstream
+
+Create a new branch for changesets that have been applied upstream and walk through all local
+changesets, submitting them and renumbering (remapping entity IDs and references) as necessary.
+
+```bash
+cd posm/
+git checkout -b applied upstream
+../submit-all.sh
+```
+
+ID remapping information will be left behind in `.git/map.json` (cumulative) and `.git/<commit>.json` (per-changeset).
+
+To track the number of pending changesets, count the number of commits between the `upstream` marker and the tip of the `osm` branch:
+
+```bash
+watch "git --no-pager log --reverse --format=%h upstream..osm | wc -l"
+```
+
+The Git repository we produced includes all of the history and context used for reconciliation. Once synchronization has been completed, its primary purpose is as an artifact of the merge process. Rather than partially applying upstream changes to POSM’s database, it’s much easier to replace all of the data with a new extract.
