@@ -14,7 +14,11 @@
             <ul class="open">
                 {% for child in item.children %}
                 <li class="" id="{{child.name}}">
-                    <a href="#"> {{child.name}}</a>
+                    {% if child.path %}
+                        <a href="{{site.baseurl}}/{{child.path}}"> {{child.name}}</a>
+                    {% else %}
+                        <a href="#"> {{child.name}}</a>
+                    {% endif %}
                     <ul class="open">
                         {% for grandchild in child.children %}
                         <li class="" id="{{grandchild.name}}">

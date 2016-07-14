@@ -73,19 +73,89 @@
  }
  
  /* footer */
- .footer-logo {
+ #footer .footer-logo {
      height: 60px;
      position: relative;
  }
 
- #footer {
-     top: 50%;
+ #footer .license {
+     margin: 0 7px 0 20px;
      position: relative;
+     top: 0;
+ }
+
+ #footer .group {
+     padding:0;
+ }
+
+ #footer .logo-width {
+     max-width: 175px;
  }
 
  #footer .row {
      margin-left: auto !important;
      margin-right: auto !important;
+ }
+
+ @media (max-width: 50em){
+
+     #footer .license-align {
+         text-align: left;
+     }
+
+     #footer .license img {
+         min-width: 80px;
+     }
+     
+     #footer .socials {
+         right: 4px;
+         top: 0 !important;
+     }
+
+     #footer .social-media {
+         display: none;
+     }
+
+ }
+
+ @media (min-width: 50em){
+     #footer .license-align {
+         text-align: right;
+     }
+     
+     #footer .social-media-mobile {
+         display: none;
+     }
+
+     #footer .social-media {
+         display: block;
+     }
+
+     #footer .license {
+         top:15px;
+     }
+ }
+
+ #footer .socials {
+     margin: 0 0 0 15px !important;
+     position: relative;
+     min-width: 95px;
+     top: 11px;
+ }
+
+ #footer .logo {
+     min-width: 156px;
+ }
+
+ #footer ul.socials a:hover i {
+     background: #eee;
+ }
+
+ #footer .footer-spacing {
+     margin: 0;
+     display: inline-flex;
+     padding: 15px 0;
+     max-width: none !important;
  }
 
  .modIconText .icon-text-simple .service-icon {
@@ -280,7 +350,7 @@
 
  #new-sidebar~.new-sidebar-main-padding {
      padding: 50px 50px 50px 315px;
-     min-height: 467px;
+     min-height: 545px;
  }
 
  @media screen and (max-width: 767px) {
@@ -323,10 +393,6 @@
  .service-vertical-spacing {
      position: relative;
      top: 14px;
- }
-
- .license {
-     margin: 0 15px 0 20px;
  }
 
  a {
@@ -386,15 +452,8 @@
      text-decoration: none;
  }
 
-.socials {
-    margin: 0 12px 0px 0 !important;
-}
 .mini-icon {
     font-size: 12px;
-}
-
-.footer-spacing {
-    margin-bottom: 10px;
 }
 
 .custom-nav {
@@ -416,4 +475,9 @@
 
  :focus {
      outline: none;
+ }
+
+
+ .inline-flex {
+     display: inline-flex;
  }

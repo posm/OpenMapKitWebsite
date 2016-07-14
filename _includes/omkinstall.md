@@ -13,26 +13,24 @@ You can either download ODK Collect on the [Google Play Store](https://play.goog
 
 #### OpenMapKit
 
-Once the ODK is installed download the OpenMapKit from the [Google Play Store](https://play.google.com/store/apps/developer?id=OpenMapKit) or get the latest APK release directly
-[here](https://github.com/AmericanRedCross/OpenMapKitAndroid/releases/download/v1.1/OpenMapKit_v1.1.apk)
-
-
+Once the ODK is installed download the OpenMapKit from the [Google Play Store](https://play.google.com/store/apps/developer?id=OpenMapKit) or get the APK  
+[here](https://github.com/AmericanRedCross/OpenMapKitAndroid/releases)
 
 #### OpenMapKit Server
-Once ODK Collect and OpenMapKit are on your Android device, install OpenMapKit Server on an environment of your choosing. 
+Once ODK Collect and OpenMapKit are on your Android device, install OpenMapKit Server on an environment of your choosing.
 
 
-For an actual deployment of OpenMapKit Server, it is recommended to use 
+For an actual deployment of OpenMapKit Server, it is recommended to use
 [posm-build](https://github.com/AmericanRedCross/posm-build) to install your
-instance. posm-build is a lightweight shell build system used for POSM servers. 
-OpenMapKit Server is designed to be a part of a POSM server, however, the 
+instance. posm-build is a lightweight shell build system used for POSM servers.
+OpenMapKit Server is designed to be a part of a POSM server, however, the
 posm-build allows you to be modular regarding what gets installed, so you can
 and should use it if you want to install a standalone OpenMapKit Server.
 
 The advantage is that in a few lines, you can have OpenMapKit Server installed
 and integrated as an Upstart service in Ubuntu Linux. This means that if
 OpenMapKit Server crashes or is restarted, the API will restart automatically.
-Also, posm-build only gets the dependencies you need and downloads only the 
+Also, posm-build only gets the dependencies you need and downloads only the
 files you need, so the entire repo does not need to be cloned with git.
 
 Instructions for installing OMK Server on your development environment can be found [here](https://github.com/AmericanRedCross/OpenMapKitServer/blob/master/docs/development-installation.md)
@@ -76,12 +74,12 @@ You can start / stop / restart the `omk-service` like any Ubuntu Upstart service
     sudo service omk-server stop
     sudo service omk-server start
     sudo service omk-server restart
-    
+
 ##### Your Data
 
-All of your data are stored in `/opt/omk/OpenMapKitServer/public`. 
+All of your data are stored in `/opt/omk/OpenMapKitServer/public`.
 
-You can scp / sftp the 
+You can scp / sftp the
 
 forms `/opt/omk/OpenMapKitServer/public/forms`
 
@@ -92,4 +90,3 @@ submissions `/opt/omk/OpenMapKitServer/public/submissions`
 from the server to backup and access your data. There is no database, so all of your data are in these files.
 
 This is also included in the [Walkthrough Tutorial](http://openmapkit.com/docs_walkthrough.html).
-

@@ -7001,7 +7001,7 @@ button.close {
     font-family: FontAwesome;
     src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.4.0);
     src: url(../fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.4.0) format('embedded-opentype'),
-    url(../fonts/font-awesome/fontawesome-webfont.woff2?v=4.4.0) format('woff2'),
+    /*url(../fonts/font-awesome/fontawesome-webfont.woff2?v=4.4.0) format('woff2'),*/
     url(../fonts/font-awesome/fontawesome-webfont.woff?v=4.4.0) format('woff'),
     url(../fonts/font-awesome/fontawesome-webfont.ttf?v=4.4.0) format('truetype'),
     url(../fonts/font-awesome/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular) format('svg');
