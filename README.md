@@ -1,7 +1,5 @@
 ##[CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/) License
 
-Install gem plugins
-
 ```bundle install```
 
 Start jekyll dev server
