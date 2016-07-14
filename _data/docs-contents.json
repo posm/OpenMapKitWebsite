@@ -55,11 +55,8 @@
           {
             "name": "Walkthrough",
             "path": "docs_walkthrough.html"
-          },
-          {
-            "name": "Sample Data",
-            "path": "docs_sampledata.html"
           }
+
         ]
 
       }

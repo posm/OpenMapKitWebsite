@@ -1,72 +1,43 @@
-## Creating Your Own Mobile Basemap
+## Creating Your Own Basemap
 
-The OpenMapKit has the ability to host map tiles on the phone even when it is disconnected from the Internet. This section shows you how to generate offline tiles to be used on the phone. The OMK team is working on an improvied provisioning workflow, but until that's done use the steps below. 
+The OpenMapKit has the ability to host map tiles on the phone even when it is disconnected from the Internet. This section shows you how to generate offline tiles. Previously, basemap tiles had to be scraped from an endpoint and then manually added to a mobile device. Now the HOT Export tool can be used to add basemap tiles to POSM and then deploy them to mobile devices and field papers. Both of those are covered in the [Walkthrough Documentation](http://openmapkit.com/docs_walkthrough.html).
 
-MBTiles is a format made by the folks at [Mapbox](https://www.mapbox.com/) that allows you to store PNG or vector tile sets as a single file. An MBTiles file is actually a SQLite database that follows a specific schema. Check out the [spec](https://github.com/mapbox/mbtiles-spec) to learn more about it.
+## HOT Export Tool
 
-For the purpose of OpenMapKit, you can easily scrape PNG tiles from an online endpoint and store them in an MBTiles file with a few NodeJS command-line tools.
+The HOT Export Tool is used to get the larger Area of Interest data from OpenStreetMap onto the POSM. The two main components that it packages for you are 1) OSM PBF, the vector data,  and 2) MBTiles, basemap tiles.
 
-#### Scraping an Online HTTP Tile Endpoint
+POSM itself generates tiles, called _POSM Carto_ on the device itself, but it is often useful to have the HOT Export Tool fetch tiles for you on the internet as well--especially if you want to have a satellite basemap.
 
-A node module called [tl](https://www.npmjs.com/package/tl) allows you to scrape an HTTP map tile endpoint for PNG tiles and stuffs them into an MBTiles file. You can install it with the following command:
+Currently, the POSM HOT Export Tool can be reached at:
 
-```sh
-npm install -g tl mbtiles tilelive-http
-```
+http://posm.io/en/
 
-Now you will have `tl` installed as a globally accessible executable in your shell environment. Switch to whatever directory you want to save your MBTiles file to. The following command will scrape tiles from the Humanitarian OSM Basemap endpoint for Dhaka, Bangladesh.
+Name and describe your export. On the right, make sure you have selected _Select Export Area_, and draw a bounding box to server as your Area of Interest.
 
-```sh
-tl copy -z 13 -Z 19 -b '90.375853 23.700965 90.437307 23.754632' 'http://c.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png' mbtiles://./dhaka.mbtiles
-```
+![Describe Export](images/a-hot1.png)
+*Describe an Export*
 
-* `-z` is the minimum zoom
-* `-Z` is the maximum zoom
-* `'90.375853 23.700965 90.437307 23.754632'` is the bounding box
-    * `southWestLng southWestLat northEastLng northEastLat`
-    * Check out [BBoxFinder.com](http://bboxfinder.com/) to help you get this bounding box coordinate set.
-* `'http://c.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'` is the http endpoint for the tiles
-* `mbtiles://./dhaka.mbtiles` is the MBTiles file the scraped PNGs will be saved to
+Choose the file formats you want. You want to at least have OSM PBF. OSMAnd OBF is a bonus, because you can load your extract in OSMAnd. If you want the export tool to generate an MBTiles basemap from the internet, check _MBTiles_.
 
-#### Pre-generated Offline MBTiles Basemaps
+![File Formats](images/a-hot2.png)
+*File Formats*
 
-Below is a list of links to previously generated MBTiles files to get you started. All you need to do to use them is to drag and drop them into the `openmapkit/mbitles` directory on your Android phone.
+If you would like to have an MBTiles basemap fetched from the internet _(optional)_, you need to specify the tile template URL and zoom levels to be fetched. This task by far takes the longest, and the generated MBTiles file can be _huge_... You can use [Geofabrik's Tile Calculator](http://tools.geofabrik.de/calc/) to help you determine how big your MBTiles is likely to be.
 
-#### Humanitarian OpenStreetMap Examples
+![MBTiles Source URL](images/a-hot3.png)
+*MBTiles Source URL*
 
-* [Dvizarasekwa, Harare, Zimbabwe - Mar 24 2015](https://www.dropbox.com/s/bcyg1qkdl502evn/dvziarasekwa-hot-all20.mbtiles)
-    * Zoom 12 - 22 (Actually only fetched through 20)
-    * Bounding Box: 30.885143 -17.824980 30.967541 -17.784733
-    * Command: `tl copy -z 13 -Z 22 -b '30.885143 -17.824980 30.967541 -17.784733' 'http://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png' mbtiles://./dvizarasekwa-hot.mbtiles`
-* [Dhaka, Bangladesh - Jan 2 2015](https://www.dropbox.com/s/0vgkkgtcnwpjzs1/dhaka2015-01-02.mbtiles)
-    * Zoom 13 - 19
-    * Bounding Box: 90.375853 23.700965 90.437307 23.754632
+Finally, you need to __Create Export__.
 
-#### Standard OpenStreetMap
+![Export Details](images/a-hot4.png)
+*Export Details*
 
-* [Dvizarasekwa, Harare, Zimbabwe - Mar 6 2015]
-    * Zoom 13 - 20
-    * Bounding Box: -17.820934970719602 30.90642929077148 -17.788573952710493 30.944967269897
-    * Command: `tl copy -z 13 -Z 20 -b '30.885143 -17.824980 30.967541 -17.784733' 'http://a.tile.openstreetmap.org/{z}/{x}/{y}.png' mbtiles://./dvizarasekwa-osm.mbtiles`
+The export begins by fetching OSM data from the Overpass API. This may take a while, and if you are creating  MBTiles, it may even take hours. You will be emailed when the export is complete.
 
-* [Harare, Zimbabwe - Mar 6 2013]
-    * Zoom 13 - 20
-    * Bounding Box: 
-    * Command: `tl copy -z 13 -Z 20 -b '30.390930 -18.195434 31.709290 -17.551736' 'http://a.tile.openstreetmap.org/{z}/{x}/{y}.png' mbtiles://./harare-osm.mbtiles`
+![Beginning of Export](images/a-hot5.png)
+*Beginning of Export*
 
-#### Preview MBTiles Locally
+Once your export is completed, right click on __POSM Bundle__ and copy the URL. You will use that URL as a data source in the POSM Administrative interface.
 
-You can use [tessera](https://github.com/mojodna/tessera) to locally serve your MBTiles file to allow you to preview the basemap you have scraped.
-
-To install:
-
-```sh
-npm install -g tessera
-npm install -g mbtiles
-```
-
-Then, `cd` to the directory with your MBTiles file. To serve, execute:
-
-```sh
-tessera mbtiles://./whatever.mbtiles
-```
+![Completed Export](images/a-hot6.png)
+*Completed Export*
