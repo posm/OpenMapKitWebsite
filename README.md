@@ -1,4 +1,5 @@
-##[CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/) License
+## Website for OpenMapKit
+**[CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/) license**
 
 ```bundle install```
 
@@ -11,3 +12,4 @@ The current folder will be generated into ./_site, watch for changes, and regene
 ```jekyll build --watch```
 
 Documentation built using [theDocs](http://shamsoft.net/theDocs/index.html)
+
