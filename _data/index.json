@@ -115,7 +115,7 @@
       "link_to": "docs.html"
     },
     {
-      "icon": "icn-icn_surey_filled",
+      "icon": "icn-icon_surveyFilled",
       "title": "Implement Survey",
       "description": "Take your survey to the field to collect data and geographic information.",
       "link_to": "docs_odkformsforomk.html"
