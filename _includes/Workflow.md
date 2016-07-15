@@ -14,20 +14,20 @@ The overview of the process is:
 
 ### OMK Server Production Installation
 
-For an actual deployment of OpenMapKit Server, it is recommended to use 
+For an actual deployment of OpenMapKit Server, it is recommended to use
 [posm-build](https://github.com/AmericanRedCross/posm-build) to install your
-instance. posm-build is a lightweight shell build system used for POSM servers. 
-OpenMapKit Server is designed to be a part of a POSM server, however, the 
+instance. posm-build is a lightweight shell build system used for POSM servers.
+OpenMapKit Server is designed to be a part of a POSM server, however, the
 posm-build allows you to be modular regarding what gets installed, so you can
 and should use it if you want to install a standalone OpenMapKit Server.
 
 The advantage is that in a few lines, you can have OpenMapKit Server installed
 and integrated as an Upstart service in Ubuntu Linux. This means that if
 OpenMapKit Server crashes or is restarted, the API will restart automatically.
-Also, posm-build only gets the dependencies you need and downloads only the 
+Also, posm-build only gets the dependencies you need and downloads only the
 files you need, so the entire repo does not need to be cloned with git.
 
-Instructions for installing OMK Server on your development environment can be found [here](https://github.com/AmericanRedCross/OpenMapKitServer/blob/master/docs/development-installation.md)
+Instructions for installing OMK Server on your development environment can be found [here](https://github.com/AmericanRedCross/OpenMapKitServer/blob/master/docs/development-installation.md).
 
 #### Tested On
 
@@ -44,10 +44,10 @@ have to throw much hardware at it.
 #### Steps
 
 1. Download and extract posm-build.
-        
-        sudo -s
+
+				sudo -s
         wget -q -O - https://github.com/AmericanRedCross/posm-build/archive/master.tar.gz | tar -zxf - -C /root --strip=2
-        
+
 
 2. Create a `settings.local` file in `/root/etc` with the following content:
 
@@ -69,12 +69,12 @@ You can start / stop / restart the `omk-service` like any Ubuntu Upstart service
     sudo service omk-server stop
     sudo service omk-server start
     sudo service omk-server restart
-    
+
 #### Your Data
 
-All of your data are stored in `/opt/omk/OpenMapKitServer/public`. 
+All of your data are stored in `/opt/omk/OpenMapKitServer/public`.
 
-You can scp / sftp the 
+You can scp / sftp the
 
 forms `/opt/omk/OpenMapKitServer/public/forms`
 
@@ -88,7 +88,7 @@ from the server to backup and access your data. There is no database, so all of 
 ### Creating and Adding a Survey
 
 #### Create or Modify XLSForm using Excel
-Creating forms for ODK or OMK can be as simple or complex as the survey itself. In most cases this step can be completed in under an hour. 
+Creating forms for ODK or OMK can be as simple or complex as the survey itself. In most cases this step can be completed in under an hour.
 
 Setting up the basic survey form:
 
@@ -103,7 +103,7 @@ Creating survey questions consistent with Open Street Map tags:
 
 A similar example can be viewed and downloaded [here](https://docs.google.com/spreadsheets/d/11H4-mGYTS61GLjSbVoTbmhoI5DjlF5fcBwNwQcvd2Go/edit#gid=0)
 
-More detailed documentation for how to correctly create a survey form can be found in the [Creating Surveys for OMK](http://openmapkit.com/docs_odkformsforomk.html) tab in the **Users** documentation. 
+More detailed documentation for how to correctly create a survey form can be found in the [Creating Surveys for OMK](http://openmapkit.com/docs_odkformsforomk.html) tab in the **Users** documentation.
 
 
 #### Upload Survey to OMK Server
@@ -113,7 +113,7 @@ To use the survey you create in the field, it must be added to OMK Server. You c
 http://{your_host_url}/pages/upload-form/
 ```
 
-OR 
+OR
 
 By opening the OMK Server UI.
 
@@ -237,43 +237,58 @@ Now you are read to download a deployment on your phone. You can enter the serve
 
 Make sure your phone is connected to the __POSM__ wifi network.
 
+{:.imageSize}
 ![No Server Setup](images/d-android1.png)
+
 *No Server Setup Yet*
 
 The QR Code will be read, and it will bring you to the corresponding deployment.
 
+{:.imageSize}
 ![Deployment Details](images/d-android2.png)
+
 *Deployment Details*
 
 Now you can download it by pressing the button in the lower right.
 
+{:.imageSize}
 ![Downloading](images/d-android3.png)
+
 *Downloading*
 
 If you jump back to the previous screen, you can see the list of deployments on the POSM's OpenMapKit Server.
 
+{:.imageSize}
 ![List of Deployments](images/d-android4.png)
+
 *List of Deployments*
 
 Once your download is complete, there will be a new button in the bottom left to __Check Out__ your deployment. This will turn on the POSM Carto MBTiles and OSM XML on the map for you.
 
+{:.imageSize}
 ![Download Complete](images/d-android5.png)
+
 *Download Complete*
 
 You should also see the bounds of your field paper atlas pages. The top of the map should show the page that is green below.
 
+{:.imageSize}
 ![Field Paper with Pages](images/d-android6.png)
+
 *Field Paper with Pages*
 
 #### Also...
 
 Before, you always had to start with ODK Collect. Now, if you start from OpenMapKit and try to edit a feature, the app will lead you back to ODK Collect to fill in your survey.
 
+{:.imageSize.imageBorder}
 ![Notice to Launch ODK Collect](images/d-android7.png)
+
 *Notice to Launch ODK Collect*
 
 Once you've gotten back into OpenMapKit _from_ ODK Collect, you can edit tags as usual.
 
+{:.imageSize}
 ![Return from ODK Collect](images/d-android8.png)
 
 
@@ -282,62 +297,62 @@ Once you've gotten back into OpenMapKit _from_ ODK Collect, you can edit tags as
 ##### Start Blank form in ODK Collect
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143725/e08011e8-e295-11e4-8df4-53db84657b5c.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143725/e08011e8-e295-11e4-8df4-53db84657b5c.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143746/e10a4426-e295-11e4-857f-932854bfd6b1.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143746/e10a4426-e295-11e4-857f-932854bfd6b1.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143734/e09dfb36-e295-11e4-85b5-c6f7d9107b3c.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143734/e09dfb36-e295-11e4-85b5-c6f7d9107b3c.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143735/e0ab1320-e295-11e4-970a-2098b7d98b3c.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143735/e0ab1320-e295-11e4-970a-2098b7d98b3c.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143736/e0ab7f90-e295-11e4-9835-6eedc6beda0e.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143736/e0ab7f90-e295-11e4-9835-6eedc6beda0e.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143737/e0ae9540-e295-11e4-8b4a-2a44d0e58618.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143737/e0ae9540-e295-11e4-8b4a-2a44d0e58618.png)
 
 ##### Continue Form in OMK App
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143738/e0aff584-e295-11e4-9438-0490e06decfd.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143738/e0aff584-e295-11e4-9438-0490e06decfd.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143811/41619680-e296-11e4-94c7-6e6abbd6f1a9.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143811/41619680-e296-11e4-94c7-6e6abbd6f1a9.png)
 
 You can click on any feature on your map to edit it.
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143813/41672dac-e296-11e4-943c-a46cff5ec395.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143813/41672dac-e296-11e4-943c-a46cff5ec395.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143814/4167b812-e296-11e4-9301-52f662c61f94.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143814/4167b812-e296-11e4-9301-52f662c61f94.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143816/416b2074-e296-11e4-9a77-87f3c998d6bc.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143816/416b2074-e296-11e4-9a77-87f3c998d6bc.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143818/41749b54-e296-11e4-80d3-9fd211ac7d3c.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143818/41749b54-e296-11e4-80d3-9fd211ac7d3c.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143823/418bc694-e296-11e4-92c4-9acf989c95e9.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143823/418bc694-e296-11e4-92c4-9acf989c95e9.png)
 
 ##### Complete Form in ODK Collect App
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143824/418dea64-e296-11e4-8939-3fc81b30facd.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143824/418dea64-e296-11e4-8939-3fc81b30facd.png)
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143825/418fd0d6-e296-11e4-9e9e-1e9c4af0ac77.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143825/418fd0d6-e296-11e4-9e9e-1e9c4af0ac77.png)
 
 Click on **Send Finalized Form(s)** to get to the upload dialogue.
 
 ##### Upload Form Data in ODK Collect App
 
 {:.imageSize}
-![]( https://cloud.githubusercontent.com/assets/506078/7143826/41946380-e296-11e4-9a4f-0c4ef0ed2e1e.png) |
+![]( https://cloud.githubusercontent.com/assets/506078/7143826/41946380-e296-11e4-9a4f-0c4ef0ed2e1e.png)
 
 Select all the forms you want or click **Toggle All**. When you're read click **Send Selected** to upload your completed data to the server.
 
@@ -357,7 +372,7 @@ Click on the the **View Submissions** tab of the survey you would like to view.
 *View Submissions*
 
 
-You have the options to view & download the ODK data, view & download the OSM data and the ability to submit the OSM data back to the OSM API. 
+You have the options to view & download the ODK data, view & download the OSM data and the ability to submit the OSM data back to the OSM API.
 
 
 ![OMK Metadata](images/osm_metadata.png)
@@ -369,7 +384,7 @@ If there are any conflicts that occur when submitting data back to the OSM API, 
 
 #### Resolve Conflicts with the POSM Changeset Replay Tool
 
-The Changeset Replay Tool is a workflow for resolving conflicts. It uses a local Git repository containing the current state (local edits), transform it so that it contains the new desired upstream state (what OSM should look like after merging), and apply the necessary transformations (in the form of API calls) to update the upstream state. 
+The Changeset Replay Tool is a workflow for resolving conflicts. It uses a local Git repository containing the current state (local edits), transform it so that it contains the new desired upstream state (what OSM should look like after merging), and apply the necessary transformations (in the form of API calls) to update the upstream state.
 
 ##### 1. Obtain AOI Extract at Branch Point
 
@@ -379,77 +394,74 @@ You should already have a copy of this file.
 
 Determine the first local changeset. Assuming you have access to the local APIDB:
 
-```bash
-psql -d osm_posm -t -c "select id from changesets where num_changes > 0 order by id asc limit 1"
-```
+
+	psql -d osm_posm -t -c "select id from changesets where num_changes > 0 order by id asc limit 1"
+
 
 Gather changesets from the local OSM API into `changesets/`:
 
-```bash
-OSM_BASE_URL=http://localhost:3000 ./gather_changesets.sh <first changeset id>
-```
+
+	OSM_BASE_URL=http://localhost:3000 ./gather_changesets.sh <first changeset id>
+
 
 ##### 3. Initialize the git Repository from the Branch Point
 
 Filter the AOI extract according to entities referenced in local changesets:
 
-```bash
-node filter-by-use.js huaquillas-fixed.pbf posm/ changesets/*.osc
-cd posm/
-git init
-git add .
-git commit -m "Branch point"
-git tag start
-cd ..
-```
+	node filter-by-use.js huaquillas-fixed.pbf posm/ changesets/*.osc
+	cd posm/
+	git init
+	git add .
+	git commit -m "Branch point"
+	git tag start
+	cd ..
+
 
 ##### 4. Obtain a Current AOI Extract
 
 Calculate the bounding box for all local changesets and fetch the corresponding area from Overpass,
 converting to PBF for good measure:
 
-```bash
-echo "(node($(node changeset-bbox.js changesets/*.xml | jq -r 'map(tostring) | [.[1], .[0], .[3], .[2]] | join(",")'));<;>>;>;);out meta;" > overpass.query
-wget -O aoi.xml --post-file=overpass.query http://overpass-api.de/api/interpreter
-osmconvert aoi.xml --out-pbf > aoi.pbf
-```
+
+	echo "(node($(node changeset-bbox.js changesets/*.xml | jq -r 'map(tostring) | [.[1], .[0], .[3], .[2]] | join(",")'));<;>>;>;);out meta;" > overpass.query
+	wget -O aoi.xml --post-file=overpass.query http://overpass-api.de/api/interpreter
+	osmconvert aoi.xml --out-pbf > aoi.pbf
+
 
 ##### 5. Extract and Apply Upstream Changes
 
 Filter the AOI extract according to entities referenced in local changesets and apply to a new
 branch. This ensures that there's a common ancestor when moving commits between branches.
 
-```bash
-cd posm/
-rm -rf *
-cd ..
 
-node filter-by-use.js aoi.pbf posm/ changesets/*.osc
-cd posm/
-git add .
-git checkout -b osm
-git commit -m "Current OSM"
-git tag upstream
-git gc
-cd ..
-```
+	cd posm/
+	rm -rf *
+	cd ..
+
+	node filter-by-use.js aoi.pbf posm/ changesets/*.osc
+	cd posm/
+	git add .
+	git checkout -b osm
+	git commit -m "Current OSM"
+	git tag upstream
+	git gc
+	cd ..
+
 
 ##### 6. Apply Local Changesets to the Branch Point
 
-This is effectively what has already occurred through editing using the OSM API, although doing it
-in `git` terms allows us to more easily move changes between branches.
+This is effectively what has already occurred through editing using the OSM API, although doing it in `git` terms allows us to more easily move changes between branches.
 
-```bash
-cd posm/
-git checkout master
-cd ..
 
-REPO=posm ./preprocess-changesets.sh changesets/
+	cd posm/
+	git checkout master
 
-cd posm/
-git gc
-cd ..
-```
+	REPO=posm ./preprocess-changesets.sh changesets/
+
+	cd posm/
+	git gc
+	cd ..
+
 
 ##### 7-8. Apply Local Changesets to the Upstream Version and Resolve Conflicts
 
@@ -459,66 +471,64 @@ manually.
 
 TODO extract this into a script
 
-```bash
-cd posm/
-git checkout osm
-git tag marker start
-git --no-pager log --reverse --format=%h marker..master | while read sha1; do
-  git cherry-pick $sha1
-  
-  echo Applying $sha1
+	cd posm/
+	git checkout osm
+	git tag marker start
+	git --no-pager log --reverse --format=%h marker..master | while read sha1; do
+	  git cherry-pick $sha1
 
-  if [ -f .git/CHERRY_PICK_HEAD ]; then
-    # remove files that were deleted by us (as we no longer refer to them and
-    # will submit the deletions as "if-unused")
-    git status --porcelain | grep ^UD | cut -d " " -f 2 | xargs git rm
+	  echo Applying $sha1
 
-    # remove files that were deleted upstream
-    git status --porcelain | grep ^DU | cut -d " " -f 2 | xargs git rm
+	  if [ -f .git/CHERRY_PICK_HEAD ]; then
+	    # remove files that were deleted by us (as we no longer refer to them and
+	    # will submit the deletions as "if-unused")
+	    git status --porcelain | grep ^UD | cut -d " " -f 2 | xargs git rm
 
-    # data available to the mergetool:
-    #  * OSM version
-    #  * our version
-    #  * current version of OSM refs (via API) -- (we don't know the version ref'd)
-    #  * current version of our refs (via API, if POSM is available) -- (we don't know the version ref'd)
+	    # remove files that were deleted upstream
+	    git status --porcelain | grep ^DU | cut -d " " -f 2 | xargs git rm
 
-    # In other words, we can show node movements, tag and ref/membership changes
-    # but not way/relation composition (visually)
-    # TODO sometimes this fails, in which case marker will have already been set to $sha1
-    git mergetool -y --no-prompt
+	    # data available to the mergetool:
+	    #  * OSM version
+	    #  * our version
+	    #  * current version of OSM refs (via API) -- (we don't know the version ref'd)
+	    #  * current version of our refs (via API, if POSM is available) -- (we don't know the version ref'd)
 
-    git clean -f
+	    # In other words, we can show node movements, tag and ref/membership changes
+	    # but not way/relation composition (visually)
+	    # TODO sometimes this fails, in which case marker will have already been set to $sha1
+	    git mergetool -y --no-prompt
 
-    git add */
+	    git clean -f
 
-    git commit --allow-empty -C $sha1
-  fi
+	    git add */
 
-  # remove temporary files
-  git clean -f
+	    git commit --allow-empty -C $sha1
+	  fi
 
-  # update the marker
-  git tag -f marker $sha1
-done
-```
+	  # remove temporary files
+	  git clean -f
+
+	  # update the marker
+	  git tag -f marker $sha1
+	done
+
 
 ##### 9. Submit Resolved Changesets Upstream
 
 Create a new branch for changesets that have been applied upstream and walk through all local
 changesets, submitting them and renumbering (remapping entity IDs and references) as necessary.
 
-```bash
-cd posm/
-git checkout -b applied upstream
-../submit-all.sh
-```
+
+	cd posm/
+	git checkout -b applied upstream
+	../submit-all.sh
+
 
 ID remapping information will be left behind in `.git/map.json` (cumulative) and `.git/<commit>.json` (per-changeset).
 
 To track the number of pending changesets, count the number of commits between the `upstream` marker and the tip of the `osm` branch:
 
-```bash
-watch "git --no-pager log --reverse --format=%h upstream..osm | wc -l"
-```
+
+	watch "git --no-pager log --reverse --format=%h upstream..osm | wc -l"
 
 The Git repository we produced includes all of the history and context used for reconciliation. Once synchronization has been completed, its primary purpose is as an artifact of the merge process. Rather than partially applying upstream changes to POSM’s database, it’s much easier to replace all of the data with a new extract.

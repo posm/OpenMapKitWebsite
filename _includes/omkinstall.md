@@ -6,19 +6,16 @@ _Prerequisites:_
 You'll need the lastest version of both ODK Collect and OpenMapKit on your Android device. The OMK currently supports Android version 4.2 and higher.
 You will also need install OpenMapKit Server in order manage surveys and OSM data, deploy them to your Android devices and submit surveys back to OSM.
 
-
 #### ODK Collect
 
 You can either download ODK Collect on the [Google Play Store](https://play.google.com/store/apps/details?id=org.odk.collect.android) or directly download the [APK](https://opendatakit.org/downloads/download-category/collect/).
 
 #### OpenMapKit
 
-Once the ODK is installed download the OpenMapKit from the [Google Play Store](https://play.google.com/store/apps/developer?id=OpenMapKit) or get the APK  
-[here](https://github.com/AmericanRedCross/OpenMapKitAndroid/releases)
+Once ODK Collect is installed download OpenMapKit from the [Google Play Store](https://play.google.com/store/apps/developer?id=OpenMapKit) or get the APK [here](https://github.com/AmericanRedCross/OpenMapKitAndroid/releases).
 
 #### OpenMapKit Server
 Once ODK Collect and OpenMapKit are on your Android device, install OpenMapKit Server on an environment of your choosing.
-
 
 For an actual deployment of OpenMapKit Server, it is recommended to use
 [posm-build](https://github.com/AmericanRedCross/posm-build) to install your
@@ -33,7 +30,7 @@ OpenMapKit Server crashes or is restarted, the API will restart automatically.
 Also, posm-build only gets the dependencies you need and downloads only the
 files you need, so the entire repo does not need to be cloned with git.
 
-Instructions for installing OMK Server on your development environment can be found [here](https://github.com/AmericanRedCross/OpenMapKitServer/blob/master/docs/development-installation.md)
+Instructions for installing OMK Server on your development environment can be found [here](https://github.com/AmericanRedCross/OpenMapKitServer/blob/master/docs/development-installation.md).
 
 ##### Tested On
 
