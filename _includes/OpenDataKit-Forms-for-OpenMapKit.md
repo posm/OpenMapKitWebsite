@@ -22,7 +22,6 @@ This parameter is referenced in the _osm sheet_, between choices and settings.
 
 
 
-{:.imageSize}
 ![osm sheet](https://cloud.githubusercontent.com/assets/556367/7404929/9418893c-ee9f-11e4-9249-b684ff33e16a.png)
 
 The _osm sheet_ has three columns: list name, name, and label. This sheet defines the tagging parameters that will be sent to OpenMapKit.
@@ -31,7 +30,7 @@ The _osm sheet_ has three columns: list name, name, and label. This sheet define
 | -- |--- | --- | --- |
 | 1 | list name | name | label |
 
-__list name__ has two functions. 
+__list name__ has two functions.
 
 1. It defines the set of tags that OpenMapKit will add to an OSM feature.
 
