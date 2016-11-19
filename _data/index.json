@@ -40,7 +40,7 @@
         "items": [
           {
             "class":"hero2-button",
-            "text": "Get Android App",
+            "text": "Get OpenMapKit Android",
             "link_to": "https://play.google.com/store/apps/details?id=org.redcross.openmapkit&hl=en"
           }
         ]
@@ -110,8 +110,8 @@
     },
     {
       "icon": "icn-icon_OMK",
-      "title": "Open OMK App",
-      "description": "The OpenStreetMap question launches the OMK app to enable OpenStreetMap editing.",
+      "title": "Launch OpenMapKit Android",
+      "description": "The OpenStreetMap question launches OpenMapKit Android to enable OpenStreetMap editing.",
       "link_to": "docs.html"
     },
     {
