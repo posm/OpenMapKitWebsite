@@ -1,0 +1,484 @@
+ html, body  {
+   font-size:14px;
+ }
+
+ .brand-green {
+     color: #639B3D;
+ }
+
+ /* Navbar logo */
+ .top-bar .title-area .name h1 a {
+     font-size: 150px;
+     position: relative;
+     bottom: 25px;
+     color:#5E695C;
+ }
+ button:hover, button:focus, .button:hover, .button:focus {
+     background-color: #fff;
+ }
+
+ .contain-to-grid{
+     overflow-y: hidden;
+ }
+
+ /** Navbar when expanded */
+ /*.top-bar.expanded .title-area {*/
+     /*background: #fff;*/
+ /*}*/
+
+ .top-bar.expanded .toggle-topbar a {
+     color: #639B3D;
+ }
+
+ .right-nav-spacing {
+     position: relative;
+     right: 7px;
+ }
+
+ .contain-to-grid .top-bar-section ul li {
+     background: #fff;
+ }
+
+ .top-bar .toggle-topbar.menu-icon a {
+     color: #639B3D;
+ }
+
+ /*.top-bar.expanded .toggle-topbar a {*/
+      /*color: #fff;*/
+ /*}*/
+
+ .top-bar, .contain-to-grid {
+     background-color: #fff;
+ }
+
+ .f-topbar-fixed.shrink .top-bar .title-area, .f-topbar-fixed.shrink .top-bar .title-area li, .f-topbar-fixed.shrink .top-bar .title-area a {
+     line-height: 123px;
+ }
+
+ /* Navbar logo on shrink */
+ .f-topbar-fixed.shrink .top-bar .title-area img, .f-topbar-fixed.shrink .top-bar .title-area li img, .f-topbar-fixed.shrink .top-bar .title-area a {
+     position: relative;
+     bottom: 45px;
+     left:0px;
+ }
+
+ /** Hide Horizontal menu on mobile screen **/
+ .open-sidebar section.top-bar-section {
+     display: none;
+ }
+
+ .home  #new-sidebar {
+     display: none;
+ }
+
+ /* footer */
+ #footer .footer-logo {
+     height: 60px;
+     position: relative;
+ }
+
+ #footer .license {
+     margin: 0 7px 0 20px;
+     position: relative;
+     top: 0;
+ }
+
+ #footer .group {
+     padding:0;
+ }
+
+ #footer .logo-width {
+     max-width: 175px;
+ }
+
+ #footer .row {
+     margin-left: auto !important;
+     margin-right: auto !important;
+ }
+
+ @media (max-width: 50em){
+
+     #footer .license-align {
+         text-align: left;
+     }
+
+     #footer .license img {
+         min-width: 80px;
+     }
+
+     #footer .socials {
+         right: 4px;
+         top: 0 !important;
+     }
+
+     #footer .social-media {
+         display: none;
+     }
+
+ }
+
+ @media (min-width: 50em){
+     #footer .license-align {
+         text-align: right;
+     }
+
+     #footer .social-media-mobile {
+         display: none;
+     }
+
+     #footer .social-media {
+         display: block;
+     }
+
+     #footer .license {
+         top:15px;
+     }
+ }
+
+ #footer .socials {
+     margin: 0 0 0 15px !important;
+     position: relative;
+     min-width: 95px;
+     top: 11px;
+ }
+
+ #footer .logo {
+     min-width: 156px;
+ }
+
+ #footer ul.socials a:hover i {
+     background: #eee;
+ }
+
+ #footer .footer-spacing {
+     margin: 0;
+     display: inline-flex;
+     padding: 15px 0;
+     max-width: none !important;
+ }
+
+ .modIconText .icon-text-simple .service-icon {
+     font-size: 50px;
+     float: left;
+     color: #e0e0e0;
+     text-align: center;
+ }
+
+ .modIconText .icon-text-circle:hover i {
+     color: #639B3D;
+ }
+
+ .modSectionHeader .special-title h2::after {
+     background: #639B3D;
+ }
+
+ @media (max-width: 767px) {
+     .open-sidebar .contain-to-grid.sticky.fixed, .open-sidebar .contain-to-grid.sticky, body.open-sidebar {
+         left:-80%;
+     }
+
+     .f-topbar-fixed.open-sidebar article.main-content {
+        right:80%;
+     }
+ }
+
+ .custom-topbar {
+     position: absolute !important;
+     right: 0;
+     top: 27px;
+ }
+
+ /** Nav bar hamburger**/
+
+ .contain-to-grid.sticky .top-bar .button, .top-bar button {
+     top:0;
+ }
+
+ .f-topbar-fixed.shrink nav button.main{
+     top:-40px;
+ }
+
+ .shrink .custom-topbar {
+     top:10px;
+ }
+
+ .hamburger-menu {
+     bottom:0 !important;
+ }
+
+ .hero2-font {
+     color: #464646 !important;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     text-transform: none !important;
+     text-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+ }
+
+ .hero2-spacing {
+     line-height: 3.5rem !important;
+     font-size: 3.3rem !important;
+ }
+
+ .hero2-button {
+     position: relative;
+     bottom: 18px;
+ }
+
+/** Hero text **/
+ .modDefaultSlider .sequence .title h2, .modDefaultSlider .sequence .small-title h2 {
+     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.35);
+ }
+
+ /** Buttons **/
+ .button {
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     color: #fff;
+     background: #639B3D;
+     border: 2px solid #639B3D;
+ }
+
+ .button:hover {
+     background-color: rgba(99, 155, 61, 0.8);
+ }
+
+ .modMilestone i {
+     background: #639B3D;
+ }
+
+.hero-padding {
+    padding:0px 0px 0px 25px;
+}
+
+.hero-button-padding {
+    padding: 0px 0px 0px 30px;
+}
+
+.roboto {
+    font-family: "Roboto";
+}
+
+.dark-grey {
+    color: #5E695C !important;;
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}
+
+.section-padding {
+    padding:0 0 0 20px;
+}
+
+.sidenav-margin {
+    margin-left:35px;
+}
+
+.hero2-text-position {
+    top:100px;
+}
+
+.screenshot {
+    height:600px;
+}
+
+@media (min-width: 960px) {
+    .docs-nav-width {
+        /*max-width: none !important;*/
+    }
+}
+
+ .sidenav ul {
+      padding-left: 0 !important
+ }
+
+ @media (max-width: 770px) {
+     #new-sidebar {
+         display: none;
+     }
+ }
+
+ .f-topbar-fixed.shrink #new-sidebar {
+     top:60px;
+ }
+
+ .f-topbar-fixed.shrink #new-sidebar .new-sidebar-content {
+     position: relative;
+     top:20px;
+ }
+
+ #new-sidebar {
+     width: 270px;
+     position: fixed;
+     background: #f5f5f5;
+     top: 100px;
+     bottom: 0;
+     left: 0;
+     overflow-y: auto;
+     z-index: 10;
+ }
+
+ #new-sidebar .new-sidebar-content {
+     position: relative;
+     top:20px;
+ }
+
+ #new-sidebar ul {
+     list-style: none;
+     font-weight: 600;
+ }
+
+ #new-sidebar li {
+     font-size: 14px;
+     line-height: 30px;
+     margin-bottom: 4px;
+ }
+
+ #new-sidebar li a:hover {
+     background-color: #eee;
+     color: #639B3D;
+     text-decoration: none;
+ }
+
+ #new-sidebar a {
+     padding: 2px 20px!important;
+     display: block;
+     line-height: 30px;
+     color: #5E695C;
+     transition: .3s ease;
+ }
+
+ #new-sidebar~.new-sidebar-main-padding {
+     padding: 50px 50px 50px 315px;
+     min-height: 545px;
+ }
+
+ @media screen and (max-width: 767px) {
+     .main-content {
+         padding: 30px 40px !important;
+     }
+ }
+
+ .custom-topbar button:hover {
+     background-color: #ffffff;
+ }
+
+ .open-sidebar #new-sidebar {
+     right: 0px !important;
+     display: block !important;
+     top: 0;
+     width: 80%;
+     left: inherit;
+     height: 100%;
+     overflow-y: auto;
+ }
+
+ .open-sidebar #new-sidebar .new-sidebar-content {
+     top: 20px;
+ }
+
+
+ .modDefaultSlider .sequence .animate-in .small-title.bottom-to-top.hero-rise {
+    top:100px;
+ }
+
+ .modDefaultSlider .sequence .animate-in .title.bottom-to-top {
+     top:100px;
+ }
+
+ .modDefaultSlider .sequence .animate-in .buttons-wrapper.bottom-to-top {
+     top:75px;
+ }
+
+ .service-vertical-spacing {
+     position: relative;
+     top: 14px;
+ }
+
+ a {
+     color: #639B3D;
+     -moz-transition-duration: 0.3s;
+     -o-transition-duration: 0.3s;
+     -webkit-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+    font-weight: bold;
+ }
+
+
+ td, th{
+     border: 1px darkgrey solid;
+ }
+ table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
+     display: table-cell;
+     line-height: 1.28571rem;
+     color: #000000;
+     border: 1px darkgrey solid;
+ }
+ .imageSize img{
+     /*max-width: 60%;*/
+     height: 500px;
+     border: 1px darkgrey solid;
+ }
+
+ code {
+     color: #000000;
+     background-color: #f7f7f7;
+     text-shadow: 0 1px #ffffff;
+     line-height: 1.45;
+     border-radius: 3px;
+ }
+
+
+ /*!**/
+ /*Max width before this PARTICULAR table gets nasty*/
+ /*This query will take effect for any screen smaller than 760px*/
+ /*and also iPads specifically.*/
+ /**!*/
+ @media
+ only screen and (max-width: 760px),
+ (min-device-width: 768px) and (max-device-width: 1024px) {
+
+     /* Force table to not be like tables anymore */
+     table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
+      font-size: 10px;
+    }
+     .imageSize{
+         width: 80%;
+     }
+ }
+
+
+.activeMenu {
+     background-color: #cfcfcf;
+     color: #639B3D !important;
+     text-decoration: none;
+ }
+
+.mini-icon {
+    font-size: 12px;
+}
+
+.custom-nav {
+    background-color: transparent;
+    border: none;
+}
+
+ .navbar-toggle .icon-bar {
+     display: block;
+     width: 22px;
+     height: 2px;
+     border-radius: 1px;
+     margin-top:4px;
+ }
+
+ .navbar-toggle .icon-bar {
+     background-color: #639B3D;
+ }
+
+ :focus {
+     outline: none;
+ }
+
+
+ .inline-flex {
+     display: inline-flex;
+ }
