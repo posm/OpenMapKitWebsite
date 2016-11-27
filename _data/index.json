@@ -40,7 +40,7 @@
         "items": [
           {
             "class":"hero2-button",
-            "text": "Get Android App",
+            "text": "Get OpenMapKit Android",
             "link_to": "https://play.google.com/store/apps/details?id=org.redcross.openmapkit&hl=en"
           }
         ]
@@ -98,7 +98,7 @@
   "how_works": {
     "title": "How it works",
     "text": [
-      "OpenMapKit (OMK) is an extension of OpenDataKit allowing users to create professional quality mobile data collection surveys for field data collection.",
+      "OpenMapKit is an extension of OpenDataKit allowing users to create professional quality mobile data collection surveys for field data collection.",
       "OpenMapKit launches directly from OpenDataKit when the OSM question type is enabled in a standard survey. Simply include OSM questions and tags in your survey to collect information on OSM in the field."]
   },
   "omk_features": [
@@ -110,8 +110,8 @@
     },
     {
       "icon": "icn-icon_OMK",
-      "title": "Open OMK App",
-      "description": "The OpenStreetMap question launches the OMK app to enable OpenStreetMap editing.",
+      "title": "Launch OpenMapKit Android",
+      "description": "The OpenStreetMap question launches OpenMapKit Android to enable OpenStreetMap editing.",
       "link_to": "docs.html"
     },
     {

@@ -5,24 +5,21 @@
         <ul class="">
         {% for item in site.data.docs-contents %}
 
-        <!--{% if item.name == "Overview" %}-->
-        <!--<li><a class="active" href="{{site.baseurl}}/{{item.path}}">{{ item.name }}</a></li>-->
-        <!--{% else %}-->
         <li>
-            <a href="{{site.baseurl}}/{{item.path}}">{{ item.name }}</a>
+            <a href="{{item.path}}">{{ item.name }}</a>
             {% if item.children %}
             <ul class="open">
                 {% for child in item.children %}
                 <li class="" id="{{child.name}}">
                     {% if child.path %}
-                        <a href="{{site.baseurl}}/{{child.path}}"> {{child.name}}</a>
+                        <a href="{{child.path}}"> {{child.name}}</a>
                     {% else %}
                         <a href="#"> {{child.name}}</a>
                     {% endif %}
                     <ul class="open">
                         {% for grandchild in child.children %}
                         <li class="" id="{{grandchild.name}}">
-                            <a href="{{site.baseurl}}/{{grandchild.path}}"> {{grandchild.name}}</a>
+                            <a href="{{grandchild.path}}"> {{grandchild.name}}</a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -32,7 +29,6 @@
             {% else %}
             {% endif %}
         </li>
-        {% endif %}
 
         {% endfor %}
 

@@ -1,4 +1,4 @@
-##Creating Surveys
+##Creating Forms
 
 The primary change to the forms in OpenDataKit is that we've added an`osm` question type. Rather than including a geographic point or shape directly in the data of a form, we instead have an `osm` question that refers to an OSM file that gets created in OpenMapKit.
 
@@ -14,7 +14,7 @@ An OSM question is a new "media type", which means that it functions in the surv
 
 If you download this [Basic OpenMapKit Example](https://docs.google.com/spreadsheets/d/11H4-mGYTS61GLjSbVoTbmhoI5DjlF5fcBwNwQcvd2Go/edit?usp=sharing) form, you can see a simple OSM question. This question is named `osm_building`. In the type column, it is defined to be `osm`. It also has a parameter of `building_tags`.
 
-![osm question](https://cloud.githubusercontent.com/assets/556367/7404927/8fcfdbaa-ee9f-11e4-98a8-58b5a74e5433.png)
+![osm question](images/forms/1.png)
 
 This parameter is referenced in the _osm sheet_, between choices and settings.
 
@@ -22,7 +22,7 @@ This parameter is referenced in the _osm sheet_, between choices and settings.
 
 
 
-![osm sheet](https://cloud.githubusercontent.com/assets/556367/7404929/9418893c-ee9f-11e4-9249-b684ff33e16a.png)
+![osm sheet](images/forms/2.png)
 
 The _osm sheet_ has three columns: list name, name, and label. This sheet defines the tagging parameters that will be sent to OpenMapKit.
 
@@ -57,4 +57,4 @@ This step is optional, and if you do not provide a set of tag values, the user w
 
 Multiple Choice OpenMapKit Tag Question             |  Manual String Value OpenMapKit Tag Question
 :-------------------------:|:-------------------------:
-![multiple choice question](https://cloud.githubusercontent.com/assets/556367/7404896/31078528-ee9f-11e4-851f-a8943a66584b.png)  |  ![string value question](https://cloud.githubusercontent.com/assets/556367/7404898/37291566-ee9f-11e4-9f23-b5eee42bdfea.png)
+![multiple choice question](images/forms/3.png)  |  ![string value question](images/forms/4.png)

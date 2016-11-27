@@ -10,7 +10,7 @@ POSM itself generates tiles, called _POSM Carto_ on the device itself, but it is
 
 Currently, the POSM HOT Export Tool can be reached at:
 
-http://posm.io/en/
+http://export.posm.io/
 
 Name and describe your export. On the right, make sure you have selected _Select Export Area_, and draw a bounding box to server as your Area of Interest.
 

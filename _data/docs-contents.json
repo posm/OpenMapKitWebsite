@@ -17,7 +17,7 @@
           },
 
           {
-            "name": "Creating Surveys for OMK",
+            "name": "Creating Forms",
             "path": "docs_odkformsforomk.html"
           },
           {
@@ -27,24 +27,6 @@
           {
             "name": "Additional Resources",
             "path": "docs_additionalresources.html"
-          }
-        ]
-      },
-      {
-        "name": "For Developers",
-        "section_id": "developers",
-        "children": [
-          {
-            "name": "Architecture",
-            "path": "docs_developers.html"
-          },
-          {
-            "name": "Technical Specs",
-            "path": "docs_developers.html"
-          },
-          {
-            "name": "Contributing Code",
-            "path": "docs_developers.html"
           }
         ]
       },
@@ -64,7 +46,25 @@
         "name": "Constraints",
         "section_id": "constraints",
         "path": "docs_constraints.html"
-      }
+      },
+      {
+        "name": "Developers",
+        "section_id": "developers",
+        "children": [
+          {
+            "name": "Architecture",
+            "path": "docs_developers.html"
+          },
+          {
+            "name": "Technical Specs",
+            "path": "docs_developers.html"
+          },
+          {
+            "name": "Contributing Code",
+            "path": "docs_developers.html"
+          }
+        ]
+      },
     ]
   }
 ]

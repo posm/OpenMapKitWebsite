@@ -12,11 +12,11 @@ The `default.json` file defines constraints that are to be applied to all survey
 
 The form-specific configurations are named after the __form title__ of your XLSX form.
 
-![](https://cloud.githubusercontent.com/assets/556367/15690925/d28fac7a-273a-11e6-8677-5d07728c29c7.png)
+![](images/constraints/1.png)
 
 You can also see this title in OpenMapKit Server.
 
-![](https://cloud.githubusercontent.com/assets/556367/15691046/74a3bdda-273b-11e6-80fd-796915978b6c.png)
+![](images/constraints/2.png)
 
 ## JSON Schema
 
@@ -114,7 +114,7 @@ The following are all of the types of constraints you can apply on an OSM tag ke
 For tags that have a select one or a select many interface, if you enable the `custom_value` constraint to true, the user can input a custom tag value in addition to the pre-defined choices.
 
 {:.imageSize}
-![Custom Value UI](https://cloud.githubusercontent.com/assets/556367/12104460/71739ed2-b300-11e5-94fd-914a7bc4a7f5.png)
+![Custom Value UI](images/constraints/3.png)
 
 This is a `boolean` type constraint. You simply have a `"custom_value": true` for our given OSM tag.
 
@@ -129,7 +129,7 @@ This is a `boolean` type constraint. You simply have a `"custom_value": true` fo
 A `default` constraint for a tag applies a default value for a given OSM tag. The user can change that value if she chooses.
 
 {:.imageSize}
-![default](https://cloud.githubusercontent.com/assets/556367/15692147/a74504fa-2741-11e6-87d5-11fbe394dea2.png)
+![default](images/constraints/4.png)
 
 This is a `string` type constraint.
 
@@ -174,7 +174,7 @@ This is a `boolean` type constraint.
 A `numeric` constraint makes the numeric keyboard pop up by default for a question. The user still can toggle back to an alpha keyboard.
 
 {:.imageSize}
-![numeric](https://cloud.githubusercontent.com/assets/556367/15692507/b73fb48e-2743-11e6-8288-8739553609d9.png)
+![numeric](images/constraints/5.png)
 
 This is a `boolean` type constraint.
 
@@ -189,12 +189,12 @@ This is a `boolean` type constraint.
 A `required` constraint forces the user to answer a given question. You will know it is a required question when you see __Required__ in the top right corner or the screen.
 
 {:.imageSize}
-![required](https://cloud.githubusercontent.com/assets/556367/15444551/e8fb25ee-1ea6-11e6-8572-a2a031f26b6d.png)
+![required](images/constraints/6.png)
 
 If the user does not answer the tag question, the following Snackbar will divert the user from bouncing back into ODK Collect.
 
 {:.imageSize}
-![required notification](https://cloud.githubusercontent.com/assets/556367/15692919/2f0325d0-2746-11e6-9304-36fb23886504.png)
+![required notification](images/constraints/7.png)
 
 Clicking on OK will scroll you to the first missing required tag.
 
@@ -211,7 +211,7 @@ This is a `boolean` type constraint.
 A `select_multiple` constraint allows the user to select multiple values for a given tag. These tag values are `;` delimited, and this is the standard OpenStreetMap convention for having multiple values for a tag.
 
 {:.imageSize}
-![select_multiple](https://cloud.githubusercontent.com/assets/556367/15693150/ede2b41a-2747-11e6-833a-a562c8f88bc5.png)
+![select_multiple](images/constraints/8.png)
 
 This is a `boolean` type constraint.
 

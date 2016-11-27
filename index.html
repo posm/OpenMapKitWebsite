@@ -54,7 +54,7 @@ section_id: home
               <div class='large-12 columns hero-button-padding'>
                 <div class='two spacing'></div>
                 {% for button in slide.buttons.items %}
-                  <a class='button {{button.class}}' href='{{site.baseurl}}/{{ button.link_to }}'>{{ button.text }}</a>
+                  <a class='button {{button.class}}' href='{{ button.link_to }}'>{{ button.text }}</a>
                 {% endfor %}
               </div>
             </div>
