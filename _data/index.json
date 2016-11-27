@@ -98,7 +98,7 @@
   "how_works": {
     "title": "How it works",
     "text": [
-      "OpenMapKit (OMK) is an extension of OpenDataKit allowing users to create professional quality mobile data collection surveys for field data collection.",
+      "OpenMapKit is an extension of OpenDataKit allowing users to create professional quality mobile data collection surveys for field data collection.",
       "OpenMapKit launches directly from OpenDataKit when the OSM question type is enabled in a standard survey. Simply include OSM questions and tags in your survey to collect information on OSM in the field."]
   },
   "omk_features": [

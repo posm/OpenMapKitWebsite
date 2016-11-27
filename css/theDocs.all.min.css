@@ -10556,7 +10556,7 @@ h6 {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: Raleway,Helvetica Neue,Helvetica,Arial,sans-serif
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
 h1 a,h1 a:focus,h1 a:hover,h2 a,h2 a:focus,h2 a:hover,h3 a,h3 a:focus,h3 a:hover,h4 a,h4 a:focus,h4 a:hover,h5 a,h5 a:focus,h5 a:hover,h6 a,h6 a:focus,h6 a:hover {
@@ -11743,7 +11743,7 @@ pre[class*=language-][data-language]:before {
     left: 0;
     top: 0;
     color: #555;
-    font-family: Raleway,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24px;
     width: 42px;
     height: 42px;
@@ -13295,7 +13295,7 @@ h6 {
     font-weight: 400; }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 h1 a,
 h1 a:focus,
 h1 a:hover, h2 a,
@@ -14245,7 +14245,7 @@ pre[class*='language-'][data-language]::before {
     left: 0;
     top: 0;
     color: #555;
-    font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 24px;
     width: 42px;
     height: 42px;
