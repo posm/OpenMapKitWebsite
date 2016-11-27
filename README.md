@@ -26,6 +26,12 @@ To watch for changes, and regenerate automatically:
 bundle exec jekyll serve --watch
 ```
 
+To simply build your project without serving:
+
+```
+bundle exec jekyll build
+```
+
 ## Deploy
 
 http://openmapkit.org is hosted by Github Pages. This is a Jekyll project that is built automatically by Github from the [gh-pages](https://github.com/AmericanRedCross/OpenMapKitWebsite/tree/gh-pages) branch.
@@ -35,8 +41,10 @@ The Jekyll build is also committed to the `_site` subdirectory. This subdirector
 To commit the `_site` directory to the `dist` branch:
 
 ```
-
+git subtree push --prefix _site origin dist
 ```
+
+This command should be done whenever you want to publish your build to the POSM offline build. This [gist](https://gist.github.com/cobyism/4730490) explains more details about committing a subdirectory to a different branch.
 
 ----
 
