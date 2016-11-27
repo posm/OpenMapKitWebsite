@@ -92,18 +92,18 @@ Creating forms for ODK or OMK can be as simple or complex as the survey itself. 
 
 Setting up the basic survey form:
 
-![](https://cloud.githubusercontent.com/assets/506078/7144405/1a1ae4a6-e29a-11e4-9467-ccc7404feaf5.png) |
+![](images/walkthrough/1.png) |
 
 Creating a drop down list of surveyor names:
 
-![](https://cloud.githubusercontent.com/assets/506078/7144404/1a195dc0-e29a-11e4-9034-9da6ea439c5f.png) |
+![](images/walkthrough/2.png) |
 
 Creating survey questions consistent with Open Street Map tags:
-![](https://cloud.githubusercontent.com/assets/506078/7144403/1a194880-e29a-11e4-923a-f846cf81f379.png) |
+![](images/walkthrough/3.png) |
 
 A similar example can be viewed and downloaded [here](https://docs.google.com/spreadsheets/d/11H4-mGYTS61GLjSbVoTbmhoI5DjlF5fcBwNwQcvd2Go/edit#gid=0)
 
-More detailed documentation for how to correctly create a survey form can be found in the [Creating Surveys](http://openmapkit.com/docs_odkformsforomk.html) tab in the **Users** documentation.
+More detailed documentation for how to correctly create a survey form can be found in the [Creating Surveys](docs_odkformsforomk.html) tab in the **Users** documentation.
 
 
 #### Upload Survey to OpenMapKit Server
