@@ -1,9 +1,9 @@
-## OMK Walkthrough
-This walkthrough is intended to take you through the entire process of setting up and using the OMK application from start to finish.
+## OpenMapKit Walkthrough
+This walkthrough is intended to take you through the entire process of setting up and using OpenMapKit from start to finish.
 
 The overview of the process is:
 
-1.  Build OMK Server
+1.  Build OpenMapKit Server
 2.  Create and Add Survey
 3.  Use HOT Export Tool to get OSM Data - basemap & vector data (POSM Bundle)
 4.  Deploy POSM Area of Interest with POSM Bundle
@@ -12,7 +12,7 @@ The overview of the process is:
 7.  View & Download Survey Data
 8.  Submit to OSM API
 
-### OMK Server Production Installation
+### OpenMapKit Server Production Installation
 
 For an actual deployment of OpenMapKit Server, it is recommended to use
 [posm-build](https://github.com/AmericanRedCross/posm-build) to install your
@@ -27,7 +27,7 @@ OpenMapKit Server crashes or is restarted, the API will restart automatically.
 Also, posm-build only gets the dependencies you need and downloads only the
 files you need, so the entire repo does not need to be cloned with git.
 
-Instructions for installing OMK Server on your development environment can be found [here](https://github.com/AmericanRedCross/OpenMapKitServer/blob/master/docs/development-installation.md).
+Instructions for installing OpenMapKit Server on your development environment can be found [here](https://github.com/AmericanRedCross/OpenMapKitServer/blob/master/docs/development-installation.md).
 
 #### Tested On
 
@@ -103,31 +103,31 @@ Creating survey questions consistent with Open Street Map tags:
 
 A similar example can be viewed and downloaded [here](https://docs.google.com/spreadsheets/d/11H4-mGYTS61GLjSbVoTbmhoI5DjlF5fcBwNwQcvd2Go/edit#gid=0)
 
-More detailed documentation for how to correctly create a survey form can be found in the [Creating Surveys for OMK](http://openmapkit.com/docs_odkformsforomk.html) tab in the **Users** documentation.
+More detailed documentation for how to correctly create a survey form can be found in the [Creating Surveys](http://openmapkit.com/docs_odkformsforomk.html) tab in the **Users** documentation.
 
 
-#### Upload Survey to OMK Server
+#### Upload Survey to OpenMapKit Server
 
-To use the survey you create in the field, it must be added to OMK Server. You can upload forms by using the API call
+To use the survey you create in the field, it must be added to OpenMapKit Server. You can upload forms by using the API call
 ```
 http://{your_host_url}/pages/upload-form/
 ```
 
 OR
 
-By opening the OMK Server UI.
+By opening OpenMapKit Server UI.
 
 You will see all the forms currently on your server
 
-![OMK Server Forms](images/omkserver1.png)
-*OMK Server Forms*
+![OpenMapKit Server Forms](images/omkserver1.png)
+*OpenMapKit Server Forms*
 
 Clicking in the upper right corner will give you a drop down menu, click **Upload Form** to upload your survey.
 
-![OMK Server Upload Form](images/omkserver2.png)
+![OpenMapKit Server Upload Form](images/omkserver2.png)
 *Upload Form*
 
-You can drag-n-drop your form or click to select it. Then hit **Submit** to add your survey to your OMK Server.
+You can drag-n-drop your form or click to select it. Then hit **Submit** to add your survey to your OpenMapKit Server.
 
 
 ### HOT Export Tool - OSM Basemap & Data
@@ -138,7 +138,7 @@ POSM itself generates tiles, called _POSM Carto_ on the device itself, but it is
 
 Currently, the POSM HOT Export Tool can be reached at:
 
-[http://posm.io/en/](http://posm.io/en/)
+[http://export.posm.io/](http://export.posm.io/)
 
 Name and describe your export. On the right, make sure you have selected _Select Export Area_, and draw a bounding box to server as your Area of Interest.
 
@@ -314,7 +314,7 @@ Once you've gotten back into OpenMapKit _from_ ODK Collect, you can edit tags as
 {:.imageSize}
 ![]( https://cloud.githubusercontent.com/assets/506078/7143737/e0ae9540-e295-11e4-8b4a-2a44d0e58618.png)
 
-##### Continue Form in OMK App
+##### Continue Form in OpenMapKit Android
 
 {:.imageSize}
 ![]( https://cloud.githubusercontent.com/assets/506078/7143738/e0aff584-e295-11e4-9438-0490e06decfd.png)
@@ -356,26 +356,26 @@ Click on **Send Finalized Form(s)** to get to the upload dialogue.
 
 Select all the forms you want or click **Toggle All**. When you're read click **Send Selected** to upload your completed data to the server.
 
-#### View Form Data on OMK Server
+#### View Form Data on OpenMapKit Server
 
 ##### See your ODK & OSM submissions:
 Submissions can be viewed, downloaded and submitted to OSM from OMK Server. To access submitted forms and data, first open the OMK Server UI.
 
-![OMK Server Forms](images/omkserver1.png)
-*OMK Server Forms*
+![OpenMapKit Server Forms](images/omkserver1.png)
+*Forms*
 
 
 Click on the the **View Submissions** tab of the survey you would like to view.
 
 
-![OMK View Submissions](images/osm_submissions.png)
+![OpenMapKit View Submissions](images/osm_submissions.png)
 *View Submissions*
 
 
 You have the options to view & download the ODK data, view & download the OSM data and the ability to submit the OSM data back to the OSM API.
 
 
-![OMK Metadata](images/osm_metadata.png)
+![OpenMapKit Metadata](images/osm_metadata.png)
 *Survey Metadata*
 
 

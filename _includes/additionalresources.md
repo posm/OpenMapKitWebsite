@@ -1,6 +1,6 @@
 ## Additional Resources
 
-The team is working hard on the OMK & POSM project. Right now the best place to find out more is in the source code repository itself and related wiki pages.
+The team is working hard on OpenMapKit and POSM. Right now the best place to find out more is in the source code repository itself and related wiki pages.
 
 ### Source Code
 

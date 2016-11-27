@@ -3,7 +3,7 @@
 #### Before getting started
 
 _Prerequisites:_
-You'll need the lastest version of both ODK Collect and OpenMapKit on your Android device. The OMK currently supports Android version 4.2 and higher.
+You'll need the lastest version of both ODK Collect and OpenMapKit on your Android device. OpenMapKit currently supports Android version 4.2 and higher.
 You will also need install OpenMapKit Server in order manage surveys and OSM data, deploy them to your Android devices and submit surveys back to OSM.
 
 #### ODK Collect
@@ -30,7 +30,7 @@ OpenMapKit Server crashes or is restarted, the API will restart automatically.
 Also, posm-build only gets the dependencies you need and downloads only the
 files you need, so the entire repo does not need to be cloned with git.
 
-Instructions for installing OMK Server on your development environment can be found [here](https://github.com/AmericanRedCross/OpenMapKitServer/blob/master/docs/development-installation.md).
+Instructions for installing OpenMapKit Server on your development environment can be found [here](https://github.com/AmericanRedCross/OpenMapKitServer/blob/master/docs/development-installation.md).
 
 ##### Tested On
 
