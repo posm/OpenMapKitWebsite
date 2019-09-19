@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>OpenMapKit Website</title>
+    <title>OpenMapKit</title>
     <meta name="description"
-          content="OpenMapKitWebsite is the website for the OpenMapKit project. We are moving all training material within the wiki to the website
+          content="OpenMapKitWebsite is the website for the OpenMapKit project.
 ">
 
     <link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
@@ -63,179 +63,9 @@
 
   <body>
 
-    <div class='contain-to-grid sticky fixed'>
-  <nav class='top-bar docs-nav-width' data-options='sticky_on: large' data-topbar=''>
-
-    <ul class='title-area'>
-      <li class='name'>
-        <h1>
-          <a href='index.html'>
-            <div class="icn-logo_OMK"></div>
-          </a>
-        </h1>
-      </li>
-
-
-      <!--<li class='toggle-topbar menu-icon'>-->
-      <!--<a href='#'>Menu</a>-->
-      <!--</li>-->
-
-      <li class="toggle-topbar custom-topbar">
-        <button type="button" class="main custom-nav navbar-toggle for-sidebar" data-toggle="offcanvas">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </li>
-
-    </ul>
-    <section class='top-bar-section'>
-      <ul class="right">
-        
-        
-
-        
-        <li class="active">
-          <a href="index.html">Home</a>
-        </li>
-        
-        
-        
-
-        
-        <li class="">
-          <a href="docs.html">Documentation</a>
-        </li>
-        
-        
-      </ul>
-    </section>
-  </nav>
-</div>
-
 
     <div class="home" role='main'>
-      <div>
-  <!-- Sidebar -->
-<aside id="new-sidebar">
-
-    <div id="sideBar" class="new-sidebar-content">
-        <ul class="">
-        
-
-        <li>
-            <a href="index.html">Home</a>
-            
-            
-        </li>
-
-        
-
-        <li>
-            <a href="docs.html">Documentation</a>
-            
-            <ul class="open">
-                
-                <li class="" id="Users">
-                    
-                        <a href="#"> Users</a>
-                    
-                    <ul class="open">
-                        
-                        <li class="" id="Installation">
-                            <a href="docs_install.html"> Installation</a>
-                        </li>
-                        
-                        <li class="" id="Creating Forms">
-                            <a href="docs_odkformsforomk.html"> Creating Forms</a>
-                        </li>
-                        
-                        <li class="" id="Creating OSM Basemap">
-                            <a href="docs_creatingbasemaps.html"> Creating OSM Basemap</a>
-                        </li>
-                        
-                        <li class="" id="Additional Resources">
-                            <a href="docs_additionalresources.html"> Additional Resources</a>
-                        </li>
-                        
-                    </ul>
-                </li>
-                
-                <li class="" id="Tutorials">
-                    
-                        <a href="#"> Tutorials</a>
-                    
-                    <ul class="open">
-                        
-                        <li class="" id="Walkthrough">
-                            <a href="docs_walkthrough.html"> Walkthrough</a>
-                        </li>
-                        
-                    </ul>
-                </li>
-                
-                <li class="" id="Constraints">
-                    
-                        <a href="docs_constraints.html"> Constraints</a>
-                    
-                    <ul class="open">
-                        
-                    </ul>
-                </li>
-                
-                <li class="" id="Developers">
-                    
-                        <a href="#"> Developers</a>
-                    
-                    <ul class="open">
-                        
-                        <li class="" id="Architecture">
-                            <a href="docs_developers.html"> Architecture</a>
-                        </li>
-                        
-                        <li class="" id="Technical Specs">
-                            <a href="docs_developers.html"> Technical Specs</a>
-                        </li>
-                        
-                        <li class="" id="Contributing Code">
-                            <a href="docs_developers.html"> Contributing Code</a>
-                        </li>
-                        
-                    </ul>
-                </li>
-                
-            </ul>
-            
-        </li>
-
-        
-
-    </ul>
-    </div>
-</aside>
-<!-- END Sidebar -->
-
-<script type="text/javascript">
-
-    jQuery(window).ready(function() {
-
-        var pathname = window.location.pathname; // Returns path only
-        $("#sideBar ul li a").each(function(){
-            if (($(this).attr('href')) == pathname){
-                $(this).addClass("activeMenu");
-//                return false;
-            }
-
-        });
-
-    });
-
-
-</script>
-
-</div>
-
-<div class='mod modDefaultSlider'>
+      <div class='mod modDefaultSlider'>
   <div class='sequence' data-autostop='on' data-timeout='0'>
     <a class='sequence-prev' href='javascript:void(0);'>
       <span></span>
@@ -277,7 +107,7 @@
               <div class='large-12 columns hero-button-padding'>
                 <div class='two spacing'></div>
                 
-                  <a class='button ' href='docs.html'>Learn More</a>
+                  <a class='button ' href='http://posm.io/docs/'>Learn More</a>
                 
               </div>
             </div>
@@ -325,7 +155,7 @@
   <div class="medium-4 large-4 columns">
     <div class='fadein mod modIconText' data-delay='0'>
   <div class='icon-text-circle'>
-    <a href="docs_odkformsforomk.html"><i class='pointer-cursor icn-icon_survey'></i></a>
+    <i class='icn-icon_survey'></i>
     <h3>How to create a survey</h3>
     <p>Use <a href = http://xlsform.org/>XForms</a> to create a standard survey using OpenDataKit.</p>
   </div>
@@ -336,7 +166,7 @@
   <div class="medium-4 large-4 columns">
     <div class='fadein mod modIconText' data-delay='0'>
   <div class='icon-text-circle'>
-    <a href="docs.html"><i class='pointer-cursor icn-icon_OMK'></i></a>
+    <i class='icn-icon_OMK'></i>
     <h3>Launch OpenMapKit Android</h3>
     <p>The OpenStreetMap question launches OpenMapKit Android to enable OpenStreetMap editing.</p>
   </div>
@@ -347,7 +177,7 @@
   <div class="medium-4 large-4 columns">
     <div class='fadein mod modIconText' data-delay='0'>
   <div class='icon-text-circle'>
-    <a href="docs_odkformsforomk.html"><i class='pointer-cursor icn-icon_surveyFilled'></i></a>
+    <i class='icn-icon_surveyFilled'></i>
     <h3>Implement Survey</h3>
     <p>Take your survey to the field to collect data and geographic information.</p>
   </div>
@@ -385,7 +215,7 @@
   <div class='row'>
     <div class='large-12 columns'>
       <p class='centered-text'>
-        <a class='button' href='docs.html'>Learn More</a>
+        <a class='button' href='http://posm.io/docs/'>Learn More</a>
       </p>
     </div>
   </div>
@@ -456,12 +286,12 @@
                 <div class="small-12 medium-3 large-2 column social-media">
                     <ul class='socials'>
                         <li class="pull-left">
-                            <a href='https://twitter.com/openmapkit' target="_blank">
+                            <a href='https://twitter.com/awesomeposm' target="_blank">
                                 <i class='fa fa-twitter mini-icon'></i>
                             </a>
                         </li>
                         <li class="pull-left">
-                            <a href='https://github.com/AmericanRedCross/OpenMapKitAndroid' target="_blank">
+                            <a href='https://github.com/posm/OpenMapKitAndroid' target="_blank">
                                 <i class='fa fa-github mini-icon'></i>
                             </a>
                         </li>
@@ -476,12 +306,12 @@
                         <div class="small-12 medium-12 large-12 column social-media-mobile">
                             <ul class='socials'>
                                 <li class="pull-right">
-                                    <a href='https://twitter.com/openmapkit' target="_blank">
+                                    <a href='https://twitter.com/awesomeposm' target="_blank">
                                         <i class='fa fa-twitter mini-icon'></i>
                                     </a>
                                 </li>
                                 <li class="pull-right">
-                                    <a href='https://github.com/AmericanRedCross/OpenMapKitAndroid' target="_blank">
+                                    <a href='https://github.com/posm/OpenMapKitAndroid' target="_blank">
                                         <i class='fa fa-github mini-icon'></i>
                                     </a>
                                 </li>

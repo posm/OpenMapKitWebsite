@@ -1,12 +1,11 @@
 # Site settings
-title: OpenMapKit Website
-email: info@openmapkit.org
+title: OpenMapKit
+email: 
 description: > # this means to ignore newlines until "baseurl:"
-  OpenMapKitWebsite is the website for the OpenMapKit project. We are moving all training
-  material within the wiki to the website
+  OpenMapKitWebsite is the website for the OpenMapKit project.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://openmapkit.org/" # the base hostname & protocol for your site
-twitter_username: OpenMapKit
+twitter_username: awesomeposm
 github_username:  AmericanRedCross
 
 # Build settings

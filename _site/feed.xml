@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OpenMapKit Website</title>
-    <description>OpenMapKitWebsite is the website for the OpenMapKit project. We are moving all training material within the wiki to the website
+    <title>OpenMapKit</title>
+    <description>OpenMapKitWebsite is the website for the OpenMapKit project.
 </description>
-    <link>http://openmapkit.org//</link>
-    <atom:link href="http://openmapkit.org//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Nov 2016 09:33:14 -0800</pubDate>
-    <lastBuildDate>Sun, 27 Nov 2016 09:33:14 -0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 19 Sep 2019 17:30:47 -0400</pubDate>
+    <lastBuildDate>Thu, 19 Sep 2019 17:30:47 -0400</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
   </channel>

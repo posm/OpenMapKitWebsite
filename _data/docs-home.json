@@ -1,8 +1,0 @@
-{
-    "name": "Documentation",
-    "section_id": "docs-home",
-    "header":{
-        "title":"OMK Platform Documentation",
-        "text": "Docuumentation to help you get started installing, configuring and deploying OpenMapKit in the field. This also includes details on deploying OpenMapKit Server, designing forms for OpenStreetMap contributions. Eventhough this is a rapidly evolving project we encourage everyone to read the developer documentation and welcome contributions to the project"
-    }
-}

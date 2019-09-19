@@ -17,7 +17,7 @@
         "items": [
           {
             "text": "Learn More",
-            "link_to": "docs.html"
+            "link_to": "http://posm.io/docs/"
           }
         ]
       }
@@ -105,20 +105,17 @@
     {
       "icon": "icn-icon_survey",
       "title": "How to create a survey",
-      "description": "Use <a href = http://xlsform.org/>XForms</a> to create a standard survey using OpenDataKit.",
-      "link_to": "docs_odkformsforomk.html"
+      "description": "Use <a href = http://xlsform.org/>XForms</a> to create a standard survey using OpenDataKit."
     },
     {
       "icon": "icn-icon_OMK",
       "title": "Launch OpenMapKit Android",
-      "description": "The OpenStreetMap question launches OpenMapKit Android to enable OpenStreetMap editing.",
-      "link_to": "docs.html"
+      "description": "The OpenStreetMap question launches OpenMapKit Android to enable OpenStreetMap editing."
     },
     {
       "icon": "icn-icon_surveyFilled",
       "title": "Implement Survey",
-      "description": "Take your survey to the field to collect data and geographic information.",
-      "link_to": "docs_odkformsforomk.html"
+      "description": "Take your survey to the field to collect data and geographic information."
     }
   ]
 }

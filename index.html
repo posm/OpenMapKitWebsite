@@ -3,9 +3,6 @@ layout: default
 section_id: home
 ---
 
-<div>
-  {% include docs-sidebar.html %}
-</div>
 
 <div class='mod modDefaultSlider'>
   <div class='sequence' data-autostop='on' data-timeout='0'>
@@ -70,7 +67,7 @@ section_id: home
 <div class="row">
   {% for feature in site.data.index.omk_features %}
   <div class="medium-4 large-4 columns">
-    {% include icon-text.html title=feature.title desc=feature.description icon_class=feature.icon delay='0' link=feature.link_to shape_class='icon-text-circle' %}
+    {% include icon-text.html title=feature.title desc=feature.description icon_class=feature.icon delay='0' shape_class='icon-text-circle' %}
   </div>
   {% endfor %}
 </div>
@@ -94,7 +91,7 @@ section_id: home
   <div class='row'>
     <div class='large-12 columns'>
       <p class='centered-text'>
-        <a class='button' href='docs.html'>Learn More</a>
+        <a class='button' href='http://posm.io/docs/'>Learn More</a>
       </p>
     </div>
   </div>
